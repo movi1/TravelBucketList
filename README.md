@@ -1,30 +1,55 @@
 # the-last-project-cfg
-## Travel bucket list
+## Travel bucket lis
 
-### Collaborators Clone the Repository:
 
- * Your collaborators can now clone the repository to their local machines:
+
+ ### Collaborators Clone the Repository:
 ```
-git clone https://github.com/movi1/the-last-project-cfg.git
-```
----
-
-### Install Dependencies:
-
-* Inside the cloned repository, collaborators need to install the project dependencies. This is done using the following command:
-
-```
+git clone https://github.com/your-username/the-last-project-cfg.git
 cd the-last-project-cfg
-cd frontend-react
+```
+* Frontend (React) and Backend Development:
+
+
+## Navigate to the frontend-react or backend folder:
+
+```
+cd frontend-react   # or cd backend
+```
+### Install Dependencies:
+Inside the frontend folder, collaborators should install the React app dependencies:
+```
 npm install
 ```
 
 ---
-This command installs all the dependencies listed in the package.json file.
-
 * Start the Development Server:
+* 
 After installing dependencies, collaborators can start the development server:
 ```
 npm start
 ```
 ---
+* Make changes, add, commit, and push:
+---
+### Committing Changes to the Main Repository:
+
+* Navigate back to the root directory:
+```
+cd ..
+```
+---
+* Check the status (optional):
+
+```
+git status
+```
+---
+* Add, commit, and push changes to the main repository:
+
+```
+git add .
+git commit -m "Descriptive commit message"
+git push 
+```
+
