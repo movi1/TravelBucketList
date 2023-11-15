@@ -14,6 +14,7 @@ git clone https://github.com/movi1/the-last-project-cfg.git
 * Inside the cloned repository, collaborators need to install the project dependencies. This is done using the following command:
 
 ```
+cd the-last-project-cfg
 cd frontend-react
 npm install
 ```
