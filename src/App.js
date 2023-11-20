@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import MapComponent from './MapComponent';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -18,17 +19,29 @@ function App() {
       });
   }, []);
 
-  const fetchCountryDetails = (countryCode) => {
-    // Find the selected country in the countries array
-    const selectedCountryData = countries.find(
-      (country) => country.cca2 === countryCode
-    );
+  const fetchCountryDetails = async (countryCode) => {
+    try {
+      // Find the selected country in the countries array
+      const selectedCountryData = countries.find(
+        (country) => country.cca2 === countryCode
+      );
 
-    // Fetch additional details based on the selected country
-    // For example, you can fetch more details from another API or use the existing data
-    // For simplicity, I'm just using the existing data here
-    setCountryDetails(selectedCountryData);
+      // Fetch additional details based on the selected country
+      // For example, you can fetch more details from another API or use the existing data
+      // For simplicity, I'm just using the existing data here
+      setCountryDetails(selectedCountryData);
+    } catch (error) {
+      console.error('Error fetching country details:', error);
+    }
   };
+
+
+  const ACCESS_TOKEN = 'pk.eyJ1IjoibW92aTgiLCJhIjoiY2xwNnF2NjBtMmRudDJ2cWs2Z3Fydmh0cCJ9.q7q8e9YPRQAiWqJ8k8WQ-Q';
+
+  // Check if countryDetails is not null before accessing latlng
+  const mapUrl = countryDetails && countryDetails.latlng
+    ? `https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/${countryDetails.latlng[1]},${countryDetails.latlng[0]}/400x300?access_token=${ACCESS_TOKEN}`
+    : '';
 
   const handleSearchTermChange = (event) => {
     const term = event.target.value;
@@ -43,19 +56,20 @@ function App() {
     setSuggestedCountries(filteredCountries);
   };
 
-  const handleCountrySelect = (selectedCountryCode) => {
+  const handleCountrySelect = async (selectedCountryCode) => {
     setSelectedCountry(selectedCountryCode);
 
     // Fetch additional details about the selected country
-    fetchCountryDetails(selectedCountryCode);
+    await fetchCountryDetails(selectedCountryCode);
 
     // Clear the suggestions and search term
     setSuggestedCountries([]);
     setSearchTerm('');
   };
-  console.log('countryDetails:', countryDetails);
+
   return (
     <div>
+
       <input
         type="text"
         placeholder="Search for a country"
@@ -77,10 +91,29 @@ function App() {
         <div>
           <h2>{countryDetails?.name.common}</h2>
           <p>Capital City: {countryDetails?.capital[0]}</p>
-          <p>Currency: {countryDetails?.currencies.name}</p>
-          <p>Languages: {countryDetails?.languages[0]}</p>
-          <p>Maps: {countryDetails?.currencies?.[0]}</p>
-          <p>TimeZone: {countryDetails?.currencies?.[0]}</p>
+          <p>
+            Currencies:{" "}
+            {Object.values(countryDetails?.currencies)
+              .map(c => c.name)
+              .join(", ")}
+          </p>
+
+          <p>
+            Languages:{" "}
+            {Object.values(countryDetails?.languages)
+              .map(l => l)
+              .join(", ")}
+          </p>
+
+
+          {/* Render the MapComponent with the selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */}
+          <MapComponent selectedCityName={countryDetails?.capital[0]} />
+
+
+          <p>
+            Timezones:{" "}
+            {countryDetails?.timezones.map(tz => tz).join(", ")}
+          </p>
         </div>
       )}
     </div>
