@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 /* Render the MapComponent from the parenrt app selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */
-const MapComponent = ({ selectedCityName }) => {
+export const MapComponent = ({ selectedCityName }) => {
   const [mapUrl, setMapUrl] = useState('');
 
   console.log(selectedCityName)

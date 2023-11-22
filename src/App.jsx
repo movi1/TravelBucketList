@@ -1,6 +1,8 @@
-// import { Routes, Route } from 'react-router-dom'; // UNCOMMENT WHEN WE START BUILDING THE ROUTE PAGES
-import {Header} from './components/header/header'
+import { Routes, Route } from 'react-router-dom';
+import { Header } from './components/header/header';
+import { MapSearch } from './components/map/MapSearch';
 import './App.css';
+
 
 function App() {
   return (
@@ -10,16 +12,17 @@ function App() {
 
       {/* UNCOMMENT THE ROUTES BELOW AS WE START BUILDING EACH PAGE */}
 
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/pack-your-list" element={<PackYourList />} />
-        <Route path="/bucket-list" element={<BucketList />} />
-        <Route path="/signup-login" element={<SignUpLogin />} />
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<MapSearch />} />
+        <Route path="/about" />
+        <Route path="/pack-your-list" />
+        <Route path="/bucket-list" />
+        <Route path="/signup-login" />
+      </Routes>
 
     </div>
   );
+  
 }
-
+  
 export default App;
