@@ -6,39 +6,34 @@
  ### Collaborators Clone the Repository:
 ```
 git clone https://github.com/your-username/the-last-project-cfg.git
+```
+---
+
+##  Navigate to the project folder:
+
+```
 cd the-last-project-cfg
 ```
-* Frontend (React) and Backend Development:
-
-
-## Navigate to the frontend-react or backend folder:
-
-```
-cd frontend-react   # or cd backend
-```
 ### Install Dependencies:
-Inside the frontend folder, collaborators should install the React app dependencies:
+
++ Inside project folder, install dependencies:
 ```
 npm install
 ```
 
 ---
-* Start the Development Server:
-* 
-After installing dependencies, collaborators can start the development server:
+### Start the Development Server:
+
++ After installing dependencies, collaborators can start the development server:
 ```
 npm start
 ```
 ---
-* Make changes, add, commit, and push:
----
-### Committing Changes to the Main Repository:
 
-* Navigate back to the root directory:
-```
-cd ..
-```
----
+### Make changes
+
+### Committing Changes 
+
 * Check the status (optional):
 
 ```
