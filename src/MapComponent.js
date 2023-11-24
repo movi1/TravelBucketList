@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './MapComponent.css';
+
 
 /* Render the MapComponent from the parenrt app selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */
 const MapComponent = ({ selectedCityName }) => {
@@ -42,7 +44,7 @@ const MapComponent = ({ selectedCityName }) => {
   
 
   return (
-    <div>
+    <div className="map-container">
       {mapUrl && (
         <>
           <iframe

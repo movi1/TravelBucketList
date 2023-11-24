@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,58 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Open+Sans&family=Pacifico&family=Playpen+Sans:wght@300&family=Public+Sans:ital@1&family=Rye&family=Special+Elite&display=swap');
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 }
+
+.search-container {
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0.1, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions {
+  position: absolute;
+  top: 60px; /* Adjust the distance from the input */
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions div:hover {
+  background-color: #f0f0f0;
+}
+
+.country-details {
+  max-width: 500px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* MapComponent.css */
+/* Add styles for MapComponent if needed */

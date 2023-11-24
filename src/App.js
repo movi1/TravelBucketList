@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
+import './App.css';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -48,9 +49,9 @@ function App() {
     setSearchTerm(term);
 
     // Filter countries based on the input term
-    const filteredCountries = countries.filter((country) =>
-      country.name.common.toLowerCase().includes(term.toLowerCase())
-    );
+    const filteredCountries = countries.filter(country => {
+      return country.name.common.toLowerCase().startsWith(term.toLowerCase());
+    });
 
     // Display suggestions
     setSuggestedCountries(filteredCountries);
@@ -66,58 +67,54 @@ function App() {
     setSuggestedCountries([]);
     setSearchTerm('');
   };
-
   return (
-    <div>
-
-      <input
-        type="text"
-        placeholder="Search for a country"
-        value={searchTerm}
-        onChange={handleSearchTermChange}
-      />
-      <div>
-        {suggestedCountries.map((country) => (
-          <div
-            key={country.cca2}
-            onClick={() => handleCountrySelect(country.cca2)}
-            style={{ cursor: 'pointer', padding: '5px' }}
-          >
-            {country.name.common}
-          </div>
-        ))}
+    <div className="main-container">
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search for a country"
+          value={searchTerm}
+          onChange={handleSearchTermChange}
+        />
+        <div className="suggestions">
+          {suggestedCountries.map((country) => (
+            <div
+              key={country.cca2}
+              onClick={() => handleCountrySelect(country.cca2)}
+            >
+              {country.name.common}
+            </div>
+          ))}
+        </div>
       </div>
+  
       {selectedCountry && (
-        <div>
+        <div className="country-details">
           <h2>{countryDetails?.name.common}</h2>
           <p>Capital City: {countryDetails?.capital[0]}</p>
           <p>
             Currencies:{" "}
             {Object.values(countryDetails?.currencies)
-              .map(c => c.name)
+              .map((c) => c.name)
               .join(", ")}
           </p>
-
           <p>
             Languages:{" "}
             {Object.values(countryDetails?.languages)
-              .map(l => l)
+              .map((l) => l)
               .join(", ")}
           </p>
-
-
-          {/* Render the MapComponent with the selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */}
           <MapComponent selectedCityName={countryDetails?.capital[0]} />
-
-
           <p>
             Timezones:{" "}
-            {countryDetails?.timezones.map(tz => tz).join(", ")}
+            {countryDetails?.timezones.map((tz) => tz).join(", ")}
           </p>
         </div>
       )}
     </div>
   );
+  
+  
 }
 
 export default App;
