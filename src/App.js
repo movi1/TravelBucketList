@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
 import { MapSearch } from './components/map/MapSearch';
 import './App.css';
 
@@ -19,6 +20,8 @@ function App() {
         <Route path="/bucket-list" />
         <Route path="/signup-login" />
       </Routes>
+
+      <Footer /> {/* this will be on every page */}
 
     </div>
   );
