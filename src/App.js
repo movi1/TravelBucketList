@@ -26,7 +26,7 @@ function App() {
       const selectedCountryData = countries.find(
         (country) => country.cca2 === countryCode
       );
-
+      console.log(selectedCountryData)
       // Fetch additional details based on the selected country
       // For example, you can fetch more details from another API or use the existing data
       // For simplicity, I'm just using the existing data here
@@ -62,6 +62,8 @@ function App() {
 
     // Fetch additional details about the selected country
     await fetchCountryDetails(selectedCountryCode);
+
+   
 
     // Clear the suggestions and search term
     setSuggestedCountries([]);
@@ -107,7 +109,8 @@ function App() {
             </p>
             <p>
               Timezones:{" "}
-              {countryDetails?.timezones.map((tz) => tz).join(", ")}
+              {/* {countryDetails?.timezones.map((tz) => tz).join(", ")} */}
+              {countryDetails?.timezones.map[0]}
             </p>
           </div>
 
