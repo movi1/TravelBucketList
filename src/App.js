@@ -87,34 +87,38 @@ function App() {
           ))}
         </div>
       </div>
-  
+
       {selectedCountry && (
         <div className="country-details">
-          <h2>{countryDetails?.name.common}</h2>
-          <p>Capital City: {countryDetails?.capital[0]}</p>
-          <p>
-            Currencies:{" "}
-            {Object.values(countryDetails?.currencies)
-              .map((c) => c.name)
-              .join(", ")}
-          </p>
-          <p>
-            Languages:{" "}
-            {Object.values(countryDetails?.languages)
-              .map((l) => l)
-              .join(", ")}
-          </p>
+          <div className="country-info">
+            <h2>{countryDetails?.name.common}</h2>
+            <p>Capital City: {countryDetails?.capital[0]}</p>
+            <p>
+              Currencies:{" "}
+              {Object.values(countryDetails?.currencies)
+                .map((c) => c.name)
+                .join(", ")}
+            </p>
+            <p>
+              Languages:{" "}
+              {Object.values(countryDetails?.languages)
+                .map((l) => l)
+                .join(", ")}
+            </p>
+            <p>
+              Timezones:{" "}
+              {countryDetails?.timezones.map((tz) => tz).join(", ")}
+            </p>
+          </div>
+
+
           <MapComponent selectedCityName={countryDetails?.capital[0]} />
-          <p>
-            Timezones:{" "}
-            {countryDetails?.timezones.map((tz) => tz).join(", ")}
-          </p>
+
         </div>
       )}
     </div>
   );
-  
-  
+
 }
 
 export default App;

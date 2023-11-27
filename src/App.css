@@ -37,24 +37,30 @@
   }
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Open+Sans&family=Pacifico&family=Playpen+Sans:wght@300&family=Public+Sans:ital@1&family=Rye&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Lobster+Two&family=Open+Sans&family=Playpen+Sans:wght@300&display=swap");
 
+body {
+  font-family: "Kanit", sans-serif;
+}
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-container {
   position: relative;
-  width: 500px;
-  max-width: 100%;
+  width: 80%;
+  max-width: 500px;
   box-shadow: 0 6px 6px rgba(0, 0, 0.1, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
-
 input {
   width: 100%;
   padding: 15px;
@@ -83,10 +89,18 @@ input {
 }
 
 .country-details {
-  max-width: 500px;
-  margin-top: 20px;
+  /* box-sizing: content-box; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 30%;
   text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.country-info {
+  max-width: 50%; /* Adjust as needed */
 }
 
-/* MapComponent.css */
-/* Add styles for MapComponent if needed */

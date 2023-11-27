@@ -1,26 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Open+Sans&family=Pacifico&family=Playpen+Sans:wght@300&family=Public+Sans:ital@1&family=Rye&family=Special+Elite&display=swap');
-/* MapComponent.css */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Lobster+Two&family=Open+Sans&family=Playpen+Sans:wght@300&display=swap');
+
 .map-container {
-    margin-top: 20px;
+  max-width: 100%;
+  /* margin-top: 20px; */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0.5, 0.);
+}
+
+.map-frame {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+.view-larger-map {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #4285f4;
+}
+
+.view-larger-map:hover {
+  text-decoration: underline;
+}
+
+/* Mobile phones - single column */
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
   }
   
-  .map-frame {
-    width: 100%;
-    height: 350px;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .country-details { 
+    flex-direction: column;
+    align-items: center;  
+  }
+}
+
+/* Tablet view */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .country-details {
+    flex-direction: column;
+    align-items: center;
   }
   
-  .view-larger-map {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #4285f4; /* Google Blue, change as needed */
+  .map-container {
+    order: -1; /* Put map first */
+    width: 60%;
+    margin: 0 auto 70px; /* Center with margins */
   }
   
-  .view-larger-map:hover {
-    text-decoration: underline;
+  .country-info {
+    text-align: center;    
+    width: 100%; 
+  }
+
+}
+/* Laptops and desktops - side by side columns */
+@media (min-width: 1025px) {
+  .main-container {  
+    flex-direction: row;
   }
   
-  
+  .country-details {
+    flex-direction: row; 
+  }  
+}

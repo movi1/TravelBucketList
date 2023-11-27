@@ -49,8 +49,8 @@ const MapComponent = ({ selectedCityName }) => {
         <>
           <iframe
             title="Map of the selected city"
-            width="425"
-            height="350"
+            width="300"
+            height="300"
             frameBorder="0"
             scrolling="no"
             marginHeight="0"
@@ -64,6 +64,7 @@ const MapComponent = ({ selectedCityName }) => {
               View Larger Map
             </a>
           </small>
+
         </>
       )}
     </div>
