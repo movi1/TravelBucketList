@@ -63,7 +63,7 @@ function App() {
     // Fetch additional details about the selected country
     await fetchCountryDetails(selectedCountryCode);
 
-   
+
 
     // Clear the suggestions and search term
     setSuggestedCountries([]);
@@ -90,33 +90,54 @@ function App() {
         </div>
       </div>
 
-      {selectedCountry && (
+      {selectedCountry && countryDetails && (
         <div className="country-details">
           <div className="country-info">
             <h2>{countryDetails?.name.common}</h2>
-            <p>Capital City: {countryDetails?.capital[0]}</p>
-            <p>
-              Currencies:{" "}
-              {Object.values(countryDetails?.currencies)
-                .map((c) => c.name)
-                .join(", ")}
-            </p>
-            <p>
-              Languages:{" "}
-              {Object.values(countryDetails?.languages)
-                .map((l) => l)
-                .join(", ")}
-            </p>
-            <p>
-              Timezones:{" "}
-              {/* {countryDetails?.timezones.map((tz) => tz).join(", ")} */}
-              {countryDetails?.timezones.map[0]}
-            </p>
+
+            {countryDetails?.capital && countryDetails.capital.length > 0 ? (
+              <p>Capital City: {countryDetails.capital[0]}</p>
+            ) : (
+              <p>Capital City: No Data</p>
+            )}
+
+            {countryDetails?.currencies && Object.keys(countryDetails.currencies).length > 0 ? (
+              <p>
+                Currencies:{" "}
+                {Object.values(countryDetails.currencies)
+                  .map((c) => c.name)
+                  .join(", ")}
+              </p>
+            ) : (
+              <p>Currencies: No Data</p>
+            )}
+
+            {countryDetails?.languages && Object.keys(countryDetails.languages).length > 0 ? (
+              <p>
+                Languages:{" "}
+                {Object.values(countryDetails.languages)
+                  .map((l) => l)
+                  .join(", ")}
+              </p>
+            ) : (
+              <p>Languages: No Data</p>
+            )}
+
+            {countryDetails?.timezones && Object.keys(countryDetails.timezones).length > 0 ? (
+              <p>
+                Timezones: {countryDetails.timezones[0]}
+              </p>
+            ) : (
+              <p>Timezones: No Data</p>
+            )}
           </div>
 
 
+          {countryDetails?.capital && Object.keys(countryDetails.capital).length > 0 ? (
           <MapComponent selectedCityName={countryDetails?.capital[0]} />
-
+          ) : (
+            <p>Capital: No Data</p>
+          )}
         </div>
       )}
     </div>
