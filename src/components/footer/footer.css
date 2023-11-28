@@ -1,0 +1,18 @@
+/* Footer.css */
+
+.footer {
+    background-color: #EAE0D5;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+.social-icon {
+  width: 30px;
+  padding: 25px 8px 0 8px;
+}
+
+.copyright {
+  font-size: 8px;
+}
