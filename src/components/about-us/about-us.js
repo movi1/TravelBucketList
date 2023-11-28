@@ -14,7 +14,6 @@ export const AboutUs = () => {
                 </ul>
             </p>
 
-            <br />
 
             <h2>Sheetal Varsani</h2>
             <p>I love crafting because:
@@ -23,6 +22,15 @@ export const AboutUs = () => {
                     <li>Being creative relaxes me and calms my mind</li>
                 </ul>
             </p>
+
+            <h2>Moira Corradini</h2>
+            <p>I love painting bacause:
+                <ul>
+                    <li>It allows me to express my creativity</li>
+                    <li>Blending colors and seeing a painting come to life exites me</li>
+                </ul>
+            </p>
+          
         </div>
     );
 };
