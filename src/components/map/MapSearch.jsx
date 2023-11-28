@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
-import './App.css';
 
-function MapSearch() {
+export const MapSearch = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
   const [countryDetails, setCountryDetails] = useState(null);
@@ -142,4 +141,3 @@ function MapSearch() {
   );
 }
   
-export default MapSearch ;
