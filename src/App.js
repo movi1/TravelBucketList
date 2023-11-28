@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/header/header';
+import { AboutUs} from './components/about-us/about-us';
 import { Footer } from './components/footer/footer';
 import { MapSearch } from './components/map/MapSearch';
 import './App.css';
@@ -15,14 +16,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<MapSearch />} />
-        <Route path="/about" element={<div>
-          <h1>About us!</h1>
-          <h2>Lauren Cole</h2>
-          <p>My favourite hobby is playing video games, I like it because:
-            <ul>It helps me relax</ul>
-            <ul>I can do it alone</ul>
-          </p>
-        </div>}/>
+        <Route path="/about" element={<AboutUs />}/>
         <Route path="/pack-your-list" />
         <Route path="/bucket-list" />
         <Route path="/signup-login" />
