@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './MapSearch.css';
+
 
 /* Render the MapComponent from the parenrt app selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */
 export const MapComponent = ({ selectedCityName }) => {
@@ -42,13 +44,13 @@ export const MapComponent = ({ selectedCityName }) => {
   
 
   return (
-    <div>
+    <div className="map-container">
       {mapUrl && (
         <>
           <iframe
             title="Map of the selected city"
-            width="425"
-            height="350"
+            width="300"
+            height="300"
             frameBorder="0"
             scrolling="no"
             marginHeight="0"
@@ -62,6 +64,7 @@ export const MapComponent = ({ selectedCityName }) => {
               View Larger Map
             </a>
           </small>
+
         </>
       )}
     </div>
