@@ -31,6 +31,14 @@ export const AboutUs = () => {
                 </ul>
             </p>
           
+            <h2>Louisa Rhodes de Grey </h2>
+            <p>I love reading bacause:
+                <ul>
+                    <li>It allows me to have quiet time</li>
+                    <li>Sometimes I read things to learn, and other times just rubbish!</li>
+                </ul>
+            </p>
+          
         </div>
     );
 };
