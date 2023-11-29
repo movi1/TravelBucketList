@@ -48,6 +48,16 @@ export const MapSearch = () => {
     const term = event.target.value;
     setSearchTerm(term);
 
+        // Check if the input is clicked to reset the state
+        if (term === '') {
+          setSelectedCountry('');
+          setCountryDetails(null);
+          setSuggestedCountries([]);
+          setSearchTerm('');
+        } else {
+          setSearchTerm(term);
+    
+
     // Filter countries based on the input term
     const filteredCountries = countries.filter(country => {
       return country.name.common.toLowerCase().startsWith(term.toLowerCase());
@@ -55,6 +65,7 @@ export const MapSearch = () => {
 
     // Display suggestions
     setSuggestedCountries(filteredCountries);
+  }
   };
 
   const handleCountrySelect = async (selectedCountryCode) => {
@@ -71,12 +82,15 @@ export const MapSearch = () => {
     setSearchTerm('');
   };
 
+  
+
   return (
+    
     <div className="main-container">
       <div className="search-container">
         <input
           type="text"
-          placeholder="Find your destination... "
+          placeholder="Where do you want to go?"
           value={searchTerm}
           onChange={handleSearchTermChange}
           
