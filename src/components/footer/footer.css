@@ -1,19 +1,26 @@
 /* Footer.css */
 
 .footer {
-    background-color: #EAE0D5;
-    text-align: center;
-    /* position: absolute; */
-    width: 100%;
-    bottom: 0;
-    height: 15vh;
-  }
-
-.social-icon {
-  width: 30px;
-  padding: 25px 8px 0 8px;
+  background-color: #22333B; /* Adjust the background color of the footer */
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* Adjust the text color */
 }
 
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px; /* Set a fixed height to maintain aspect ratio */
+    padding: 3px; /* Reduce the padding to make the border smaller */
+    background-color: #f4f4f4; /* Adjust the background color of the icon */
+    border-radius: 50%; /* Make the icon circular */
+  }
 .copyright {
   font-size: 8px;
 }

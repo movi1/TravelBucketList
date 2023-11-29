@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Kanit:ital,wght@1,300&family=Montserrat&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Montserrat&family=Open+Sans&family=Poppins&family=Roboto&display=swap');
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: " Poppins", sans-serif;
 }
 .main-container {
   display: flex;

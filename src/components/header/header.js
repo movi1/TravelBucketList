@@ -4,8 +4,11 @@ import './header.css';
 export const Header = () => {
     return (
         <header>
-            <div className="logo">
-                <h1>PACK & GO</h1>
+            <div className="header-container">
+                <div className="logo">
+                    <img src="./images/logo-backpack.png" alt="" style={{ width: '90px' }} />
+                </div>
+                <h1 style={{ fontSize: '2em', margin: '0' }}>PACK & GO</h1>
             </div>
             <nav>
                 <ul>
