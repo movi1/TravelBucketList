@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
+import CountryDetails from './CountryDetails';
 
 export const MapSearch = () => {
   const [countries, setCountries] = useState([]);
@@ -7,7 +8,7 @@ export const MapSearch = () => {
   const [countryDetails, setCountryDetails] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestedCountries, setSuggestedCountries] = useState([]);
-
+  const [selectedCountries, setSelectedCountries] = useState([]);
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())
@@ -62,20 +63,23 @@ export const MapSearch = () => {
     // Fetch additional details about the selected country
     await fetchCountryDetails(selectedCountryCode);
 
-
+    // Add newly selected country to state array
+    setSelectedCountries(prevCountries => [...prevCountries, selectedCountryCode]);
 
     // Clear the suggestions and search term
     setSuggestedCountries([]);
     setSearchTerm('');
   };
+
   return (
     <div className="main-container">
       <div className="search-container">
         <input
           type="text"
-          placeholder="Search for a country"
+          placeholder="Find your destination... "
           value={searchTerm}
           onChange={handleSearchTermChange}
+          
         />
         <div className="suggestions">
           {suggestedCountries.map((country) => (
@@ -88,6 +92,8 @@ export const MapSearch = () => {
           ))}
         </div>
       </div>
+
+
 
       {selectedCountry && countryDetails && (
         <div className="country-details">
@@ -131,13 +137,17 @@ export const MapSearch = () => {
             )}
           </div>
           {countryDetails?.capital && Object.keys(countryDetails.capital).length > 0 ? (
-          <MapComponent selectedCityName={countryDetails?.capital[0]} />
+            <MapComponent selectedCityName={countryDetails?.capital[0]} />
           ) : (
             <p>Capital: No Data</p>
           )}
         </div>
       )}
+      {selectedCountries.map(country => (
+    <CountryDetails key={country} countryCode={country} /> 
+  ))
+}
+
     </div>
   );
-}
-  
+};

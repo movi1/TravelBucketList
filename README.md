@@ -48,3 +48,28 @@ git commit -m "Descriptive commit message"
 git push 
 ```
 
+
+## Color Legend
+
+### Background Color
+- Main background: #FFFFFF (white)
+- Secondary background: #F2F2F2 (light gray)
+
+### Text Color
+- Main text: #333333 (dark gray)
+- Secondary text: #666666 (medium gray)
+- Accent text: #007BFF (blue)
+
+### Buttons and Links
+- Button background: #007BFF (blue)
+- Button text: #FFFFFF (white)
+
+### Borders
+- Border color: #0A0908
+
+### Shadows
+- Box shadow: #0A0908 rgba(0, 0, 0, 0.1)
+
+### Other Colors
+- Accent color: #FFD700 (gold)
+- Error color: #FF0000 (red)
