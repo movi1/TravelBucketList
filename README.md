@@ -48,3 +48,12 @@ git commit -m "Descriptive commit message"
 git push 
 ```
 
+
+## Color Legend
+
+#22333B
+#0A0908
+#EAE0D5
+#C6AC8F
+#5E503F
+#fff

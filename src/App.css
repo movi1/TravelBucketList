@@ -1,8 +1,6 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Lobster+Two&family=Open+Sans&family=Playpen+Sans:wght@300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Kanit:ital,wght@1,300&family=Montserrat&family=Open+Sans&display=swap');
 body {
-  font-family: "Kanit", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .main-container {
   display: flex;
@@ -11,26 +9,56 @@ body {
   justify-content: center;
   /* height: 100vh; */
   background-color: #f4f4f4;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px #0A0908(0, 0, 0, 0.1);
   min-height: 70vh;
 }
-
 .search-container {
   position: relative;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 6px 6px rgba(0, 0, 0.1, 0.1);
-  background-color: #fff;
+  box-shadow: 0 4px 6px  rgb(94,80,63);
+  background-color: #f4f4f4;
   border-radius: 10px;
   margin-bottom: 20px;
+ 
 }
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0px 3px 5px rgba(10, 9, 8, 0.10);
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  
+ 
+}
+
+input::placeholder {
+  /* color: rgba(34, 51, 59, 0.7);  */
+  color: #22333B;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid  #C6AC8F;
+  box-shadow: 0px 6px 10px rgba(0, 123, 255, 0.1); 
+  
+}
+
+
 
 .suggestions {
   position: absolute;
   top: 60px; /* Adjust the distance from the input */
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 5px #0A0908(0, 0, 0, 0.1);
+  z-index: 999; /* Adjust the value based on your layout */
+  color: #22333B;
 }
 
 .suggestions div {
@@ -40,34 +68,27 @@ body {
 }
 
 .suggestions div:hover {
-  background-color: #f0f0f0;
-}
-
-input {
-  max-width: 70%;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #EAE0D5;
 }
 
 .country-details {
   /* box-sizing: content-box; */
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-evenly;
   position: relative;
   max-width: 70%;
   text-align: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   /* padding: 15px; */
   border-radius: 10px;
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 5px  rgb(94,80,63);
+  background-color: #f0f0f0;
+  color: #22333B;
 }
 
 .country-info {
-  max-width: 100%; 
+  max-width: 100%;
   padding: 10px;
   margin: 0 5px 30px;
 }
