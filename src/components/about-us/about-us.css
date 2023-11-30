@@ -1,24 +1,51 @@
-/* about-us.css */
-
-.about-us {
+.about-us-container {
+    max-width: 800px; 
+    width: 100%;
+    margin-left: 40px;
+  }
+  
+  .about-us-intro {
     text-align: center;
-    /* height: 65vh; */
-}
-
-.about-us ul {
-    list-style-position: inside;
-    text-align: center;
-    padding-left: 0;
-}
-
-h1 {
-    padding: 20px 0;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-p, li, ul {
-    font-size: 1rem;
-}
+    margin-bottom: 30px;
+    font-family: "EB Garamond", sans-serif;
+    color: #22333B;
+    
+  }
+  
+  .about-us-profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px; 
+    /* margin-left: 40px; */
+  } 
+  
+  .profile {
+    width: 50%;
+    margin-bottom: 30px;
+   
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+  }
+  
+  .profile h2 {
+    color: #22333B;
+    margin-bottom: 10px;
+  }
+  
+  .profile p {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .profile ul {
+    margin-top: 10px;
+    list-style: inside;
+  }
+  
+  @media (max-width: 600px) {
+    .about-us-profiles {
+      grid-template-columns: 1fr; 
+    }
+  }

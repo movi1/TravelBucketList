@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './footer.css';
 
 const facebook_icon = process.env.PUBLIC_URL + '/facebook_icon.png';

@@ -6,9 +6,9 @@ export const Header = () => {
         <header>
             <div className="header-container">
                 <div className="logo">
-                    <img src="./images/logo-backpack.png" alt="" style={{ width: '90px' }} />
+                    <img src="./images/logo1.svg" alt=""/>
                 </div>
-                <h1 style={{ fontSize: '2em', margin: '0' }}>PACK & GO</h1>
+                <h1 className="title">PACK & GO</h1>
             </div>
             <nav>
                 <ul>
