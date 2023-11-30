@@ -10,6 +10,7 @@ export const MapSearch = () => {
   const [suggestedCountries, setSuggestedCountries] = useState([]);
   const [selectedCountries, setSelectedCountries] = useState([]);
   useEffect(() => {
+    
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())
       .then((data) => {

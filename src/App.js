@@ -3,7 +3,8 @@ import { Header } from './components/header/header';
 import { AboutUs } from './components/about-us/about-us';
 import { Footer } from './components/footer/footer';
 import { MapSearch } from './components/map/MapSearch';
-
+import { Home } from './components/home/home';
+import { BucketList } from './components/bucket-list/bucket-list';
 import './App.css';
 
 
@@ -16,10 +17,10 @@ function App() {
       {/* UNCOMMENT THE ROUTES BELOW AS WE START BUILDING EACH PAGE */}
 
       <Routes>
-        <Route path="/" element={<MapSearch />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/pack-your-list" />
-        <Route path="/bucket-list" />
+        <Route path="/bucket-list" element={<BucketList />} />
         <Route path="/signup-login" />
       </Routes>
 
