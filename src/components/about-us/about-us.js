@@ -51,6 +51,18 @@ export const AboutUs = () => {
               </ul>
             </p>
           </div>
+
+          <div className="profile">
+            <h2>Shiromini Satkunarajah</h2>
+            <p>
+              I love watching movies bacause: 
+              <ul>
+                <li>It allows me to go forget reality and go into another world</li>
+                <li>I like it when a movies has action, comedy and a bit of romance </li>
+              </ul>
+            </p>
+          </div>
+          
         </div>
       </div>
     );
