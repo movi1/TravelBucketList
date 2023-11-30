@@ -4,8 +4,11 @@ import './header.css';
 export const Header = () => {
     return (
         <header>
-            <div className="logo">
-                <h1>PACK & GO</h1>
+            <div className="header-container">
+                <div className="logo">
+                    <img src="./images/logo1.svg" alt=""/>
+                </div>
+                <h1 className="title">PACK & GO</h1>
             </div>
             <nav>
                 <ul>
