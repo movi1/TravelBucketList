@@ -3,7 +3,7 @@ import './MapSearch.css';
 
 
 /* Render the MapComponent from the parenrt app selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */
-export const MapComponent = ({ selectedCityName }) => {
+export default function MapComponent({ selectedCityName }) {
   const [mapUrl, setMapUrl] = useState('');
 
   console.log(selectedCityName)
@@ -70,5 +70,3 @@ export const MapComponent = ({ selectedCityName }) => {
     </div>
   );
 };
-
-export default MapComponent;
