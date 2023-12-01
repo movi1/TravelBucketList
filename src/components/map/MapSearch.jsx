@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
 import CountryDetails from './CountryDetails';
 
-export const MapSearch = () => {
+export const  MapSearch = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
   const [countryDetails, setCountryDetails] = useState(null);
@@ -166,3 +166,5 @@ export const MapSearch = () => {
     </div>
   );
 };
+
+export default MapSearch;

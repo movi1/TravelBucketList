@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/header/header';
 import { AboutUs } from './components/about-us/about-us';
@@ -15,7 +16,6 @@ function App() {
       <Header /> {/* this will be on every page */}
 
       {/* UNCOMMENT THE ROUTES BELOW AS WE START BUILDING EACH PAGE */}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
