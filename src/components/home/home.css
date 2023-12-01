@@ -1,3 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with any preferred font */
+}
+
 .main-content {
-    min-height: 70vh; /* Adjust as needed */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('/public/images/car.png') center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.explore-btn {
+  background-color: #27ae60; /* Green color for the button */
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+  background-color: #218c53; /* Darker green color on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-content {
+  animation: fadeIn 2s ease-out;
+}
