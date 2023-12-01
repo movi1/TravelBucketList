@@ -1,0 +1,39 @@
+{
+  "🎫 Essentials": [
+    "Passport",
+    "Boarding pass",
+    "Any VISAs/ESTAs you might need",
+    "Travel insurance documents",
+    "Wallet, credit & debit cards, foreign currency"
+ 
+  ],
+  "🧳 Clothes": [
+    "Painkillers",
+    "Pack of tissues",
+    "Wet wipes"
+
+  ],
+  "🛫 Carry-On": [
+    "Earplugs",
+    "Eye mask",
+    "Neck pillow"
+  
+ ],
+ "🔌 Misc": [
+  "Phone",
+  "Phone charger",
+  "Travel plug adapter",
+  "Portable charger/power bank",
+  "Headphones",
+  "iPad/tablet/Kindle"
+
+],
+"💄 Make-Up": [
+ "Lipstick",
+ "Eyeshadow"
+
+],
+"🌍 Your Trip": [
+ "Logic goes here - be brave"
+]
+}

@@ -3,6 +3,7 @@ import { Header } from './components/header/header';
 import { AboutUs } from './components/about-us/about-us';
 import { Footer } from './components/footer/footer';
 import { MapSearch } from './components/map/MapSearch';
+import PackList from './components/pack-list/pack-list';
 
 import './App.css';
 
@@ -18,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MapSearch />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/pack-your-list" />
+        <Route path="/pack-your-list" element={<PackList />} />
         <Route path="/bucket-list" />
         <Route path="/signup-login" />
       </Routes>
