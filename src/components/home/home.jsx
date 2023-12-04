@@ -1,8 +1,7 @@
 // home.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from "react";
-import "animate.css";
+import 'animate.css';
 import './home.css';
 
 export const Home = () => {
@@ -10,42 +9,27 @@ export const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setAnimate(true); 
+      setAnimate(true);
     }, 500);
-  }, [])
+  }, []);
 
   return (
     <div className="containers">
-      <div
-        className={`row-title animate__animated ${
-          animate ? "animate__fadeInDown" : ""
-        }`}
-      >
-        <h1 className="title-home-page">Your Dream Destinations Await!</h1>
+      {/* Container 1: Title */}
+      <div className={`row-title animate__animated ${animate ? 'animate__fadeInDown' : ''}`}>
+        <h1 className="title-home-page">Welcome to Pack & Go</h1>
 
         <p
-          className={`subtitle animate__animated ${
-            animate ? "animate__fadeInDown" : ""
-          } animate__delay-1s`}
+          className={`subtitle animate__animated ${animate ? 'animate__fadeInDown' : ''} animate__delay-1s`}
         >
-          Create Your Travel Bucket List and Start Exploring
+          Your Ultimate Hub for Effortless Travel Planning and Exploration
         </p>
 
-        <p
-          className={`description animate__animated ${
-            animate ? "animate__fadeInDown" : ""
-          } animate__delay-2s`}
-        >
-          Discover amazing places, mark your favorites, and turn your travel
-          dreams into reality.
-        </p>
         <Link
           to="/bucket-list"
-          className={`explore-btn animate__animated ${
-            animate ? "animate__fadeInDown" : ""
-          } animate__delay-3s`}
+          className={`explore-btn animate__animated ${animate ? 'animate__fadeInDown' : ''} animate__delay-2s`}
         >
-          Explore Bucket List
+          Start Your Journey
         </Link>
       </div>
 
@@ -55,20 +39,35 @@ export const Home = () => {
           <img src="/images/car.png" alt="Car" />
         </div>
       </div>
-     
-        {/* Container 3: Meet the Team */}
-        <div className="row-team">
-          <h2>Meet the Team</h2>
-          <div className="team-members">
-            {/* Add your team member avatars with links to the about us page */}
-            <Link to="/about-us">
-              <img src="/images/movi-avatar.png" alt="Team Member 1" />
-            </Link>
-            {/* Repeat for other team members */}
-          </div>
+
+      {/* Container 3: Explore and Simplify */}
+      <div
+        className={`row-team animate__animated ${
+          animate ? 'animate__fadeInUp' : ''
+        }`}
+      >
+        <h1 className="team-heading">Explore, Plan, and Simplify Your Travels</h1>
+        <div className="team-content">
+          <p
+            className={`team-description animate__animated ${
+              animate ? 'animate__fadeInUp' : ''
+            } animate__delay-1s`}
+          >
+            Pack & Go – the place where your travel dreams come to life. Discover amazing destinations, plan your trips effortlessly, and simplify your travel experience. Join us on a journey of exploration and adventure!
+          </p>
+
+          {/* Sign Up for Free Link */}
+          <Link
+            to="/signup"
+            className={`cta-btn animate__animated ${
+              animate ? 'animate__fadeInUp' : ''
+            } animate__delay-2s`}
+          >
+            Join the Adventure
+          </Link>
         </div>
       </div>
-    
+    </div>
   );
 };
 
