@@ -28,7 +28,7 @@ function TestimonialsCarousel() {
           <p>MEREDITH, Seattle</p>
         </div>
         <div className='testimonial-slide'>
-          <h3>The worst thing about going on holiday is packing...<br></br>this app is a godsend!</h3>
+          <h3>Packing is the worst thing about going on holiday...<br></br>so this app is a godsend!</h3>
           <p>PRIYA, Crewe</p>
         </div>
         <div className='testimonial-slide'>
