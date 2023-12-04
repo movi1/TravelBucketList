@@ -1,0 +1,23 @@
+/* testimonials.css */
+
+h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+
+.testimonials-container {
+    background-color: #c6ac8f;
+    padding: 0px 40px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 50px;
+  }
+  
+.testimonial-slide {
+    padding: 70px 0;
+    text-align: center;
+}

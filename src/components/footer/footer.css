@@ -2,10 +2,11 @@
 
 .footer {
   background-color: #22333b;
-  padding: 20px;
+  padding: 30px;
+  padding-top: 50px;
   text-align: center;
   color: #fff;
-  margin-top: 20px; /* Add margin at the top to create space */
+  margin-top: 90px; /* Add margin at the top to create space */
 }
 
 .footer-icons {
