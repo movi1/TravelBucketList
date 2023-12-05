@@ -6,7 +6,9 @@
   padding-top: 50px;
   text-align: center;
   color: #fff;
-  margin-top: 90px; /* Add margin at the top to create space */
+  margin-top: auto;
+  /* min-height: 10vh; */
+
 }
 
 .footer-icons {
