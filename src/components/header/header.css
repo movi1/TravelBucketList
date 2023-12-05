@@ -1,75 +1,18 @@
-/* Header.css */
 
-header {
+.custom-navbar {
+  background-color: #22333b; /* Your desired background color */
+}
+
+/* Add your custom styles */
+.custom-navbar {
   background-color: #22333b;
-  color: #f0f0f0;
-  /* padding: 60px 100px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  height: 15vh;
- 
+  color: white;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
+.custom-navbar .navbar-nav .nav-link {
+  color: white;
 }
 
-.logo {
-  text-align: center;
-  margin: 20px;
-}
-
-.logo img {
-  width: 120px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.title {
-  font-family: "EB Garamond", sans-serif;
-  font-size: 50px;
-  /* font-style: italic; */
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 50px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #f0f0f0;
-  /* font-weight: bold; */
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-}
-
-/* Styles for responsiveness */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
+.custom-navbar .navbar-toggler-icon {
+   color: white; 
 }

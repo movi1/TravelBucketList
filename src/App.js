@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/header/header';
 import { AboutUs } from './components/about-us/about-us';
 import { Footer } from './components/footer/footer';
-import { MapSearch } from './components/map/MapSearch';
 import { Home } from './components/home/home';
 import { BucketList } from './components/bucket-list/bucket-list';
 import "animate.css/animate.min.css";
