@@ -51,9 +51,9 @@ git push
 
 ## Color Legend
 
-#22333B
-#0A0908
-#EAE0D5
-#C6AC8F
-#5E503F
+#22333B blue
+#0A0908 almost black
+#EAE0D5 light pink
+#C6AC8F light brown
+#5E503F brown
 #fff
