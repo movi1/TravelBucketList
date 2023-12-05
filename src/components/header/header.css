@@ -1,18 +1,50 @@
 
-.custom-navbar {
-  background-color: #22333b; /* Your desired background color */
-}
-
 /* Add your custom styles */
 .custom-navbar {
-  background-color: #22333b;
+  background-color: #22333B;
   color: white;
+  font-family: "Raleway", sans-serif;
+  
 }
 
 .custom-navbar .navbar-nav .nav-link {
   color: white;
+
 }
 
-.custom-navbar .navbar-toggler-icon {
-   color: white; 
+.navbar-nav .nav-link:hover {
+  color: #C6AC8F;
 }
+.custom-navbar .navbar-toggler-icon {
+  color: white;
+  
+ 
+}
+
+#basic-navbar-nav {
+  flex-grow: 0;
+  font-size: 20px;
+  
+}
+.navbar-brand-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  
+  
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  
+}
+.navbar-brand img,
+.navbar-brand .title {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", sans-serif;
+}
+.navbar-brand img {
+margin-right: 40px;
+}
+
