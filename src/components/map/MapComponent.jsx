@@ -43,8 +43,8 @@ export default function MapComponent({ selectedCityName }) {
   }, [selectedCityName]);
   
 
-  return (
-    <div className="map-container">
+  return (                        // data-testid is used for testing to identify HTML elements.
+    <div className="map-container" data-testid="map-container"> 
       {mapUrl && (
         <>
           <iframe
