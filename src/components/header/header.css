@@ -1,75 +1,50 @@
-/* Header.css */
 
-header {
-  background-color: #22333b;
-  color: #f0f0f0;
-  /* padding: 60px 100px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  height: 15vh;
+/* Add your custom styles */
+.custom-navbar {
+  background-color: #22333B;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: white;
+
+}
+
+.navbar-nav .nav-link:hover {
+  color: #C6AC8F;
+}
+.custom-navbar .navbar-toggler-icon {
+  color: white;
+  
  
 }
 
-.header-container {
+#basic-navbar-nav {
+  flex-grow: 0;
+  font-size: 20px;
+  
+}
+.navbar-brand-wrapper {
   display: flex;
   align-items: center;
+  margin-right: auto;
+  
+  
 }
-
-.logo {
-  text-align: center;
-  margin: 20px;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  
 }
-
-.logo img {
-  width: 120px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.title {
-  font-family: "EB Garamond", sans-serif;
-  font-size: 50px;
-  /* font-style: italic; */
-}
-
-nav ul {
-  list-style-type: none;
+.navbar-brand img,
+.navbar-brand .title {
   margin: 0;
   padding: 0;
-  display: flex;
+  font-family: "EB Garamond", sans-serif;
+}
+.navbar-brand img {
+margin-right: 40px;
 }
 
-nav ul li {
-  margin-right: 50px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #f0f0f0;
-  /* font-weight: bold; */
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-}
-
-/* Styles for responsiveness */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-}
