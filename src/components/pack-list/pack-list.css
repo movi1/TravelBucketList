@@ -1,0 +1,38 @@
+/* pack-list.css */
+
+/* Center the container */
+.accordion-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+ /* Disable user selection on accordion cards */
+.accordion-button {
+    user-select: none;
+  }
+  
+  /* Additional styles for .pack-list */
+  .pack-list {
+    text-align: center;
+  }
+  
+  .pack-list ul {
+    list-style-position: inside;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  h1 {
+    padding: 20px 0;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p,
+  li,
+  ul {
+    font-size: 1rem;
+  }
+  

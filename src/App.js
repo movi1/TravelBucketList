@@ -5,6 +5,7 @@ import { Home } from "./components/home/home";
 import { AboutUs } from "./components/about-us/about-us";
 import TestimonialCarousel from "./components/testimonial-carousel/testimonial-carousel";
 import { BucketList } from "./components/bucket-list/bucket-list";
+import PackList from './components/pack-list/pack-list';
 import { Footer } from "./components/footer/footer";
 
 import "animate.css/animate.min.css";
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<><Home /></>} />
         <Route path="/about" element={<><AboutUs /><TestimonialCarousel /></>} />
-        <Route path="/pack-your-list" />
+        <Route path="/pack-your-list" element={<PackList />} />
         <Route path="/bucket-list" element={<BucketList />} />
         <Route path="/signup-login" />
       </Routes>
