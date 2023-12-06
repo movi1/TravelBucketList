@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import TestimonialCarousel from "./testimonial-carousel";
 
-
 // npm run test
 
 describe("Carousel", () => {
@@ -27,7 +26,9 @@ describe("Carousel", () => {
     window.scrollTo = jest.fn();
     const backToTop = screen.getByText("Back to Top");
     fireEvent.click(backToTop);
-    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      behavior: "smooth",
+    });
   });
-  
 });
