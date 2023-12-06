@@ -1,4 +1,6 @@
-/* testimonials.css */
+body {
+    background-color: #5e503f;
+}
 
 h3 {
     font-family: "EB Garamond", sans-serif;
@@ -8,19 +10,71 @@ h3 {
     font-weight: 100;
 }
 
+.arrow-down {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    z-index: 2;
+}
+
+.intro-text {
+    position:relative;
+    font-family: "EB Garamond", sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding-top: 20px;
+    margin-top: 50px;
+    color: #f8f8f8;
+}
+
 
 .testimonials-container {
-    background-color: #5e503f;
-    color: #f8f8f8;
-    padding: 0px 40px;
-    width: 50%;
-    margin: 0 auto;
+    background-color: #f8f8f8;
+    color: #22333b;
+    padding: 0px 20px;
+    width: 70%;
+    margin: 100px auto;
+    margin-bottom: 150px;
     text-align: center;
     border-radius: 50px;
-    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
   }
   
 .testimonial-slide {
     padding: 70px 0;
     text-align: center;
+    width: 60%;
+}
+
+.custom-prev-button,
+.custom-next-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size:3rem;
+    color: #22333b;
+    font-family: "EB Garamond", sans-serif;
+    cursor: pointer;
+}
+
+.custom-prev-button {
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+  
+.custom-next-button {
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    transform: translateY(-50%);
+    z-index: 2;
 }
