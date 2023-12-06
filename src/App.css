@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=EB+Garamond:wght@500&family=Josefin+Slab&family=Kanit:ital,wght@1,300&family=Montserrat&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Raleway&display=swap');
 body {
   font-family: " Raleway", sans-serif;
+  background-color: #f4f4f4;
 
 }
 .main-container {
