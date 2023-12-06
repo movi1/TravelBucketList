@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +6,8 @@ import './testimonials.css';
 
 
 function TestimonialsCarousel() {
-  const slider = React.useRef(null);
+  const testimonialsRef = useRef(null);
+  const slider = useRef(null);
 
   const handlePrevClick = () => {
     slider?.current?.slickPrev();
@@ -14,6 +15,14 @@ function TestimonialsCarousel() {
 
   const handleNextClick = () => {
     slider?.current?.slickNext();
+  };
+
+  const handleDownArrowClick = () => {
+    testimonialsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleUpArrowClick = () => {
+    window.scrollTo({top: 0, behavior: 'smooth',});
   };
 
   var settings = {
@@ -39,11 +48,12 @@ function TestimonialsCarousel() {
 
   return (
     <div className="testimonials">
-      <div className="intro-text">
-        <img src="/images/arrowImage.png" alt="Arrow" className="arrow-down" />
-        <p>This is an introduction to the testimonials or any other text you want to include.</p>
+      <div className="testimonials-text">
+        <p>TESTIMONIALS</p>
+        <p className="testimonials-tagline">See what our users have to say!</p>
+        <img src="/images/arrowImage.png" alt="Arrow" className="down-arrow" onClick={handleDownArrowClick} />
       </div>
-      <div className='testimonials-container'>
+      <div ref={testimonialsRef} className='testimonials-container'>
         <button className="custom-prev-button" onClick={handlePrevClick}>&lt;</button>
         
         <Slider ref={slider} {...settings} className='testimonials-carousel'>
@@ -70,6 +80,10 @@ function TestimonialsCarousel() {
         </Slider>
 
         <button className="custom-next-button" onClick={handleNextClick}>&gt;</button>
+      </div>
+      <div className="back-to-top">
+        <p>Back to Top</p>
+        <img src="/images/arrowImage.png" alt="Up-Arrow" className="up-arrow" onClick={handleUpArrowClick} />
       </div>
     </div>
   );

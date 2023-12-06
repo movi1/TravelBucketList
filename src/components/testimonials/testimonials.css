@@ -1,5 +1,5 @@
-body {
-    background-color: #5e503f;
+.testimonials {
+    background-color: #C6AC8F;
 }
 
 h3 {
@@ -10,28 +10,57 @@ h3 {
     font-weight: 100;
 }
 
-.arrow-down {
+.down-arrow {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 50px; 
+    height: auto; 
     cursor: pointer;
     z-index: 2;
 }
 
-.intro-text {
+.testimonials-text {
     position:relative;
     font-family: "EB Garamond", sans-serif;
+    font-weight:800;
     text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.5;
-    padding-top: 20px;
-    margin-top: 50px;
-    color: #f8f8f8;
+    font-size: 35px;
+    padding-top: 300px;
+    color: #22333b;
 }
 
+.testimonials-tagline {
+    font-family: "Raley", sans-serif;
+    font-weight:100;
+    font-size: 20px;
+
+}
+
+.up-arrow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    padding-top: 120px;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 50px; 
+    height: auto; 
+    cursor: pointer;
+    z-index: 2;
+}
+
+.back-to-top {
+    position:relative;
+    font-family: "Raley", sans-serif;
+    text-align: center;
+    font-weight:100;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-top: 0px;
+    padding-bottom: 90px;
+    color: #22333b;
+}
 
 .testimonials-container {
     background-color: #f8f8f8;
@@ -39,7 +68,7 @@ h3 {
     padding: 0px 20px;
     width: 70%;
     margin: 100px auto;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     text-align: center;
     border-radius: 50px;
     position: relative;
