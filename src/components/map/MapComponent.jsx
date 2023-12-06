@@ -3,7 +3,7 @@ import './MapSearch.css';
 
 
 /* Render the MapComponent from the parenrt app selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */
-export const MapComponent = ({ selectedCityName }) => {
+export default function MapComponent({ selectedCityName }) {
   const [mapUrl, setMapUrl] = useState('');
 
   console.log(selectedCityName)
@@ -43,8 +43,8 @@ export const MapComponent = ({ selectedCityName }) => {
   }, [selectedCityName]);
   
 
-  return (
-    <div className="map-container">
+  return (                        // data-testid is used for testing to identify HTML elements.
+    <div className="map-container" data-testid="map-container"> 
       {mapUrl && (
         <>
           <iframe
@@ -70,5 +70,3 @@ export const MapComponent = ({ selectedCityName }) => {
     </div>
   );
 };
-
-export default MapComponent;

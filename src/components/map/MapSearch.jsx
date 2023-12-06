@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
 import CountryDetails from './CountryDetails';
 
-export const MapSearch = () => {
+export const  MapSearch = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
   const [countryDetails, setCountryDetails] = useState(null);
@@ -10,6 +10,7 @@ export const MapSearch = () => {
   const [suggestedCountries, setSuggestedCountries] = useState([]);
   const [selectedCountries, setSelectedCountries] = useState([]);
   useEffect(() => {
+    
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())
       .then((data) => {
@@ -165,3 +166,5 @@ export const MapSearch = () => {
     </div>
   );
 };
+
+export default MapSearch;
