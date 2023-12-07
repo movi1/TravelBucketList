@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
 import CountryDetails from './CountryDetails';
 import SaveBucketList from './SaveBucketList';
+import Message from './Message';
 
 
 export const MapSearch = () => {
@@ -13,6 +14,8 @@ export const MapSearch = () => {
   const [selectedCountries, setSelectedCountries] = useState([]);
   const [bucketList, setBucketList] = useState([]);
   const [showBucketList, setShowBucketList] = useState(false);
+  const [message, setMessage] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
 
@@ -87,14 +90,29 @@ export const MapSearch = () => {
     setSearchTerm('');
   };
 
+  const popMessage = () => {
+    setMessage('');
+  };
+
+  const country = countries.find(c => c.cca2 === selectedCountry);
   const addToBucketList = () => {
     if (selectedCountry) {
-      // Add the selected country to the bucket list
-      setBucketList([...bucketList, selectedCountry]);
-      setShowBucketList(true);
+      if (!bucketList.includes(selectedCountry)) {
+        // Add the selected country to the bucket list
+        setBucketList([...bucketList, selectedCountry]);
+        setShowBucketList(true);
+        setMessage({ text: `"${country?.name?.common}" added to your bucket list!`, type: 'success' });
+
+      } else if (bucketList.length >= 5) {
+        // Bucket list is full
+        setMessage({ text: 'Your bucket list is full. You can only save up to 5 countries.', type: 'warning' });
+      } else {
+        // Country is already in the bucket listt
+
+        setMessage({ text: `"${country?.name?.common}" is already in your bucket list.`, type: 'info' });;
+      }
     }
   };
-  
 
   return (
 
@@ -165,6 +183,14 @@ export const MapSearch = () => {
             {/* Button to add to bucket list */}
             <button onClick={addToBucketList}>Add to Bucket List</button>
           </div>
+          <button onClick={() => setIsOpen(true)}>
+            View Bucket List
+          </button>
+          {isOpen && (
+            <SaveBucketList
+              onClose={() => setIsOpen(false)}
+            />
+          )}
 
           {countryDetails?.capital && Object.keys(countryDetails.capital).length > 0 ? (
             <MapComponent selectedCityName={countryDetails?.capital[0]} />
@@ -183,6 +209,7 @@ export const MapSearch = () => {
           countries={countries}
         />
       )}
+      <Message text={message.text} onClose={popMessage} />
     </div>
   );
 };

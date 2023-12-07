@@ -17,6 +17,7 @@ import './App.css';
 function App() {
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isBucketListOpen, setIsBucketListOpen] = useState(false);
 
   const handleAddItem = () => {
     setIsVisible(true);
@@ -36,7 +37,7 @@ function App() {
         <Route path="/signup-login" />
       </Routes>
       {isVisible && <SaveBucketList />}
-
+      {isBucketListOpen && <SaveBucketList />}
 
       <Footer />
     </div>
