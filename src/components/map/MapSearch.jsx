@@ -4,7 +4,6 @@ import CountryDetails from './CountryDetails';
 import SaveBucketList from './SaveBucketList';
 
 
-
 export const MapSearch = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
@@ -13,6 +12,7 @@ export const MapSearch = () => {
   const [suggestedCountries, setSuggestedCountries] = useState([]);
   const [selectedCountries, setSelectedCountries] = useState([]);
   const [bucketList, setBucketList] = useState([]);
+  const [showBucketList, setShowBucketList] = useState(false);
 
   useEffect(() => {
 
@@ -41,7 +41,6 @@ export const MapSearch = () => {
       console.error('Error fetching country details:', error);
     }
   };
-
 
   const ACCESS_TOKEN = 'pk.eyJ1IjoibW92aTgiLCJhIjoiY2xwNnF2NjBtMmRudDJ2cWs2Z3Fydmh0cCJ9.q7q8e9YPRQAiWqJ8k8WQ-Q';
 
@@ -92,10 +91,10 @@ export const MapSearch = () => {
     if (selectedCountry) {
       // Add the selected country to the bucket list
       setBucketList([...bucketList, selectedCountry]);
+      setShowBucketList(true);
     }
   };
-
-
+  
 
   return (
 
@@ -178,9 +177,12 @@ export const MapSearch = () => {
         <CountryDetails key={country} countryCode={country} />
       ))
       }
-      <SaveBucketList bucketList={bucketList}
-        countries={countries}
-      />
+      {showBucketList && (
+        <SaveBucketList
+          bucketList={bucketList}
+          countries={countries}
+        />
+      )}
     </div>
   );
 };
