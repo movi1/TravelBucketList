@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import MapComponent from './MapComponent';
 import CountryDetails from './CountryDetails';
+import SaveBucketList from './SaveBucketList';
 
-export const  MapSearch = () => {
+
+
+export const MapSearch = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
   const [countryDetails, setCountryDetails] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestedCountries, setSuggestedCountries] = useState([]);
   const [selectedCountries, setSelectedCountries] = useState([]);
+  const [bucketList, setBucketList] = useState([]);
+
   useEffect(() => {
-    
+
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())
       .then((data) => {
@@ -49,24 +54,24 @@ export const  MapSearch = () => {
     const term = event.target.value;
     setSearchTerm(term);
 
-        // Check if the input is clicked to reset the state
-        if (term === '') {
-          setSelectedCountry('');
-          setCountryDetails(null);
-          setSuggestedCountries([]);
-          setSearchTerm('');
-        } else {
-          setSearchTerm(term);
-    
+    // Check if the input is clicked to reset the state
+    if (term === '') {
+      setSelectedCountry('');
+      setCountryDetails(null);
+      setSuggestedCountries([]);
+      setSearchTerm('');
+    } else {
+      setSearchTerm(term);
 
-    // Filter countries based on the input term
-    const filteredCountries = countries.filter(country => {
-      return country.name.common.toLowerCase().startsWith(term.toLowerCase());
-    });
 
-    // Display suggestions
-    setSuggestedCountries(filteredCountries);
-  }
+      // Filter countries based on the input term
+      const filteredCountries = countries.filter(country => {
+        return country.name.common.toLowerCase().startsWith(term.toLowerCase());
+      });
+
+      // Display suggestions
+      setSuggestedCountries(filteredCountries);
+    }
   };
 
   const handleCountrySelect = async (selectedCountryCode) => {
@@ -83,10 +88,17 @@ export const  MapSearch = () => {
     setSearchTerm('');
   };
 
-  
+  const addToBucketList = () => {
+    if (selectedCountry) {
+      // Add the selected country to the bucket list
+      setBucketList([...bucketList, selectedCountry]);
+    }
+  };
+
+
 
   return (
-    
+
     <div className="main-container">
       <div className="search-container">
         <input
@@ -94,7 +106,7 @@ export const  MapSearch = () => {
           placeholder="Where do you want to go?"
           value={searchTerm}
           onChange={handleSearchTermChange}
-          
+
         />
         <div className="suggestions">
           {suggestedCountries.map((country) => (
@@ -150,7 +162,11 @@ export const  MapSearch = () => {
             ) : (
               <p>Timezones: No Data</p>
             )}
+
+            {/* Button to add to bucket list */}
+            <button onClick={addToBucketList}>Add to Bucket List</button>
           </div>
+
           {countryDetails?.capital && Object.keys(countryDetails.capital).length > 0 ? (
             <MapComponent selectedCityName={countryDetails?.capital[0]} />
           ) : (
@@ -159,10 +175,12 @@ export const  MapSearch = () => {
         </div>
       )}
       {selectedCountries.map(country => (
-    <CountryDetails key={country} countryCode={country} /> 
-  ))
-}
-
+        <CountryDetails key={country} countryCode={country} />
+      ))
+      }
+      <SaveBucketList bucketList={bucketList}
+        countries={countries}
+      />
     </div>
   );
 };
