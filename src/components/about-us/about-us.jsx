@@ -74,7 +74,7 @@ export const AboutUs = () => {
             <ul>
               <li>It allows me to express my creativity</li>
               <li>
-                Blending colors and seeing a painting come to life exites me
+                Blending colors and seeing a painting come to life excites me
               </li>
             </ul>
           </p>
