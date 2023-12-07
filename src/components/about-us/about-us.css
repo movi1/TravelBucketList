@@ -1,51 +1,86 @@
 .about-us-container {
-    max-width: 800px; 
-    width: 100%;
-    margin-left: 40px;
+  width: 100%;
+  padding: 80px 0;
+  padding-bottom: 100px;
+  margin: 0 auto; 
+  text-align: center; 
+  background-color: #f8f8f8; 
+}
+
+/* About Us Intro */
+.about-us-intro {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  font-family: "EB Garamond", sans-serif;
+  color: #22333b; 
+}
+
+/* About Us Profiles */
+.about-us-profiles {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; /* Allow profiles to wrap onto a new line on smaller screens */
+  animation: sweepIn 1s ease-out forwards; /* Use 'forwards' to retain styles after animation */
+  opacity: 0;
+}
+
+/* Animation Keyframes */
+@keyframes sweepIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
   }
-  
-  .about-us-intro {
-    text-align: center;
-    margin-bottom: 30px;
-    font-family: "EB Garamond", sans-serif;
-    color: #22333B;
-    
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .about-us-profiles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px; 
-    /* margin-left: 40px; */
-  } 
-  
-  .profile {
-    width: 50%;
-    margin-bottom: 30px;
-   
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  background-color: #eae0d5; 
+  width: 14%;
+  margin: 0 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 5px rgba(10, 9, 8, 0.1);
+}
+
+/* Responsive Styling for Smaller Screens */
+@media only screen and (max-width: 768px) {
+  .profile-card {
+    width: 80% !important; /* One profile per row on smaller screens */
   }
-  
-  .profile h2 {
-    color: #22333B;
-    margin-bottom: 10px;
-  }
-  
-  .profile p {
-    font-size: 15px;
-    line-height: 1.5;
-    font-family: "Raleway", sans-serif;
-  }
-  
-  .profile ul {
-    margin-top: 10px;
-    list-style: inside;
-  }
-  
-  @media (max-width: 600px) {
-    .about-us-profiles {
-      grid-template-columns: 1fr; 
-    }
-  }
+}
+
+/* Profile Header Styles */
+.profile-card h2 {
+  color: #22333b;
+  font-size: 1.6em;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+/* Profile Paragraph Styles */
+.profile-card p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Profile List Item Styles */
+.profile-card li {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Profile Unordered List Styles */
+.profile-card ul {
+  margin-top: 10px;
+  list-style: inside;
+  padding-left: 0px; /* Adjust the padding to reduce the gap */
+}
