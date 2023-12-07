@@ -1,0 +1,92 @@
+/* Styles for the container holding the login/signup form */
+.login-signup-container {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 100px 0;
+  padding-top: 150px;
+}
+
+/* Styles for the form inside the container */
+.login-signup-container form {
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* Styles for labels inside the form */
+.login-signup-container label {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 0;
+}
+
+/* Styles for input fields inside the form */
+.login-signup-container input {
+  text-align: center;
+}
+
+/* Styles for the heading inside the container */
+.login-signup-container h2 {
+  color: #22333b;
+  margin-bottom: 10px;
+}
+
+/* Styles for paragraphs inside the container */
+.login-signup-container p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Styles for the welcome message paragraph */
+.welcome-message p {
+  font-size: 20px;
+}
+
+/* Styles for login/signup buttons */
+.login-signup-btn {
+  font-family: "Raley", sans-serif;
+  background-color: #5e503f;
+  padding: 12px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #f4f4f4;
+  margin: 40px 0;
+  transition: background-color 0.3s;
+  box-shadow: 0px 3px 5px rgba(10, 9, 8, 0.1);
+}
+
+/* Hover styles for login/signup buttons */
+.login-signup-btn:hover {
+  background-color: #22333b;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0.5, 0.2);
+}
+
+/* Styles for the switch button between login and signup */
+.switch-btn {
+  font-family: "Raley", sans-serif;
+  background-color: #5e503f;
+  padding: 12px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #f4f4f4;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 3px 5px rgba(10, 9, 8, 0.1);
+}
+
+/* Hover styles for the switch button */
+.switch-btn:hover {
+  background-color: #22333b;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0.5, 0.2);
+}
