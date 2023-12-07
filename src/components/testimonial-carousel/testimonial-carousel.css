@@ -4,14 +4,14 @@
     width: 90%;
   }
   .custom-prev-button,
-  .custom-next-button{
+  .custom-next-button {
     display: none;
   }
 }
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #22333B;;
+  background-color: #22333b;
   position: relative;
   padding: 10px 30px;
   margin: 0 auto;
@@ -19,7 +19,6 @@
 }
 
 /* Testimonials Text Styles */
-
 .testimonials-title {
   position: relative;
   font-family: "EB Garamond", sans-serif;
@@ -39,11 +38,9 @@
   color: #f8f8f8;
 }
 
-
-
 /* Testimonials Container Styles */
 .testimonials-container {
-  background-color: #EAE0D5;
+  background-color: #eae0d5;
   color: #22333b;
   padding: 0px 20px;
   width: 70%;
@@ -59,6 +56,7 @@
 /* Testimonial Slide Styles */
 .testimonial-slide {
   padding: 70px 0;
+  padding-bottom: 50px;
   text-align: center;
   width: 60%;
 }
@@ -75,6 +73,7 @@
   font-family: "Raley", sans-serif;
   font-weight: 100;
   font-size: 0.8em;
+  padding-top: 10px;
 }
 
 /* Custom Button Styles */

@@ -1,10 +1,12 @@
+/* About Us Container */
 .about-us-container {
   width: 100%;
   padding: 80px 0;
   padding-bottom: 100px;
-  margin: 0 auto; 
-  text-align: center; 
-  background-color: #f8f8f8; 
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f8f8f8;
+  position: relative;
 }
 
 /* About Us Intro */
@@ -12,13 +14,14 @@
   margin-bottom: 30px;
   padding: 20px 0;
   font-family: "EB Garamond", sans-serif;
-  color: #22333b; 
+  color: #22333b;
+  position: relative;
 }
 
 /* About Us Profiles */
 .about-us-profiles {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap; /* Allow profiles to wrap onto a new line on smaller screens */
   animation: sweepIn 1s ease-out forwards; /* Use 'forwards' to retain styles after animation */
   opacity: 0;
@@ -38,7 +41,7 @@
 
 /* Profile Card Styles */
 .profile-card {
-  background-color: #eae0d5; 
+  background-color: #eae0d5;
   width: 14%;
   margin: 0 20px;
   margin-bottom: 30px;
@@ -53,6 +56,9 @@
 @media only screen and (max-width: 768px) {
   .profile-card {
     width: 80% !important; /* One profile per row on smaller screens */
+  }
+  .about-us-container {
+    padding-top: 80px;
   }
 }
 
