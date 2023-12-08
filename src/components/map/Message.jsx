@@ -1,11 +1,10 @@
 import React from 'react';
-import './Message.css';
 
-const Message = ({ text, type, className }) => {
-  
+const Message = ({ text, onClose }) => {
   return (
-    <div className={`messages ${type} ${className}`}>
+    <div className="message">
       <p>{text}</p>
+      <button onClick={onClose}>Close</button>
     </div>
   );
 };
