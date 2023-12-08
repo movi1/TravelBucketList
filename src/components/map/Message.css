@@ -1,0 +1,23 @@
+/* Basic styling for the messages container */
+.messages {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Specific styles for each message type */
+.warning-message {
+  background-color: #ffd700; /* Yellow */
+  color: #8b4513; /* SaddleBrown */
+}
+
+.success-message {
+  background-color: #90ee90; /* LightGreen */
+  color: #006400; /* DarkGreen */
+}
+
+.info-message {
+  background-color: #add8e6; /* LightBlue */
+  color: #000080; /* Navy */
+}

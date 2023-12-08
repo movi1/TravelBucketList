@@ -3,6 +3,8 @@ import MapComponent from './MapComponent';
 import CountryDetails from './CountryDetails';
 import SaveBucketList from './SaveBucketList';
 import Message from './Message';
+import BucketList from '../bucket-list/bucket-list';
+
 
 
 export const MapSearch = () => {
@@ -93,26 +95,23 @@ export const MapSearch = () => {
   const popMessage = () => {
     setMessage('');
   };
-
-  const country = countries.find(c => c.cca2 === selectedCountry);
   const addToBucketList = () => {
-    if (selectedCountry) {
-      if (!bucketList.includes(selectedCountry)) {
-        // Add the selected country to the bucket list
-        setBucketList([...bucketList, selectedCountry]);
-        setShowBucketList(true);
-        setMessage({ text: `"${country?.name?.common}" added to your bucket list!`, type: 'success' });
-
-      } else if (bucketList.length >= 5) {
-        // Bucket list is full
-        setMessage({ text: 'Your bucket list is full. You can only save up to 5 countries.', type: 'warning' });
-      } else {
-        // Country is already in the bucket listt
-
-        setMessage({ text: `"${country?.name?.common}" is already in your bucket list.`, type: 'info' });;
-      }
-    }
+    // Your logic to add to the bucket list
+    console.log('Adding to the bucket list!');
   };
+
+  const handleAddToBucketList = () => {
+    addToBucketList();
+    setShowBucketList(true); // Use setShowBucketList to control visibility
+  };
+
+
+  const handleCloseBucketList = () => {
+    console.log('Closing bucket list');
+    setShowBucketList(false);
+    console.log('showBucketList:', showBucketList);
+  };
+
 
   return (
 
@@ -180,17 +179,36 @@ export const MapSearch = () => {
               <p>Timezones: No Data</p>
             )}
 
-            {/* Button to add to bucket list */}
-            <button onClick={addToBucketList}>Add to Bucket List</button>
+            {/* Button to add to the bucket list */}
+            <button onClick={handleAddToBucketList}>Add to Bucket List</button>
           </div>
-          <button onClick={() => setIsOpen(true)}>
-            View Bucket List
-          </button>
+
+
+
+
           {isOpen && (
             <SaveBucketList
               onClose={() => setIsOpen(false)}
             />
           )}
+
+          {/* Close button for the bucket list */}
+          {showBucketList && (
+            <SaveBucketList
+              bucketList={bucketList}
+              countries={countries}
+              onClose={handleCloseBucketList} // Pass the onClose function
+            />
+          )}
+
+          {showBucketList && (
+            <SaveBucketList
+              bucketList={bucketList}
+              countries={countries}
+              onClose={handleCloseBucketList}
+            />
+          )}
+
 
           {countryDetails?.capital && Object.keys(countryDetails.capital).length > 0 ? (
             <MapComponent selectedCityName={countryDetails?.capital[0]} />
@@ -203,12 +221,8 @@ export const MapSearch = () => {
         <CountryDetails key={country} countryCode={country} />
       ))
       }
-      {showBucketList && (
-        <SaveBucketList
-          bucketList={bucketList}
-          countries={countries}
-        />
-      )}
+
+
       <Message text={message.text} onClose={popMessage} />
     </div>
   );

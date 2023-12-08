@@ -1,15 +1,24 @@
 import React from 'react';
+import { FaTimes } from 'react-icons/fa';
 
-export const SaveBucketList = ({ bucketList, countries, }) => {
+
+
+export const SaveBucketList = ({ bucketList, countries, onClose }) => {
+  
+  console.log('Bucket List:', bucketList);
+  console.log('Countries:', countries);
   return (
     <div className='container'>
       <div className='row justify-content-center'>
         <div className='col-md-8'>
           <div className='bk-container mt-5 p-4 border rounded'>
+            <button className='close-btn' onClick={onClose}>
+              <FaTimes />
+            </button>
             <h1 className='mb-4'>My Bucket List</h1>
 
             <ul className='list-unstyled'>
-              {bucketList.map(countryCode => {
+              {bucketList && bucketList.map(countryCode => {
                 const country = countries.find(c => c.cca2 === countryCode);
 
                 return (
@@ -27,3 +36,4 @@ export const SaveBucketList = ({ bucketList, countries, }) => {
 };
 
 export default SaveBucketList;
+
