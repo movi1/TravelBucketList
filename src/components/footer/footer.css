@@ -23,7 +23,8 @@
   margin-right: 10px;
 }
 
-.copyright {
+.copyright p {
+  color: #fff;
   font-size: 15px;
   font-family: "EB Garamond", sans-serif;
   margin-top: 10px; /* Add margin at the top of the copyright text */
