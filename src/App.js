@@ -19,8 +19,8 @@ function App() {
       <Header /> {/* this will be on every page */}
       <Routes>
         <Route path="/" element={<><Home /></>} />
-        <Route path="/about" element={<><About /><AboutUs /><TestimonialCarousel /></>} />
-        <Route path="/pack-your-list" element={<PackList />} />
+        <Route path="/about" element={<><AboutUs /><TestimonialCarousel /></>} />
+        <Route path="/pack-list" element={<PackList />} />
         <Route path="/bucket-list" element={<BucketList />} />
         <Route path="/signup-login" element={<Login />} />
       </Routes>

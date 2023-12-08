@@ -1,55 +1,91 @@
 import React, { useState } from 'react';
 import './pack-list.css';
-import { Accordion, Container, Row, Col } from 'react-bootstrap';
+import Destination from './destination';
+import AccordionComponent from './accordion';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
 import essentialsData from './essentials.json';
 
 function PackList() {
-  // Initialize activeKey with null to start with all accordions closed
+  const [selectedDestination, setSelectedDestination] = useState(null);
   const [activeKey, setActiveKey] = useState(null);
 
-  try {
-    if (!essentialsData || typeof essentialsData !== 'object') {
-      throw new Error('Invalid essentials data format.');
+  // Function to update essentialsData based on the selected destination
+  const updateEssentialsData = (destination) => {
+    const commonSections = { ...essentialsData };
+
+    switch (destination) {
+      case 'Sun':
+        commonSections["🌍 Your Trip"] = ["Sunscreen", "Sunglasses", "Beachwear", "Dry Bag", "Beach towel", "After Sun"
+        ];
+        break;
+      case 'Snow':
+        commonSections["🌍 Your Trip"] = ["Winter coat", "Snow boots", "Thermal layers"];
+        break;
+      case 'City':
+        commonSections["🌍 Your Trip"] = ["City map", "Comfortable shoes", "Camera"];
+        break;
+      case 'Business':
+        commonSections["🌍 Your Trip"] = ["Business attire", "Laptop", "Presentation materials"];
+        break;
+      default:
+        commonSections["🌍 Your Trip"] = [];
+        break;
     }
 
-    const categories = Object.keys(essentialsData);
+    return commonSections;
+  };
 
-    const handleAccordionChange = (newActiveKey) => {
-      setActiveKey(newActiveKey);
-    };
+  const handleAccordionChange = (newActiveKey) => {
+    setActiveKey(newActiveKey);
+  };
 
-    return (
-      <Container>
+  const handleGoBack = () => {
+    setSelectedDestination(null);
+  };
+
+  const handleDestinationSelect = (destination) => {
+    setSelectedDestination(destination);
+    setActiveKey(null); // Close the accordion when a new destination is selected
+  };
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  return (
+    <div className="main-container">
+      <Container className="custom-container mt-4 pack-list-container custom-width-container">
         <Row>
-          {categories.map((category, index) => (
-            <Col key={index} md={4}>
-              <Accordion
-                activeKey={activeKey === index.toString() ? activeKey : undefined}
-                onSelect={handleAccordionChange}
-                defaultActiveKey={null} 
-                alwaysOpen
-              >
-                <Accordion.Item eventKey={index.toString()}>
-                  <Accordion.Header>{category}</Accordion.Header>
-                  <Accordion.Body>
-                    <ul>
-                      {essentialsData[category].map((item, itemIndex) => (
-                        <li key={itemIndex}>{item}</li>
-                      ))}
-                    </ul>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </Col>
-          ))}
+          <Col>
+            <Destination
+              handleDestinationSelect={handleDestinationSelect}
+              handleHover={() => {}}
+              handleLeave={() => {}}
+            />
+          </Col>
         </Row>
       </Container>
-    );
-  } catch (error) {
-    console.error('Error in PackList component:', error.message);
-    return <div>Error loading essentials data. Please check the data format.</div>;
-  }
+
+      <Container className="custom-container mt-4 pack-list-container">
+        <Row>
+          <Col>
+            {selectedDestination ? (
+              <AccordionComponent
+                id="accordion-section"
+                activeKey={activeKey}
+                handleAccordionChange={handleAccordionChange}
+                handleGoBack={handleGoBack}
+                handlePrint={handlePrint}
+                printing={false}
+                essentialsData={updateEssentialsData(selectedDestination)}
+              />
+            ) : null}
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 }
 
 export default PackList;
