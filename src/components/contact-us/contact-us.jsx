@@ -9,6 +9,7 @@ const ContactUs = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
 
+  // Validation function to check if form fields are filled
   const validateForm = () => {
     const errors = {};
 
@@ -27,16 +28,19 @@ const ContactUs = () => {
     return errors;
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validate form fields
     const formErrors = validateForm();
 
     if (Object.keys(formErrors).length === 0) {
-      setIsSubmitted(true);
       // Simulate a successful form submission
+      setIsSubmitted(true);
       console.log("Form submitted:", { name, email, message });
     } else {
+      // Update errors state with validation errors
       setErrors(formErrors);
     }
   };
@@ -45,16 +49,22 @@ const ContactUs = () => {
     <div className="contact-container">
       <div className="contact-box">
         <h2>Contact Us</h2>
+        {/* Message returned after submission*/}
         {isSubmitted ? (
           <>
             <p>Thank you for your message, we'll be in touch!</p>
             <Link to="/">
-            <img className="contact-image" src="images/bg-sea.png" alt="Mountain Sea Scenery" />
-            <p>Back to Homepage</p>
+              <img
+                className="contact-image"
+                src="images/bg-sea.png"
+                alt="Mountain Sea Scenery"
+              />
+              <p>Back to Homepage</p>
             </Link>
           </>
         ) : (
           <form className="contact-form" onSubmit={handleSubmit}>
+            {/* Input fields for name, email, and message */}
             <label>Name:</label>
             <input
               type="text"
@@ -80,6 +90,7 @@ const ContactUs = () => {
               <p className="error-message">{errors.message}</p>
             )}
 
+            {/* Submit button */}
             <button className="contact-submit-btn" type="submit">
               Submit
             </button>
