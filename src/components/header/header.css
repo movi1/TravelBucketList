@@ -7,8 +7,13 @@
   
 }
 
+.navbar .container {
+  padding: 0;
+}
+
 .custom-navbar .navbar-nav .nav-link {
   color: white;
+  margin:0 15px;
 
 }
 
