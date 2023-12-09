@@ -8,6 +8,7 @@ import TestimonialCarousel from "./components/testimonial-carousel/testimonial-c
 import { BucketList } from "./components/bucket-list/bucket-list";
 import PackList from './components/pack-list/pack-list';
 import Login from "./components/login-signup/log-in";
+import ContactUs from "./components/contact-us/contact-us";
 import { Footer } from "./components/footer/footer";
 
 import "animate.css/animate.min.css";
@@ -23,7 +24,7 @@ function App() {
         <Route path="/pack-list" element={<PackList />} />
         <Route path="/bucket-list" element={<BucketList />} />
         <Route path="/signup-login" element={<Login />} />
-        <Route path="/contact-us" element={<Login />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer /> {/* this will be on every page */}
     </div>
