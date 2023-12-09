@@ -10,11 +10,12 @@ import PackList from './components/pack-list/pack-list';
 import Login from "./components/login-signup/log-in";
 import ContactUs from "./components/contact-us/contact-us";
 import { Footer } from "./components/footer/footer";
-
+import { Faq1 } from "./components/faq-page/faq";
 import "animate.css/animate.min.css";
 import "./App.css";
 
 function App() {
+  
   return (
     <div className="App">
       <Header /> {/* this will be on every page */}
@@ -25,6 +26,7 @@ function App() {
         <Route path="/bucket-list" element={<BucketList />} />
         <Route path="/signup-login" element={<Login />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/faq" element={<faq />} />
       </Routes>
       <Footer /> {/* this will be on every page */}
     </div>
