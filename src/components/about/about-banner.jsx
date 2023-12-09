@@ -1,9 +1,9 @@
 // about.jsx
 import React, { useState, useEffect } from "react";
 import "animate.css";
-import "./about.css";
+import "./about-banner.css";
 
-const About = () => {
+const AboutBanner = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -57,4 +57,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutBanner;
