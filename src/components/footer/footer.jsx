@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./footer.css";
 
@@ -6,13 +7,9 @@ const facebook_icon = process.env.PUBLIC_URL + "/facebook_icon.png";
 const instagram_icon = process.env.PUBLIC_URL + "/instagram_icon.png";
 const email_icon = process.env.PUBLIC_URL + "/email_icon.png";
 
-
-
-
 export const Footer = () => {
-
-  const facebookLink = 'https://www.facebook.com/';
-  const instagramLink = 'https://www.instagram.com/';
+  const facebookLink = "https://www.facebook.com/";
+  const instagramLink = "https://www.instagram.com/";
 
   return (
     <footer className="footer">
@@ -25,13 +22,15 @@ export const Footer = () => {
           />
         </a>
         <a href={instagramLink} target="_blank" rel="noopener noreferrer">
-        <img
-          className="social-icon"
-          src={instagram_icon}
-          alt="Instagram Icon"
-        />
+          <img
+            className="social-icon"
+            src={instagram_icon}
+            alt="Instagram Icon"
+          />
         </a>
-        <img className="social-icon" src={email_icon} alt="Email Icon" />
+        <Link to="/contact-us">
+          <img className="social-icon" src={email_icon} alt="Email Icon" />
+        </Link>
       </div>
       <div className="copyright">
         <p>Copyright © Pack & Go Inc 2023</p>
