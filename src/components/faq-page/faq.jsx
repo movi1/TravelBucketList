@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./faq.css";
 
-export const Faq1 = () => {
+export const Faq = () => {
   // State to trigger animation
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
