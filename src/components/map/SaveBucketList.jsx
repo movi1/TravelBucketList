@@ -3,10 +3,12 @@ import { CgClose } from 'react-icons/cg';
 
 export const SaveBucketList = ({ bucketList, countries, onClose }) => {
   const [message, setMessage] = useState('');
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleButtonClick = () => {
-    onClose();
+    setIsVisible(false);
   };
+ 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,6 +17,10 @@ export const SaveBucketList = ({ bucketList, countries, onClose }) => {
 
     return () => clearTimeout(timer);
   }, [message]);
+  
+  if (!isVisible) {
+    return null; // Do not render anything if not visible
+  };
 
   return (
     <div className='container'>
