@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./about-us.css";
+import "./meet-the-team.css";
 
-export const AboutUs = () => {
+export const MeetTheTeam = () => {
   // State to trigger animation
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
