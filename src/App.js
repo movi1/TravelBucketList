@@ -23,6 +23,7 @@ function App() {
         <Route path="/pack-list" element={<PackList />} />
         <Route path="/bucket-list" element={<BucketList />} />
         <Route path="/signup-login" element={<Login />} />
+        <Route path="/contact-us" element={<Login />} />
       </Routes>
       <Footer /> {/* this will be on every page */}
     </div>
