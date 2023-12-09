@@ -1,23 +1,44 @@
-/* Basic styling for the messages container */
-.messages {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* YourComponent.css */
+
+.message {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Initially positioned above */
+
+  &.visible {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Bring it to the normal position */
+  }
+
+  &:hover {
+    background-color: #45a049;
+  }
 }
 
-/* Specific styles for each message type */
-.warning-message {
-  background-color: #ffd700; /* Yellow */
-  color: #8b4513; /* SaddleBrown */
+#text {
+  margin: 0;
+  flex-grow: 1;
+  font-size: 1.2rem;
 }
 
-.success-message {
-  background-color: #90ee90; /* LightGreen */
-  color: #006400; /* DarkGreen */
-}
+.icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-left: 10px;
+  transition: color 0.3s ease;
 
-.info-message {
-  background-color: #add8e6; /* LightBlue */
-  color: #000080; /* Navy */
+  &:hover {
+    color: #ddd;
+  }
 }

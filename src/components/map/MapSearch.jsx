@@ -194,9 +194,9 @@ export const MapSearch = () => {
             {/* Button to add to bucket list */}
             <button onClick={addToBucketList}>Add to Bucket List</button>
           </div>
-          <button onClick={() => setIsBucketListOpen(true)}>
+          {/* <button onClick={() => setIsBucketListOpen(true)}>
             View Bucket List
-          </button>
+          </button> */}
 
           {isBucketListOpen && (
             <SaveBucketList
@@ -224,11 +224,15 @@ export const MapSearch = () => {
           countries={countries}
         />
       )}
+
       {isBucketListOpen && (
-        <SaveBucketList bucketList={bucketList}
+        <SaveBucketList
+          bucketList={bucketList}
           countries={countries}
-          onClose={handleBucketListClose} />
+          onClose={handleBucketListClose}
+        />
       )}
+      
       <Message text={message.text} onClose={popMessage} />
     </div>
 
