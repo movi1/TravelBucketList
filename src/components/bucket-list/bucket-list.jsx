@@ -1,6 +1,6 @@
 
-
 import React from 'react';
+import './bucket-list.css';
 
 
 export const BucketList = ({ bucketList, countries, onClose }) => (

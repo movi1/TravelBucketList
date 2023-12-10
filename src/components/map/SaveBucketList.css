@@ -1,14 +1,14 @@
 /* Add some spacing and background color to the container */
 .bk-container {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 40px;
+  left: 50px;
   background-color: #22333B; /* Dark background */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 20px;
   z-index: 999;
-  color: #61dafb; /* Light blue text color */
+  color: #087391; /* Light blue text color */
 
   /* Set up flex container */
   display: flex;
@@ -19,11 +19,12 @@
 
 /* Style the heading for a prominent look */
 .bk-container h1 {
+
   margin-bottom: 15px;
   font-size: 28px;
   color: #61dafb;
   font-family: "EB Garamond", sans-serif; /* Light blue heading color */
-  margin-bottom: 10px; /* Add margin-bottom to create space between h1 and li */
+ /* Add margin-bottom to create space between h1 and li */
 }
 
 /* Style the list for better readability */
@@ -35,6 +36,7 @@
 
 /* Style each list item for a clean and consistent look */
 .bk-container li {
+
   font-size: 20px;
   padding: 15px;
   background-color: #5E503F;
@@ -58,35 +60,3 @@
 
 
 
-.bucket-list-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .bucket-list-items {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .bucket-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .close-button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  

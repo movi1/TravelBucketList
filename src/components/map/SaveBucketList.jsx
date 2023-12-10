@@ -26,11 +26,11 @@ export const SaveBucketList = ({ bucketList, countries, onClose }) => {
     <div className='container'>
       <div className='row justify-content-center'>
         <div className='col-md-8'>
-          <div className='bk-container mt-5 p-4 border rounded'>
+          <div className='bk-container mt-5 p-3 border rounded'>
               <button onClick={handleButtonClick} className="close-button">
               <CgClose />
             </button>
-            <h1 className='mb-4'>My Bucket List</h1>
+            <h1 className='mb-3'>My Bucket List</h1>
             <ul className='list-unstyled'>
               {bucketList.map(countryCode => {
                 const country = countries.find(c => c.cca2 === countryCode);
@@ -51,4 +51,3 @@ export const SaveBucketList = ({ bucketList, countries, onClose }) => {
 };
 
 export default SaveBucketList;
-
