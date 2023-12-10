@@ -1,0 +1,62 @@
+/* Add some spacing and background color to the container */
+.bk-container {
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  background-color: #22333B; /* Dark background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 20px;
+  z-index: 999;
+  color: #087391; /* Light blue text color */
+
+  /* Set up flex container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align children at the start (top) */
+  align-items: flex-start; /* Align children at the start (left) */
+}
+
+/* Style the heading for a prominent look */
+.bk-container h1 {
+
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #61dafb;
+  font-family: "EB Garamond", sans-serif; /* Light blue heading color */
+ /* Add margin-bottom to create space between h1 and li */
+}
+
+/* Style the list for better readability */
+.bk-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style each list item for a clean and consistent look */
+.bk-container li {
+
+  font-size: 20px;
+  padding: 15px;
+  background-color: #5E503F;
+  border-radius: 5px;
+  color: #f4f4f4;
+  font-family: "Raley", sans-serif;
+}
+
+/* Remove the margin-bottom from the last list item */
+.bk-container li:last-child {
+  margin-bottom: 0;
+}
+
+/* Add a marker before each list item for a visual cue */
+.bk-container li::before {
+  content: "🌍";
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+
+
+

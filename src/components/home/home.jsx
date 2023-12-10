@@ -29,7 +29,7 @@ export const Home = () => {
           to="/bucket-list"
           className={`explore-btn animate__animated ${animate ? 'animate__fadeInDown' : ''} animate__delay-2s`}
         >
-          Start Your Journey
+         Discover Destinations
         </Link>
       </div>
 
@@ -63,7 +63,7 @@ export const Home = () => {
               animate ? 'animate__fadeInUp' : ''
             } animate__delay-2s`}
           >
-            Join the Adventure
+            Log In & Join the Adventure
           </Link>
         </div>
       </div>

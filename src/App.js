@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/header/header";
@@ -15,20 +16,28 @@ import "animate.css/animate.min.css";
 import "./App.css";
 
 function App() {
-  
+
   return (
     <div className="App">
-      <Header /> {/* this will be on every page */}
+      <Header />
       <Routes>
         <Route path="/" element={<><Home /></>} />
         <Route path="/about" element={<><AboutBanner /><MeetTheTeam /><TestimonialCarousel /></>} />
         <Route path="/pack-list" element={<PackList />} />
-        <Route path="/bucket-list" element={<BucketList />} />
+
+        <Route path="/bucket-list" element={
+          <MapSearch  />
+        } />
+
+
+   
         <Route path="/signup-login" element={<Login />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/faq" element={<Faq />} />
+
       </Routes>
-      <Footer /> {/* this will be on every page */}
+
+      <Footer />
     </div>
   );
 }

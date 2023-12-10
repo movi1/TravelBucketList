@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './MapSearch.css';
+import './Map.css';
+import './SaveBucketList.css';
 
 
 /* Render the MapComponent from the parenrt app selectedCityName eg London or Japan  <MapComponent selectedCityName={"london"} /> */
