@@ -1,62 +1,107 @@
-/* Add some spacing and background color to the container */
+/* Default styles for larger screens */
+.container {
+  position: relative;
+}
+
 .bk-container {
-  position: fixed;
-  top: 40px;
-  left: 50px;
-  background-color: #22333B; /* Dark background */
+  position: absolute;
+  bottom: 20px;
+  left: 5px;
+  background-color:#22333B; /* Adjust the alpha channel for transparency */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
-  padding: 20px;
+  padding: 15px;
   z-index: 999;
-  color: #087391; /* Light blue text color */
-
-  /* Set up flex container */
+  color: #087391;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align children at the start (top) */
-  align-items: flex-start; /* Align children at the start (left) */
 }
 
-/* Style the heading for a prominent look */
 .bk-container h1 {
-
-  margin-bottom: 15px;
-  font-size: 28px;
+  margin-bottom: 10px;
+  font-size: 24px;
   color: #61dafb;
-  font-family: "EB Garamond", sans-serif; /* Light blue heading color */
- /* Add margin-bottom to create space between h1 and li */
+  font-family: "EB Garamond", sans-serif;
 }
 
-/* Style the list for better readability */
 .bk-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Style each list item for a clean and consistent look */
 .bk-container li {
-
-  font-size: 20px;
-  padding: 15px;
-  background-color: #5E503F;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(94, 80, 63, 0.7);
   border-radius: 5px;
   color: #f4f4f4;
-  font-family: "Raley", sans-serif;
+  margin-bottom: 8px;
 }
 
-/* Remove the margin-bottom from the last list item */
+.bk-container li:hover {
+  background-color: #087391;
+}
+
 .bk-container li:last-child {
   margin-bottom: 0;
 }
 
-/* Add a marker before each list item for a visual cue */
 .bk-container li::before {
   content: "🌍";
-  margin-right: 15px;
-  font-size: 24px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
+.close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #f4f4f4;
+  outline: none;
+}
 
+.close-button:hover {
+  color: #61dafb;
+ 
+}
+/* Laptops and desktops - side by side columns */
+@media (min-width: 1025px) {
+  
+}
+/* Media query for tablet screens */
+@media (min-width: 601px) and (max-width: 1024px)  {
+  .bk-container {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Adjust width for tablets */
+    border-radius: 0;
+    background-color: rgba(34, 51, 59, 0.7);
+  }
 
+  .bk-container li::before {
+    font-size: 18px; /* Adjust the font size for tablets */
+  }
+}
 
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .bk-container {
+    position: fixed; /* Change position to fixed */
+    bottom: 70px;
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Adjust to center */
+    width: 50%;
+    border-radius: 0;
+    background-color: rgba(34, 51, 59, 0.7);
+  }
+
+  .bk-container li::before {
+    font-size: 16px; /* Adjust the font size for small screens */
+  }
+}
