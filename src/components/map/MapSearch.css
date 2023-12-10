@@ -1,6 +1,5 @@
 /* css for MapSearch.jsx to go here */
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Lobster+Two&family=Open+Sans&family=Playpen+Sans:wght@300&display=swap');
-
 .map-container {
   max-width: 100%;
   /* margin-top: 20px; */
@@ -28,45 +27,3 @@
   text-decoration: underline;
 }
 
-/* Mobile phones - single column */
-@media (max-width: 600px) {
-  .main-container {
-    flex-direction: column;
-  }
-  
-  .country-details { 
-    flex-direction: column;
-    align-items: center;  
-  }
-}
-
-/* Tablet view */
-@media (min-width: 601px) and (max-width: 1024px) {
-
-  .country-details {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .map-container {
-    order: -1; /* Put map first */
-    width: 60%;
-    margin: 0 auto 70px; /* Center with margins */
-  }
-  
-  .country-info {
-    text-align: center;    
-    width: 100%; 
-  }
-
-}
-/* Laptops and desktops - side by side columns */
-@media (min-width: 1025px) {
-  .main-container {  
-    flex-direction: row;
-  }
-  
-  .country-details {
-    flex-direction: row; 
-  }  
-}
