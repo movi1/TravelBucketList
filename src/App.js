@@ -16,12 +16,7 @@ import './App.css';
 
 function App() {
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isBucketListOpen, setIsBucketListOpen] = useState(false);
 
-  const handleAddItem = () => {
-    setIsVisible(true);
-  }
 
   return (
     <div className="App">
@@ -31,13 +26,11 @@ function App() {
         <Route path="/about" element={<><AboutUs /><TestimonialCarousel /></>} />
         <Route path="/pack-list" element={<PackList />} />
         <Route path="/bucket-list" element={
-          <MapSearch onAddItem={handleAddItem} />
+          <MapSearch  />
         } />
 
         <Route path="/signup-login" />
       </Routes>
-      {isVisible && <SaveBucketList />}
-      {isBucketListOpen && <SaveBucketList />}
 
       <Footer />
     </div>
