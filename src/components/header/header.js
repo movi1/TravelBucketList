@@ -5,7 +5,7 @@ import "./header.css";
 // Header component
 export const Header = () => {
   return (
-    <Navbar className="custom-navbar" expand="lg" variant="dark">
+    <Navbar className="custom-navbar" expand="lg" variant="dark" >
       <Container className="header-container">
         {/* Brand Logo & Title */}
         <Nav className="align-items-center me-auto">

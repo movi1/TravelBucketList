@@ -113,6 +113,9 @@ input:focus {
     margin-top: 10px;
     width: 100%;
   }
+  .search-container {
+    width: 75%;
+  }
 
   .country-details {
     flex-direction: column;
@@ -157,9 +160,13 @@ input:focus {
  padding: 20px;
  width: 100%;
     }
+    .search-container{
+      width: 48%;
+    }
 
   .country-details {
     flex-direction: column;
+    width: 45%;
   }
 
   .map-container {
@@ -181,16 +188,15 @@ input:focus {
 
 /* Laptops and desktops - side by side columns */
 /* Laptops and desktops - side by side columns */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .main-container {
    
     flex-direction: column;
     /* Adjust as needed */
   }
 
-  .country-details {
-    /* Add larger screen styles if needed */
-  }
+
+
 
   .map-container {
     width: 60%; /* Adjust width as needed */

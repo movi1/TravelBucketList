@@ -1,14 +1,14 @@
 .containers {
   display: flex;
   flex-direction: column;
-  min-height: 75vh;
+  min-height: 70vh;
   justify-content: space-between;
   background-color: #f8f8f8;
 }
 
 .row-title,
 .row-image,
-.row-team {
+.row-section {
   width: 100%;
   box-sizing: border-box;
 }
@@ -20,7 +20,7 @@
 
   .row-title,
   .row-image,
-  .row-team {
+  .row-section {
     width: 30%; /* Adjust the width based on your design */
   }
 }
@@ -42,7 +42,7 @@
   flex: 1;
 }
 
-.row-team {
+.row-section {
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -56,7 +56,7 @@
 /* Add additional styles as needed */
 
 
-.team-heading {
+.section-heading {
   font-size: 35px;
   padding: 20px;
   font-family: "EB Garamond", sans-serif;
@@ -64,13 +64,13 @@
 
 }
 
-.team-content {
+.section-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.team-description {
+.section-description {
   font-size: 20px;
   line-height: 1.5; 
   margin-bottom: 40px;

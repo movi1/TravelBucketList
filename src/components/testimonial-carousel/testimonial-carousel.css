@@ -11,11 +11,13 @@
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #22333b;
+  background-color: #0a111b;
   position: relative;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   margin: 0 auto;
   text-align: center;
+  height: 100vh;
+
 }
 
 /* Testimonials Text Styles */

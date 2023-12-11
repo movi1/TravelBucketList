@@ -1,11 +1,13 @@
 /* Main footer */
 .footer {
-  background-color: #22333b;
+  background-color: #22333B;
   padding: 30px;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   text-align: center;
   color: #fff;
   margin-top: auto;
+  min-height: 15vh;
+  bottom: 0;
 }
 
 /* Social media icons section */
@@ -14,6 +16,7 @@
   justify-content: center;
   gap: 20px;
   padding-bottom: 10px;
+ 
 }
 
 /* Individual social media icons */
