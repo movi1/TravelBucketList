@@ -42,14 +42,14 @@ export const Home = () => {
 
       {/* Container 3: Explore and Simplify */}
       <div
-        className={`row-team animate__animated ${
+        className={`row-section animate__animated ${
           animate ? 'animate__fadeInUp' : ''
         }`}
       >
-        <h1 className="team-heading">Explore, Plan, and Simplify Your Travels</h1>
-        <div className="team-content">
+        <h1 className="section-heading">Explore, Plan, and Simplify Your Travels</h1>
+        <div className="section-content">
           <p
-            className={`team-description animate__animated ${
+            className={`section-description animate__animated ${
               animate ? 'animate__fadeInUp' : ''
             } animate__delay-1s`}
           >

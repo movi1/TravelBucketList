@@ -55,14 +55,25 @@ git push
 
 ## Color and Font Legend
 
-### Colors:
-- **#22333B:** Very dark desaturated blue
-- **#0A0908:** Very dark (mostly black) orange [Brown tone]
-- **#EAE0D5:** Light grayish orange
-- **#C6AC8F:** Slightly desaturated orange
-- **#5E503F:** Very dark grayish orange
-- **#f4f4f4:** Very light gray (mostly white)
+## Colors Used
 
+### General Colors
+- **Light Gray:** #f4f4f4
+- **Charcoal:** #22333b
+- **Dark Khaki:** #5e503f
+- **Camel:** #C6AC8F
+- **White:** #ffffff
+- **Black:** #0A0908
+- **Champagne:** #eae0d5
+- **Google Blue:** #4285f4
+- **Gainsboro Gray:** #f0f0f0
+- **Shadowy Black:** rgba(0, 0, 0.5, 0.5)
+- **Shadowy Brown:** rgb(94, 80, 63)
+
+## Responsive Design
+- Mobile View (max-width: 600px)
+- Tablet View (min-width: 601px) and (max-width: 1024px)
+- Laptop and Desktop View (min-width: 1025px)
 ### Fonts:
 The application uses the following fonts:
 

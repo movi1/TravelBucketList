@@ -1,6 +1,7 @@
 // destination.js
 import React from 'react';
 
+
 const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
   const iconStyle = {
     width: '200px',
