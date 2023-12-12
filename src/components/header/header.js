@@ -5,7 +5,7 @@ import "./header.css";
 // Header component
 export const Header = () => {
   return (
-    <Navbar className="custom-navbar" expand="lg" variant="dark" >
+    <Navbar className="custom-navbar" expand="lg" variant="dark">
       <Container className="header-container">
         {/* Brand Logo & Title */}
         <Nav className="align-items-center me-auto">
@@ -31,8 +31,8 @@ export const Header = () => {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/pack-list">Pack List</Nav.Link>
             <Nav.Link href="/bucket-list">Bucket List</Nav.Link>
+            <Nav.Link href="/faqs">FAQs</Nav.Link>
             <Nav.Link href="/signup-login">Sign Up/Login</Nav.Link>
-            <Nav.Link href="/faq">FAQs</Nav.Link>
             <Nav.Link href="/contact-us">Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>

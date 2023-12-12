@@ -1,50 +1,60 @@
+/* Header*/
+.header-container {
+  margin: 1% 0;
+  width: 100%;
+}
 
-/* Add your custom styles */
+/* Navbar */
 .custom-navbar {
-  background-color: #22333B;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  min-height: 15vh;
-  
+  background-color: #22333b;
+  color: white; 
+  font-family: "Raleway", sans-serif; 
 }
 
+/* Navbar Links */
 .custom-navbar .navbar-nav .nav-link {
-  color: white;
-
+  color: white; 
+  margin: 0 15px;
+  font-size: 0.8em; 
 }
 
+/* Hover Styles for Navbar Links */
 .navbar-nav .nav-link:hover {
-  color: #C6AC8F;
+  color: #c6ac8f; 
 }
+
+/* Navbar Toggler Icon */
 .custom-navbar .navbar-toggler-icon {
   color: white;
-  
- 
 }
 
-#basic-navbar-nav {
-  flex-grow: 0;
-  font-size: 20px;
-  
-}
+/* Navbar Brand Wrapper */
 .navbar-brand-wrapper {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  
-  
+  display: flex; 
+  align-items: center; 
+  margin: none; 
 }
+
+/* Navbar Brand */
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  
+  display: flex; 
+  align-items: center; 
 }
-.navbar-brand img,
-.navbar-brand .title {
-  margin: 0;
-  padding: 0;
-  font-family: "EB Garamond", sans-serif;
+
+/* Title Spacing*/
+.title {
+  padding-left: 20px;
 }
-.navbar-brand img {
-margin-right: 40px;
+
+/* Navbar Styles for Small Screens */
+#basic-navbar-nav {
+  flex-grow: 0; 
+  font-size: 20px; 
+}
+
+/* Responsive Font Size */
+@media (max-width: 767px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 0.7em; /* Adjust font size for smaller screens */
+  }
 }
