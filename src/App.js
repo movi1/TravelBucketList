@@ -7,7 +7,6 @@ import AboutBanner from "./components/about/about-banner";
 import { MeetTheTeam } from "./components/about/meet-the-team";
 import TestimonialCarousel from "./components/testimonial-carousel/testimonial-carousel";
 import MapSearch from "./components/map/MapSearch";
-
 import PackList from './components/pack-list/pack-list';
 import Login from "./components/login-signup/log-in";
 import ContactUs from "./components/contact-us/contact-us";
@@ -33,7 +32,7 @@ function App() {
    
         <Route path="/signup-login" element={<Login />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/faqs" element={<Faq />} />
 
       </Routes>
 
