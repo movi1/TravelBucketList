@@ -1,16 +1,16 @@
-/* About Us Container */
-.about-us-container {
+/* FAQ Container */
+.faq-container {
     width: 100%;
     padding: 80px 0;
     padding-bottom: 100px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     background-color: #f8f8f8;
     position: relative;
   }
   
-  /* About Us Intro */
-  .about-us-intro {
+  /* FAQ Title */
+  .faq-title {
     margin-bottom: 30px;
     padding: 20px 0;
     font-family: "EB Garamond", sans-serif;
@@ -18,31 +18,19 @@
     position: relative;
   }
   
-  /* About Us Profiles */
-  .about-us-profiles {
+  /* FAQ cards */
+  .faq-cards {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap; /* Allow profiles to wrap onto a new line on smaller screens */
     animation: sweepIn 1s ease-out forwards; /* Use 'forwards' to retain styles after animation */
     opacity: 0;
   }
   
-  /* Animation Keyframes */
-  @keyframes sweepIn {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Profile Card Styles */
-  .profile-card {
+  /* FAQ card style */
+  .faq-cards {
     background-color: #eae0d5;
-    width: 14%;
+    width: 100%;
     margin: 0 20px;
     margin-bottom: 30px;
     padding: 20px;
@@ -54,40 +42,24 @@
   
   /* Responsive Styling for Smaller Screens */
   @media only screen and (max-width: 768px) {
-    .profile-card {
+    .faq-cards {
       width: 80% !important; /* One profile per row on smaller screens */
     }
-    .about-us-container {
+    .faq-section {
       padding-top: 80px;
     }
   }
-  
-  /* Profile Header Styles */
-  .profile-card h2 {
-    color: #22333b;
-    font-size: 1.6em;
-    padding: 20px 0;
-    margin-bottom: 10px;
-  }
-  
-  /* Profile Paragraph Styles */
-  .profile-card p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    font-family: "Raleway", sans-serif;
-  }
-  
-  /* Profile List Item Styles */
-  .profile-card li {
-    font-size: 1.1em;
-    line-height: 1.5;
-    margin-top: 10px;
-  }
-  
-  /* Profile Unordered List Styles */
-  .profile-card ul {
-    margin-top: 10px;
-    list-style: inside;
-    padding-left: 0px; /* Adjust the padding to reduce the gap */
-  }
+
+    /* Animation Keyframes */
+    @keyframes sweepIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
   
