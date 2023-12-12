@@ -7,6 +7,7 @@ import AboutBanner from "./components/about/about-banner";
 import { MeetTheTeam } from "./components/about/meet-the-team";
 import TestimonialCarousel from "./components/testimonial-carousel/testimonial-carousel";
 import MapSearch from "./components/map/MapSearch";
+import LocationSearch  from "./components/weather/locationSearch"
 
 import PackList from './components/pack-list/pack-list';
 import Login from "./components/login-signup/log-in";
@@ -26,9 +27,8 @@ function App() {
         <Route path="/about" element={<><AboutBanner /><MeetTheTeam /><TestimonialCarousel /></>} />
         <Route path="/pack-list" element={<PackList />} />
 
-        <Route path="/bucket-list" element={ <MapSearch  />
-        } />
-
+        <Route path="/bucket-list" element={ <MapSearch  />} />
+        <Route path="/weather" element={ <LocationSearch  /> }/>
 
    
         <Route path="/signup-login" element={<Login />} />
