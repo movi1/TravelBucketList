@@ -1,4 +1,3 @@
-import "./forecast.css";
 import {
   Accordion,
   AccordionItem,

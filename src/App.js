@@ -16,6 +16,7 @@ import { Footer } from "./components/footer/footer";
 import { Faq } from "./components/faq-page/faq";
 import "animate.css/animate.min.css";
 import "./App.css";
+import Weather from "./components/weather/weather";
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
         <Route path="/pack-list" element={<PackList />} />
 
         <Route path="/bucket-list" element={ <MapSearch  />} />
-        <Route path="/weather" element={ <LocationSearch  /> }/>
+        <Route path="/weather" element={ <Weather  /> }/>
 
    
         <Route path="/signup-login" element={<Login />} />

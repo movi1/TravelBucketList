@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate"; /*wrapper for react select*/
 import { location_api, locationApiOptions } from "./api";
 
-const LocationSearch = () => {
+const LocationSearch = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
   const dropDown =  (inputValue) => {
@@ -26,6 +26,7 @@ const LocationSearch = () => {
 
   const handleOnChange = (searchData) => {
     setSearch(searchData);
+    onSearchChange(searchData);
   };
 
   return (

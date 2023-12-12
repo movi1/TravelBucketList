@@ -32,6 +32,7 @@ export const Header = () => {
             <Nav.Link href="/pack-list">Pack List</Nav.Link>
             <Nav.Link href="/bucket-list">Bucket List</Nav.Link>
             <Nav.Link href="/signup-login">Sign Up/Login</Nav.Link>
+            <Nav.Link href="/weather">Weather</Nav.Link>
             <Nav.Link href="/faq">FAQs</Nav.Link>
             <Nav.Link href="/contact-us">Contact Us</Nav.Link>
           </Nav>
