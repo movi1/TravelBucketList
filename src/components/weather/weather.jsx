@@ -1,8 +1,9 @@
-import Forecast from "./forecast";
-import CurrentWeather from "./current-weather.jsx";
-import LocationSearch from "./locationSearch";
-import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
-import { useState } from "react";
+import React, { useState } from 'react';
+import './weather.css'; 
+import Forecast from './forecast';
+import CurrentWeather from './current-weather.jsx';
+import LocationSearch from './locationSearch';
+import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -32,7 +33,7 @@ const Weather = () => {
   console.log(forecast)
   
   return (
-    <div className="container">
+    <div className="weather-container">
       <h2 className="tell-us-text">Tell us about your trip:</h2>
       <LocationSearch onSearchChange={handleOnSearchChange} />
       <div>
