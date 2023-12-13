@@ -2,19 +2,14 @@
 .footer {
   background-color: #22333B;
   padding-top: 30px;
+  padding-bottom: 5px;
   text-align: center;
   color: #fff;
   margin-top: auto;
-  height: 13vh;
-  bottom: 0;
+  
 }
 
-/* Main footer on smaller screens*/
-@media (max-width: 767px) {
-  .footer {
-    min-height: 19vh;
-  }
-}
+
 
 /* Social media icons section */
 .footer-icons {
