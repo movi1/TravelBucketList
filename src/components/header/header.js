@@ -29,10 +29,9 @@ export const Header = () => {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/pack-list">Pack List</Nav.Link>
+            <Nav.Link href="/my-trip">My Trip</Nav.Link>
             <Nav.Link href="/bucket-list">Bucket List</Nav.Link>
             <Nav.Link href="/signup-login">Sign Up/Login</Nav.Link>
-            <Nav.Link href="/weather">Weather</Nav.Link>
             <Nav.Link href="/faq">FAQs</Nav.Link>
             <Nav.Link href="/contact-us">Contact Us</Nav.Link>
           </Nav>

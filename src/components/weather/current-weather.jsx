@@ -1,9 +1,11 @@
+import "./current-weather.css";
 
 const CurrentWeather = ({ data }) => {
   return (
     <div className="weather">
       <div className="top">
         <div>
+          <h2 className= "title"> Today </h2>
           <p className="city">{data.city}</p>
           <p className="weather-description">{data.weather[0].description}</p>
         </div>
@@ -16,9 +18,6 @@ const CurrentWeather = ({ data }) => {
       <div className="bottom">
         <p className="temperature">{Math.round(data.main.temp)}°C</p>
         <div className="details">
-          <div className="parameter-row">
-            <span className="parameter-label">Details</span>
-          </div>
           <div className="parameter-row">
             <span className="parameter-label">Feels Like</span>
             <span className="parameter-value">

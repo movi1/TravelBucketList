@@ -29,8 +29,11 @@ const Weather = () => {
       .catch((err) => console.log(err));
   };
 
+  console.log(forecast)
+  
   return (
     <div className="container">
+      <h2 className="tell-us-text">Tell us about your trip:</h2>
       <LocationSearch onSearchChange={handleOnSearchChange} />
       <div>
         {currentWeather && <CurrentWeather data={currentWeather} />}
