@@ -11,13 +11,11 @@
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #0a111b;
+  background-color: #22333b;
   position: relative;
-  /* padding: 10px 30px; */
+  padding: 10px 30px;
   margin: 0 auto;
   text-align: center;
-  height: 100vh;
-
 }
 
 /* Testimonials Text Styles */
@@ -113,8 +111,7 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  padding-bottom: 20px;
-  padding-top: 130px;
+  padding-top: 120px;
   transform: translate(-50%, -50%) rotate(180deg);
   width: 2%;
   height: auto;
@@ -131,9 +128,5 @@
   font-size: 1.2em;
   line-height: 1.5;
   padding-top: 0px;
-  color: #f8f8f8;
-}
-
-.back-to-top p{
   color: #f8f8f8;
 }
