@@ -38,6 +38,7 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h2 className="tell-us-text">Tell us about your trip:</h2>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
         <button
           onClick={() => handleDestinationSelect('Sun')}
