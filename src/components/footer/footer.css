@@ -1,11 +1,19 @@
 /* Main footer */
 .footer {
-  background-color: #22333b;
-  padding: 30px;
-  padding-top: 50px;
+  background-color: #22333B;
+  padding-top: 30px;
   text-align: center;
   color: #fff;
   margin-top: auto;
+  height: 13vh;
+  bottom: 0;
+}
+
+/* Main footer on smaller screens*/
+@media (max-width: 767px) {
+  .footer {
+    min-height: 19vh;
+  }
 }
 
 /* Social media icons section */
@@ -14,6 +22,7 @@
   justify-content: center;
   gap: 20px;
   padding-bottom: 10px;
+ 
 }
 
 /* Individual social media icons */
@@ -27,7 +36,7 @@
 /* Copyright text */
 .copyright p {
   color: #fff;
-  font-size: 18px;
+  font-size: 1em;
   font-family: "EB Garamond", sans-serif;
   margin-top: 10px;
 }

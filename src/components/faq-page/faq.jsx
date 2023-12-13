@@ -8,7 +8,7 @@ export const Faq = () => {
   // Effect to handle scroll animation
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.getElementById("about-us-section");
+      const element = document.getElementById("faq-section");
       if (element) {
         const rect = element.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight - 100;
@@ -30,82 +30,41 @@ export const Faq = () => {
 
   return (
     <div
-      className={`about-us-container ${shouldAnimate ? "sweep-in" : ""}`}
-      id="about-us-section"
+      className={`faq-container ${shouldAnimate ? "sweep-in" : ""}`}
+      id="faq-section"
     >
-      {/* Introduction section */}
-      <div className="about-us-intro">
-        <h1>Meet the Team!</h1>
+      {/* FAQ title */}
+      <div className="faq-title">
+        <h1>FAQs 🤔</h1>
       </div>
 
-      {/* Team profiles section */}
-      <div className="about-us-profiles">
-        {/* Profile Card - Lauren */}
-        <div className="profile-card">
-          <h2>Lauren</h2>
-          <p>
-            My favorite hobby is playing video games.
-            <ul>
-              <li>I like it because it helps me relax</li>
-              <li>and I can do it alone</li>
-            </ul>
-          </p>
-        </div>
-
-        {/* Profile Card - Louisa */}
-        <div className="profile-card">
-          <h2>Louisa</h2>
-          <p>
-            I love reading because:
-            <ul>
-              <li>It allows me to have quiet time</li>
-              <li>
-                Sometimes I read things to learn, and other times just rubbish!
-              </li>
-            </ul>
-          </p>
-        </div>
-
-        {/* Profile Card - Moira */}
-        <div className="profile-card">
-          <h2>Moira</h2>
-          <p>
-            I love painting because:
-            <ul>
-              <li>It allows me to express my creativity</li>
-              <li>
-                Blending colors and seeing a painting come to life excites me
-              </li>
-            </ul>
-          </p>
-        </div>
-
-        {/* Profile Card - Sheetal */}
-        <div className="profile-card">
-          <h2>Sheetal</h2>
-          <p>
-            My favourite hobby is crafting.
-            <ul>
-              <li>I enjoy learning new skills</li>
-              <li>Being creative relaxes me and calms my mind</li>
-            </ul>
-          </p>
-        </div>
-
-        {/* Profile Card - Shiromini */}
-        <div className="profile-card">
-          <h2>Shiromini</h2>
-          <p>
-            I love watching movies:
-            <ul>
-              <li>
-                They allow me to go forget reality and go into another world
-              </li>
-              <li>I like action, comedy and a bit of romance</li>
-            </ul>
-          </p>
-        </div>
+      {/* Question 1 */}
+      <div className="faq-cards">
+          <h2>Do I have to pay to use the Pack & Go app, or is it free to use?</h2>
+          <p>Pack & Go is absolutely free, and it always will be!</p>
       </div>
-    </div>
+
+    
+      {/* Question 2 */}
+      <div className="faq-cards">
+          <h2>Can I share my Pack & Go bucket list/packing list on social media?</h2>
+          <p>Sure, just make sure you tag our social media handles in your posts!</p>
+      </div>
+
+
+  
+      {/* Question 3 */}
+      <div className="faq-cards">
+          <h2>I have an idea for the app, how can I make a suggestion?</h2>
+          <p>We're always looking to improve, get in touch with us using the 'Contact Us' page.</p>
+      </div>
+
+
+
+
+
+
+    
+      </div>
   );
 };

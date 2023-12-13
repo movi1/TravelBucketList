@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { CgClose } from 'react-icons/cg';
 import './Message.css';
 
 const Message = ({ text, onClose }) => {
@@ -8,22 +7,27 @@ const Message = ({ text, onClose }) => {
   useEffect(() => {
     // Update visibility when the text prop changes
     setIsVisible(!!text);
-  }, [text]);
 
-  const handleClose = () => {
-    setIsVisible(false);
-    onClose();
-  };
+    // Set a timer to close the message after 3 seconds
+    if (text) {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+        onClose();
+      }, 1000);
+
+      // Clear the timer when the component unmounts or when text changes
+      return () => clearTimeout(timer);
+    }
+  }, [text, onClose]);
+
+
 
   return (
     <>
       {isVisible && (
         <div className="message visible">
           <p id="text">{text}</p>
-          <button className="icon" onClick={handleClose}>
-            <CgClose />
-          </button>
-        </div>
+            </div>
       )}
     </>
   );

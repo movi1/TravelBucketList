@@ -1,17 +1,17 @@
-/* Header Container Styles */
+/* Header*/
 .header-container {
   margin: 1% 0;
   width: 100%;
 }
 
-/* Custom Navbar Styles */
+/* Navbar */
 .custom-navbar {
   background-color: #22333b;
   color: white; 
   font-family: "Raleway", sans-serif; 
 }
 
-/* Navbar Link Styles */
+/* Navbar Links */
 .custom-navbar .navbar-nav .nav-link {
   color: white; 
   margin: 0 15px;
@@ -23,19 +23,19 @@
   color: #c6ac8f; 
 }
 
-/* Navbar Toggler Icon Styles */
+/* Navbar Toggler Icon */
 .custom-navbar .navbar-toggler-icon {
   color: white;
 }
 
-/* Navbar Brand Wrapper Styles */
+/* Navbar Brand Wrapper */
 .navbar-brand-wrapper {
   display: flex; 
   align-items: center; 
   margin: none; 
 }
 
-/* Navbar Brand Styles */
+/* Navbar Brand */
 .navbar-brand {
   display: flex; 
   align-items: center; 

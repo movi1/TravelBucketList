@@ -3,6 +3,8 @@ import MapComponent from './MapComponent';
 import CountryDetails from './CountryDetails';
 import SaveBucketList from './SaveBucketList';
 import Message from './Message';
+import '../map/MapSearch.css';
+import '../map/Map.css';
 
 
 

@@ -23,20 +23,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Allow profiles to wrap onto a new line on smaller screens */
-  animation: sweepIn 1s ease-out forwards; /* Use 'forwards' to retain styles after animation */
-  opacity: 0;
-}
-
-/* Animation Keyframes */
-@keyframes sweepIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  opacity: 1; /* Set opacity to 1 to ensure content is always visible */
 }
 
 /* Profile Card Styles */
@@ -53,7 +40,7 @@
 }
 
 /* Responsive Styling for Smaller Screens */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .profile-card {
     width: 80% !important; /* One profile per row on smaller screens */
   }
