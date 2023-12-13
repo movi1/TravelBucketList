@@ -1,0 +1,21 @@
+
+
+.weather-container {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    padding: 50px 0;
+  }
+  
+  .tell-us-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #5e503f;
+  }
+  
+
+  
