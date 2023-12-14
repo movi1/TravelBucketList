@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import "./footer.css";
 
 // Define social media icons
-const facebook_icon = process.env.PUBLIC_URL + "/facebook_icon.png";
-const instagram_icon = process.env.PUBLIC_URL + "/instagram_icon.png";
-const email_icon = process.env.PUBLIC_URL + "/email_icon.png";
+const facebook_icon = process.env.PUBLIC_URL + "images/facebook_icon.png";
+const instagram_icon = process.env.PUBLIC_URL + "images/instagram_icon.png";
+const email_icon = process.env.PUBLIC_URL + "images/email_icon.png";
 
 // Define social media links
 const facebookLink = "https://www.facebook.com/";
