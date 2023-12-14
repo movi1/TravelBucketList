@@ -7,6 +7,14 @@ Whether you're an avid traveler or someone with a growing wanderlust, this app i
 
 ## Getting Started
 
+Follow these steps to set up and run the project on your local machine.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js and npm - [Download and Install Node.js](https://nodejs.org/)
+- Git - [Download and Install Git](https://git-scm.com/)
 
  ### Collaborators Clone the Repository:
 ```
@@ -24,6 +32,37 @@ cd the-last-project-cfg
 + Inside project folder, install dependencies:
 ```
 npm install
+```
+## Open the Project in Your Code Editor If you're using Visual Studio Code:
+```
+code .
+```
+## Set Up Environment Variables
+### In the backend folder, locate the .env.example file, copy it, and rename the copy to .env. 
+
+### Open the .env file and fill in the required information for your database connection:
+---
+DB_HOST=localhost
+
+DB_USER=myuser
+
+DB_PASSWORD=mypassword
+
+DB_DATABASE=mydatabase
+
+PORT=3306
+
+---
+
+## or run this comand :
+```
+npm run create:env
+```
+# Install Database and Start the Project
+## In the root directory of the project, run the following commands:
+
+```
+npm run install:database
 ```
 
 ---
