@@ -1,11 +1,11 @@
 // destination.js
 import React from 'react';
 
-
 const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
+  // Common styles for icons
   const iconStyle = {
-    width: '200px',
-    height: '150px',
+    width: '30%', // Adjust the percentage as needed
+    height: 'auto', // Maintain aspect ratio
     margin: '5px',
     background: 'none',
     border: 'none',
@@ -13,6 +13,7 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
     position: 'relative',
   };
 
+  // Styles for tooltips
   const tooltipStyle = {
     position: 'absolute',
     top: '100%',
@@ -26,20 +27,50 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
     transition: 'opacity 0.3s ease',
   };
 
+  // Handle hover effect
   const handleHoverEffect = (event) => {
     const tooltip = event.currentTarget.querySelector('.tooltip');
     tooltip.style.opacity = 1;
   };
 
+  // Handle leave effect
   const handleLeaveEffect = (event) => {
     const tooltip = event.currentTarget.querySelector('.tooltip');
     tooltip.style.opacity = 0;
   };
 
+  // Responsive styles
+  const responsiveStyles = {
+    iconStyle: {
+      width: '50%', // Adjust the percentage as needed for smaller screens
+      height: 'auto', // Maintain aspect ratio
+      margin: '5px',
+      background: 'none',
+      border: 'none',
+      padding: 0,
+      position: 'relative',
+    },
+    tooltipStyle: {
+      // existing styles
+    },
+    buttonContainer: {
+      display: 'flex',
+      flexDirection: 'row', // Display buttons in a row by default
+      alignItems: 'center', // Center-align buttons
+      justifyContent: 'center', // Center the buttons horizontally
+    },
+    buttonText: {
+      // Add styles for the text below the images
+      marginTop: '5px',
+      textAlign: 'center',
+    },
+  };
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div className="destination-container">
       <h2 className="tell-us-text">Tell us about your trip:</h2>
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div className="button-container" style={responsiveStyles.buttonContainer}>
+        {/* Button for Sun */}
         <button
           onClick={() => handleDestinationSelect('Sun')}
           onMouseEnter={(e) => {
@@ -50,13 +81,18 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
             handleLeave(e);
             handleLeaveEffect(e);
           }}
-          style={iconStyle}
+          style={{ ...responsiveStyles.iconStyle }}
         >
-          <img src="/images/suntrim.png" alt="Sun" style={iconStyle} />
-          <div className="tooltip" style={tooltipStyle}>
+          <div className="image-container">
+            <img src="/images/suntrim.png" alt="Sun" className="icon-style" />
+          </div>
+          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
             Sun
           </div>
+          <p className="button-text">Sun</p>
         </button>
+
+        {/* Button for Snow */}
         <button
           onClick={() => handleDestinationSelect('Snow')}
           onMouseEnter={(e) => {
@@ -67,13 +103,18 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
             handleLeave(e);
             handleLeaveEffect(e);
           }}
-          style={iconStyle}
+          style={{ ...responsiveStyles.iconStyle }}
         >
-          <img src="/images/snowtrim.png" alt="Snow" style={iconStyle} />
-          <div className="tooltip" style={tooltipStyle}>
+          <div className="image-container">
+            <img src="/images/snowtrim.png" alt="Snow" className="icon-style" />
+          </div>
+          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
             Snow
           </div>
+          <p className="button-text">Snow</p>
         </button>
+
+        {/* Button for City */}
         <button
           onClick={() => handleDestinationSelect('City')}
           onMouseEnter={(e) => {
@@ -84,13 +125,18 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
             handleLeave(e);
             handleLeaveEffect(e);
           }}
-          style={iconStyle}
+          style={{ ...responsiveStyles.iconStyle }}
         >
-          <img src="/images/citytrim.png" alt="City Break" style={iconStyle} />
-          <div className="tooltip" style={tooltipStyle}>
+          <div className="image-container">
+            <img src="/images/citytrim.png" alt="City Break" className="icon-style" />
+          </div>
+          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
             City
           </div>
+          <p className="button-text">City</p>
         </button>
+
+        {/* Button for Business */}
         <button
           onClick={() => handleDestinationSelect('Business')}
           onMouseEnter={(e) => {
@@ -101,12 +147,15 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
             handleLeave(e);
             handleLeaveEffect(e);
           }}
-          style={iconStyle}
+          style={{ ...responsiveStyles.iconStyle }}
         >
-          <img src="/images/officetrim.png" alt="Business" style={iconStyle} />
-          <div className="tooltip" style={tooltipStyle}>
+          <div className="image-container">
+            <img src="/images/officetrim.png" alt="Business" className="icon-style" />
+          </div>
+          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
             Business
           </div>
+          <p className="button-text">Business</p>
         </button>
       </div>
     </div>
