@@ -1,3 +1,4 @@
+import "./locationSearch.css";
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate"; /*wrapper for react select*/
 import { location_api, locationApiOptions } from "./api";
@@ -30,13 +31,15 @@ const LocationSearch = ({ onSearchChange }) => {
   };
 
   return (
-    <AsyncPaginate
-      placeholder="Where do you want to travel to?"
-      debounceTimeout={600}
-      value={search}
-      onChange={handleOnChange}
-      loadOptions={dropDown}
-    />
+    <div className="search-container">
+      <AsyncPaginate
+        placeholder="Where do you want to travel to?"
+        debounceTimeout={600}
+        value={search}
+        onChange={handleOnChange}
+        loadOptions={dropDown}
+      />
+    </div>
   );
 };
 

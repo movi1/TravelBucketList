@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './weather.css'; 
-import Forecast from './forecast';
+import WeatherForecast from './weather-forecast.jsx';
 import CurrentWeather from './current-weather.jsx';
 import LocationSearch from './locationSearch';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
-  const [forecast, setForecast] = useState(null);
+  const [weatherForecast, setWeatherForecast] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
@@ -25,20 +25,19 @@ const Weather = () => {
         const forecastResponse = await response[1].json();
 
         setCurrentWeather({ city: searchData.label, ...weatherResponse });
-        setForecast({ city: searchData.label, ...forecastResponse });
+        setWeatherForecast({ city: searchData.label, ...forecastResponse });
       })
       .catch((err) => console.log(err));
   };
 
-  console.log(forecast)
+  console.log(weatherForecast)
   
   return (
     <div className="weather-container">
-      <h2 className="tell-us-text">Tell us about your trip:</h2>
       <LocationSearch onSearchChange={handleOnSearchChange} />
       <div>
-        {currentWeather && <CurrentWeather data={currentWeather} />}
-        {forecast && <Forecast data={forecast} />}
+        {currentWeather && <CurrentWeather currentWeatherData={currentWeather} />}
+        {weatherForecast && <WeatherForecast weatherForecastData={weatherForecast} />}
       </div>
     </div>
   );
