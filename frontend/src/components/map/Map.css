@@ -14,39 +14,48 @@ body {
   box-shadow: 0 0 10px #0A0908(0, 0, 0, 0.1);
   min-height: 70vh;
 }
+/* Improved styles for the search container */
 .search-container {
   position: relative;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 4px 6px rgb(94, 80, 63);
+  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.2);
   background-color: #f4f4f4;
   border-radius: 10px;
+  overflow: hidden;
   margin-bottom: 20px;
 }
 
+/* Improved styles for the search input */
 input {
-  width: 100%;
+  width: calc(100% - 30px);
   padding: 15px;
   border: none;
   border-radius: 10px;
   font-size: 16px;
-  box-shadow: 0px 3px 5px rgba(10, 9, 8, 0.1);
-  transition: border 0.3s ease;
+  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.2); /* Added shadow to the input */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
   box-sizing: border-box;
-  background-color: #f0f0f0;
+  background-color: #f4f4f4;
+  margin-bottom: -1px;
 }
 
+/* Remove the border when the input is focused */
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
 input::placeholder {
   /* color: rgba(34, 51, 59, 0.7);  */
   color: #22333b;
   font-family: "Raleway", sans-serif;
 }
 
-input:focus {
+/* input:focus {
   outline: none;
   border: 1px solid #c6ac8f;
   box-shadow: 0px 6px 10px rgba(0, 123, 255, 0.1);
-}
+} */
 
 .suggestions {
   position: absolute;

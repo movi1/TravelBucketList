@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { signUpApi } from './api';
-import WelcomeMessage from '../login/welcome-message';
-import '../login/login-signup.css';
+import SignUpWelcomeMessage from './signUpWelcomeMessage';
+import './signup.css';
 import { useAuth } from './authContext'; // Update the path based on your project structure
 
 const SignUp = () => {
@@ -29,8 +29,8 @@ const SignUp = () => {
         // Perform login after successful signup
         login({ username, email });
 
-             // Log user data after calling login
-      console.log('User data after login:', { username, email });
+        // Log user data after calling login
+        console.log('User data after login:', { username, email });
 
         setIsSignedUp(true);
       } else {
@@ -43,57 +43,58 @@ const SignUp = () => {
     }
   };
 
-  // function resetForm() {
-  //   setUsername('');
-  //   setEmail('');
-  //   setPassword('');
-  //   setError('');
-  // }
+  function resetForm() {
+    setUsername('');
+    setEmail('');
+    setPassword('');
+    setError('');
+  }
 
   return (
     <div className="signup-container">
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSignUp}>
-        <label htmlFor="signup-username">Username:</label>
-        <input
-          type="text"
-          id="signup-username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <label htmlFor="signup-email">Email:</label>
-        <input
-          type="email"
-          id="signup-email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label htmlFor="signup-password">Password:</label>
-        <input
-          type="password"
-          id="signup-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-      {error && <p className="error-message">{error}</p>}
-      {isSignedUp && (
-        <div className="welcome-message">
-          <p className="success-message">Welcome, {username}! Your sign-up was successful.</p>
-          <button className="go-home-btn" onClick={() => navigate('/')}>
-            Go to Home
-          </button>
-        </div>
+      {isSignedUp ? (
+        <SignUpWelcomeMessage username={username} onNavigate={() => navigate('/another-page')} />
+      ) : (
+        <>
+          <form onSubmit={handleSignUp} className="signup-form">
+            <h2>Sign Up</h2>
+            <label htmlFor="signup-username">Username:</label>
+            <input
+              type="text"
+              id="signup-username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <label htmlFor="signup-email">Email:</label>
+            <input
+              type="email"
+              id="signup-email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <label htmlFor="signup-password">Password:</label>
+            <input
+              type="password"
+              id="signup-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit" onClick={handleSignUp} className="signup-btn">
+              Sign Up
+            </button>
+
+            {error && <p className="error-message">{error}</p>}
+            <p>
+              Already have an account? <Link to="/login">Log In</Link>
+            </p>
+          </form>
+        </>
       )}
-      <p>
-        Already have an account? <Link to="/login">Log In</Link>
-      </p>
     </div>
-  );
+  )
 };
 
 export default SignUp;
