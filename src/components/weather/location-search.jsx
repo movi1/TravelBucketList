@@ -1,4 +1,4 @@
-import "./locationSearch.css";
+import "./location-search.css";
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate"; /*wrapper for react select*/
 import { location_api, locationApiOptions } from "./api";

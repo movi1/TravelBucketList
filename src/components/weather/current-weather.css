@@ -6,7 +6,7 @@
 }
 
 .weather {
-  width: 600px;
+  width: 300px;
   border-radius: 15px;
   color: black;
   background-color: lightgrey;
@@ -14,9 +14,26 @@
   padding: 0 20px 20px 20px;
 }
 
+.weather.warm {
+  width: 300px;
+  border-radius: 15px;
+  color: black;
+  background-color: rgb(243, 72, 72);
+  margin: 20px auto 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+.weather.cold {
+  width: 300px;
+  border-radius: 15px;
+  color: black;
+  background-color: lightblue;
+  margin: 20px auto 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
 .top,
 .bottom {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -26,12 +43,7 @@
   font-size: 14px;
   line-height: 1;
   color: rgb(83, 82, 82);
-}
-
-.weather-icon {
-  width: 100px;
-  display: block;
-  float: right;
+  text-align: center;
 }
 
 .temperature {
@@ -40,8 +52,9 @@
   width: auto;
   letter-spacing: -5px;
   margin: 10px 0;
-  color: rgb(83, 82, 82);
-  padding: 0 200px 20px 50px;
+  color: black;
+  
+  text-align: center;
 }
 
 .details {
