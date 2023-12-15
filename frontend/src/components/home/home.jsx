@@ -1,6 +1,7 @@
-// home.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import 'animate.css';
 import './home.css';
 

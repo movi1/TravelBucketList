@@ -39,7 +39,6 @@ export const MapSearch = () => {
       const selectedCountryData = countries.find(
         (country) => country.cca2 === countryCode
       );
-      console.log(selectedCountryData)
       // Fetch additional details based on the selected country
       // For example, you can fetch more details from another API or use the existing data
       // For simplicity, I'm just using the existing data here
@@ -74,8 +73,8 @@ export const MapSearch = () => {
       const filteredCountries = countries.filter(country => {
         return country.name.common.toLowerCase().startsWith(term.toLowerCase());
       });
-
       // Display suggestions
+     
       setSuggestedCountries(filteredCountries);
     }
   };

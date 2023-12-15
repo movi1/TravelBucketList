@@ -58,7 +58,7 @@ input::placeholder {
 } */
 
 .suggestions {
-  position: absolute;
+  /* position: relative; */
   top: 60px; /* Adjust the distance from the input */
   width: 100%;
   background-color: #f4f4f4;
