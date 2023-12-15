@@ -1,22 +1,32 @@
 import "./current-weather.css";
 
 const CurrentWeather = ({ currentWeatherData }) => {
+  
+  let [city, region, countryCode] = currentWeatherData.city.split(", ");
+  const dateBuilder = (d) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+  }
   return (
-      <div className="weather">
+      <div className={(typeof currentWeatherData.main != "undefined") ? ((currentWeatherData.main.temp > 20) ? 'weather warm' : 'weather cold') : 'weather'}>
       <label className="title"> Today </label>
         <div className="top">
           <div>
-            <p className="city">{currentWeatherData.city}</p>
-            <p className="weather-description">{currentWeatherData.weather[0].description}</p>
+            <p className="date">{dateBuilder(new Date())}</p>
+            <p className="city">{city}<br/>{region}, {countryCode}</p>
           </div>
-          <img
-            alt="weather"
-            className="weather-icon"
-            src={`weather-icons/${currentWeatherData.weather[0].icon}.png`}
-          ></img>
+
         </div>
         <div className="bottom">
           <p className="temperature">{Math.round(currentWeatherData.main.temp)}°C</p>
+          <p className="weather-description">{currentWeatherData.weather[0].description} </p>
           <div className="details">
             <div className="parameter-row">
               <span className="parameter-label">Feels Like</span>

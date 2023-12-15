@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './weather.css'; 
 import WeatherForecast from './weather-forecast.jsx';
 import CurrentWeather from './current-weather.jsx';
-import LocationSearch from './locationSearch';
+import LocationSearch from './location-search';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 
 const Weather = () => {
