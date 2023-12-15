@@ -1,12 +1,12 @@
 import React from 'react';
-
+import './login.css';
 const WelcomeMessage = ({ username, onLogout }) => {
   return (
     <div className='welcome-message'>
       {/* Display a welcome message with the logged-in username */}
       <p>Welcome {username}! You are logged in.</p>
 
-      <button className="login-signup-btn" onClick={onLogout}>
+      <button className="logout-btn" onClick={onLogout}>
         Logout
       </button>
     </div>

@@ -1,0 +1,149 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+h2 {
+  color: #22333b;
+}
+h3 {
+    color: #22333b;
+  }
+
+.signup-form {
+  width: 400px; /* Set a fixed width for the form */
+  margin: 50px auto; /* Center the form horizontally with top and bottom margins */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0.2, 0.3);
+  text-align: center;
+  background-color: #eae0d5;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #5e503f;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #22333b;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #22333b;
+}
+
+button.signup-btn {
+  background-color: #5e503f;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to the transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+}
+
+button.signup-btn:hover {
+  background-color: #22333b;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.error-message p {
+  color: #d9534f;
+  margin-top: 15px;
+  
+}
+
+.signup-navigate-btn {
+  background-color: #5e503f;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to the transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.signup-navigate-btn:hover {
+  background-color: #22333b;
+}
+
+p {
+  color: #5e503f;
+  margin-top: 15px;
+}
+
+a {
+  color: #22333b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease; /* Add a transition for color change */
+}
+
+a:hover {
+  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3); /* Add a subtle box shadow on hover */
+}
+
+.signup-welcome-message {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eae0d5; /* Camel color */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0.2, 0.3);
+  text-align: center;
+}
+.signup-welcome-message  p {
+    color: #22333b; /* Charcoal color */
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+
+
+.signup-container a:hover {
+  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3);
+}
+
+
+.go-another-page-btn {
+    background-color: #22333B; /* Dark Khaki color */
+    color: #ffffff; /* White color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+
+.go-another-page-btn:hover {
+background-color: #5e503f;
+}
+
+
+
+
