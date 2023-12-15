@@ -33,6 +33,7 @@ const Login = () => {
     } catch (error) {
       console.error('Login error:', error);
       setError('Invalid username or password. Please try again.');
+      e.preventDefault();
     }
   };
   function handleLogout() {

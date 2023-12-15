@@ -19,7 +19,6 @@ export default function MapComponent({ selectedCityName }) {
         if (data.length > 0) {
           // Destructure lat and lon from the first result
           const { lat, lon } = data[0];
-          
           // Convert lat and lon to numbers
           const latitude = parseFloat(lat);
           const longitude = parseFloat(lon);
