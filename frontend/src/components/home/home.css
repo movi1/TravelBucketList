@@ -1,3 +1,4 @@
+/* Main Container Styles */
 .containers {
   display: flex;
   flex-direction: column;
@@ -13,6 +14,7 @@
   box-sizing: border-box;
 }
 
+/* Responsive Styles */
 @media (min-width: 768px) {
   .containers {
     flex-direction: row;
@@ -25,6 +27,7 @@
   }
 }
 
+/* Title Row Styles */
 .row-title {
   display: flex;
   flex-direction: column;
@@ -35,9 +38,9 @@
   flex: 1;
 }
 
+/* Image Row Styles */
 .row-image {
   display: flex;
-  /* align-items: center;  */
   background: #ddd;
   flex: 1;
 }
@@ -53,15 +56,12 @@
   justify-content: center; /* Center the content vertically */
 }
 
-/* Add additional styles as needed */
-
-
+/* Section Styles */
 .section-heading {
   font-size: 35px;
   padding: 20px;
   font-family: "EB Garamond", sans-serif;
   color: #5e503f;
-
 }
 
 .section-content {
@@ -72,12 +72,36 @@
 
 .section-description {
   font-size: 20px;
-  line-height: 1.5; 
+  line-height: 1.5;
   margin-bottom: 40px;
   text-align: center;
   color: #5e503f;
 }
 
+/* Image Container Styles */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s; /* Add a smooth transition effect */
+}
+
+/* Home Page Title Styles */
+.title-home-page {
+  font-size: 35px;
+  padding: 20px;
+  font-family: "EB Garamond", sans-serif;
+  color: #5e503f;
+}
+
+/* Subtitle Styles */
+.subtitle {
+  font-size: 23px;
+  margin-bottom: 40px;
+  color: #5e503f;
+}
+
+/* Call to Action Button Styles */
 .cta-btn {
   background-color: #5e503f;
   padding: 12px 10px;
@@ -91,30 +115,7 @@
   box-shadow: 0px 3px 5px rgba(10, 9, 8, 0.1); /* Added box shadow */
 }
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s; /* Add a smooth transition effect */
-}
-
-.image-container:hover img {
-  /* transform: scale(1.1); */
-}
-
-.title-home-page {
-  font-size: 35px;
-  padding: 20px;
-  font-family: "EB Garamond", sans-serif;
-  color: #5e503f;
-}
-
-.subtitle {
-  font-size: 23px;
-  margin-bottom: 40px;
-  color: #5e503f;
-}
-
+/* Explore Button Styles */
 .explore-btn {
   font-family: "Raley", sans-serif;
   background-color: #5e503f;
@@ -136,6 +137,7 @@
   box-shadow: 0px 6px 10px rgba(0, 0, 0.5, 0.2); /* Increase shadow on hover */
 }
 
+/* Animation Styles */
 @keyframes fadeIn {
   from {
     opacity: 0;

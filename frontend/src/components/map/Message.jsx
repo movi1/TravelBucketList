@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './Message.css';
+import React, { useState, useEffect } from "react";
+import "./Message.css";
 
 const Message = ({ text, onClose }) => {
   const [isVisible, setIsVisible] = useState(!!text);
@@ -20,18 +20,15 @@ const Message = ({ text, onClose }) => {
     }
   }, [text, onClose]);
 
-
-
   return (
     <>
       {isVisible && (
         <div className="message visible">
           <p id="text">{text}</p>
-            </div>
+        </div>
       )}
     </>
   );
 };
 
 export default Message;
-
