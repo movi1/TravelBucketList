@@ -45,6 +45,7 @@ function PackList() {
   };
 
   const handleDestinationSelect = (destination) => {
+    
     setSelectedDestination(destination);
     setActiveKey(null); // Close the accordion when a new destination is selected
   };

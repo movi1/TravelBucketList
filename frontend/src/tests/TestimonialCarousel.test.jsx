@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import TestimonialCarousel from "./testimonial-carousel";
+import TestimonialCarousel from "../components/testimonial-carousel/testimonial-carousel";
 
 // npm run test
 
@@ -19,6 +19,8 @@ describe("Carousel", () => {
   it("should render tagline", () => {
     const tagline = screen.getByText("See what our users have to say!");
     expect(tagline).toBeInTheDocument();
+
+    
   });
 
   // Test that checks the 'back-to-top' onClick element clicks and scrolls up to top:
