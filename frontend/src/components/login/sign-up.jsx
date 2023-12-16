@@ -14,34 +14,35 @@ const SignUp = () => {
   const [isSignedUp, setIsSignedUp] = useState(false);
   const navigate = useNavigate();
 
-  const handleSignUp = async (e) => {
-    e.preventDefault();
+const handleSignUp = async (e) => {
+  e.preventDefault();
 
-    try {
-      const response = await signUpApi(username, email, password);
+  try {
+    const response = await signUpApi(username, email, password);
 
-      if (response !== undefined && response.toLowerCase() === 'sign-up successful') {
-        console.log('Sign-up successful');
+    if (response && response.toLowerCase() === 'sign-up successful') {
+      console.log('Sign-up successful');
 
-        // Log user data before calling login
-        console.log('User data before login:', { username, email });
+      // Log user data before calling login
+      console.log('User data before login:', { username, email });
 
-        // Perform login after successful signup
-        login({ username, email });
+      // Perform login after successful signup
+      login({ username, email });
 
-        // Log user data after calling login
-        console.log('User data after login:', { username, email });
+      // Log user data after calling login
+      console.log('User data after login:', { username, email });
 
-        setIsSignedUp(true);
-      } else {
-        console.error('Invalid or unexpected response structure');
-        setError('Error during sign-up');
-      }
-    } catch (error) {
-      console.error('Error during sign-up:', error);
-      setError(error.message || 'Error during sign-up');
+      setIsSignedUp(true);
+    } else {
+      console.error('Invalid or unexpected response structure');
+      setError('Error during sign-up');
     }
-  };
+  } catch (error) {
+    console.error('Error during sign-up:', error);
+    setError(error || 'Error during sign-up');
+  }
+};
+
 
   function resetForm() {
     setUsername('');
