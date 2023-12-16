@@ -37,11 +37,38 @@ npm install
 ```
 code .
 ```
-## Set Up Environment Variables
-### In the backend folder, locate the .env.example file, copy it, and rename the copy to .env. 
 
-### Open the .env file and fill in the required information for your database connection:
+## Set Up Environment Variables
+
+### Option 1: For Windows Users:
+```
+npm run windows:env
+```
+- Open the .env file.
+
 ---
+
+### Option 2: For GIT BASH, Linux, or Mac Users
+```
+npm run create:env
+```
+- Open the .env file.
+
+---
+
+### Option 3: Manually Locate and Copy
+- Navigate to the "backend" folder.
+- Locate the .env.example file.
+- Copy it and rename the copy to .env.
+- Open the .env file.
+
+---
+
+# Fill in Database Connection Details
+
+
+## In the opened .env file, provide the necessary information for your database connection:
+
 DB_HOST=localhost
 
 DB_USER=myuser
@@ -54,10 +81,10 @@ PORT=3306
 
 ---
 
-## or run this comand :
-```
-npm run create:env
-```
+ ### Adjust the values according to your database configuration.
+
+---
+
 # Install Database and Start the Project
 ## In the root directory of the project, run the following commands:
 
