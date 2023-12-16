@@ -90,29 +90,48 @@ app.get('/signup', (req, res) => {
 });
 
 // API endpoint for user sign-up
+// API endpoint for user sign-up
 app.post('/signup', async (req, res) => {
   const { username, email, password } = req.body;
 
   try {
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Insert new user into the database with the hashed password
-    const query = `INSERT INTO users (username, email, password) VALUES (?, ?, ?)`;
-    db.query(query, [username, email, hashedPassword], (err, result) => {
-      if (err) {
-        console.error('Error signing up:', err.message);
-        res.status(500).send('Error signing up');
-      } else {
-        console.log('Signup successful');
-        res.status(201).send('Sign-up successful');
+    // Check if the username already exists in the database
+    const checkQuery = `SELECT * FROM users WHERE username = ?`;
+    db.query(checkQuery, [username], async (checkErr, checkResult) => {
+      if (checkErr) {
+        console.error('Error checking username existence:', checkErr.message);
+        res.status(500).send('Error checking username existence');
+        return;
       }
+
+      // If username already exists, send an error response
+      if (checkResult.length > 0) {
+        console.log('Username already exists');
+        res.status(400).send('Username already exists');
+        return;
+      }
+
+      // Hash the password
+      const hashedPassword = await bcrypt.hash(password, 10);
+
+      // Insert new user into the database with the hashed password
+      const insertQuery = `INSERT INTO users (username, email, password) VALUES (?, ?, ?)`;
+      db.query(insertQuery, [username, email, hashedPassword], (insertErr, insertResult) => {
+        if (insertErr) {
+          console.error('Error signing up:', insertErr.message);
+          res.status(500).send('Error signing up');
+        } else {
+          console.log('Signup successful');
+          res.status(201).send('Sign-up successful');
+        }
+      });
     });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error hashing password');
   }
 });
+
 
 
 // API endpoint for user logout (example)
