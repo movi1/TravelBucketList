@@ -1,10 +1,11 @@
+/* Title Section */
 .title {
   font-size: 23px;
   font-weight: 200;
   padding: 20px 0px 0px 0px;
-  
 }
 
+/* Weather Container Styles */
 .weather {
   width: 400px;
   border-radius: 15px;
@@ -14,6 +15,7 @@
   padding: 0 20px 20px 20px;
 }
 
+/* Warm Weather Styles */
 .weather.warm {
   width: 300px;
   border-radius: 15px;
@@ -23,6 +25,7 @@
   padding: 0 20px 20px 20px;
 }
 
+/* Cold Weather Styles */
 .weather.cold {
   width: 300px;
   border-radius: 15px;
@@ -32,12 +35,14 @@
   padding: 0 20px 20px 20px;
 }
 
+/* Top and Bottom Sections */
 .top,
 .bottom {
   justify-content: space-between;
   align-items: center;
 }
 
+/* Weather Description Styles */
 .weather-description {
   font-weight: 400;
   font-size: 14px;
@@ -46,6 +51,7 @@
   text-align: center;
 }
 
+/* Temperature Styles */
 .temperature {
   font-weight: 400;
   font-size: 70px;
@@ -53,26 +59,29 @@
   letter-spacing: -5px;
   margin: 10px 0;
   color: black;
-  
   text-align: center;
 }
 
+/* Details Section Styles */
 .details {
   width: 100%;
   padding-left: 20px;
 }
 
+/* Parameter Row Styles */
 .parameter-row {
   display: flex;
   justify-content: space-between;
 }
 
+/* Parameter Label Styles */
 .parameter-label {
   text-align: left;
   font-weight: 400;
   font-size: 12px;
 }
 
+/* Parameter Value Styles */
 .parameter-value {
   text-align: right;
   font-weight: 600;
