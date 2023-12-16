@@ -1,10 +1,11 @@
+/* Title Section */
 .title {
   font-size: 23px;
   font-weight: 700;
   padding: 0px 20px 50px 0px;
-
 }
 
+/* Daily Item Styles */
 .daily-item {
   background-color: lightgrey;
   border-radius: 15px;
@@ -16,10 +17,12 @@
   padding: 32px 20px;
 }
 
+/* Small Weather Icon Styles */
 .icon-small {
   width: 40px;
 }
 
+/* Day Label Styles */
 .day {
   color: #212121;
   flex: 1 1;
@@ -27,16 +30,19 @@
   margin-left: 15px;
 }
 
+/* Description Label Styles */
 .description {
   flex: 1 1;
   margin-right: 15px;
   text-align: right;
 }
 
+/* Temperature Label Styles */
 .temp {
   color: black;
 }
 
+/* Daily Details Grid Styles */
 .daily-details-grid {
   grid-row-gap: 0;
   grid-column-gap: 15px;
@@ -48,6 +54,7 @@
   padding: 5px 15px;
 }
 
+/* Daily Details Grid Item Styles */
 .daily-details-grid-item {
   display: flex;
   height: 30px;
@@ -55,10 +62,12 @@
   align-items: center;
 }
 
+/* Styling for the First Label in Daily Details Grid Item */
 .daily-details-grid-item label:first-child {
   color: grey;
 }
 
+/* Styling for the Last Label in Daily Details Grid Item */
 .daily-details-grid-item label:last-child {
   color: grey;
 }
