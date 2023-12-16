@@ -1,8 +1,9 @@
-/* css for MapSearch.jsx to go here */
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kanit:ital,wght@1,300&family=Lobster+Two&family=Open+Sans&family=Playpen+Sans:wght@300&display=swap');
+
+/* Map container styles */
 .map-container {
   max-width: 100%;
-  /* margin-top: 20px; */
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
