@@ -1,9 +1,23 @@
-import React from 'react';
-import { Accordion, Container, Row, Col, Button } from 'react-bootstrap';
-import './pack-list.css'; // Import the pack-list styles
+import React from "react";
+import { Accordion, Container, Row, Col, Button } from "react-bootstrap";
+import "./pack-list.css"; // Import the pack-list styles
 
-const AccordionComponent = ({ activeKey, handleAccordionChange, handleGoBack, handlePrint, printing, essentialsData }) => {
-  const categories = ["🎫 Essentials", "🧳 Clothes", "🛫 Carry-On", "🔌 Misc", "💄 Make-Up", "🌍 Your Trip"];
+const AccordionComponent = ({
+  activeKey,
+  handleAccordionChange,
+  handleGoBack,
+  handlePrint,
+  printing,
+  essentialsData,
+}) => {
+  const categories = [
+    "🎫 Essentials",
+    "🧳 Clothes",
+    "🛫 Carry-On",
+    "🔌 Misc",
+    "💄 Make-Up",
+    "🌍 Your Trip",
+  ];
 
   return (
     <Container className="pack-list-container">
@@ -20,11 +34,11 @@ const AccordionComponent = ({ activeKey, handleAccordionChange, handleGoBack, ha
                 <Accordion.Header>{category}</Accordion.Header>
                 <Accordion.Body>
                   <ul className="pack-list">
-                    {essentialsData && essentialsData[category] ? (
-                      essentialsData[category].map((item, itemIndex) => (
-                        <li key={itemIndex}>{item}</li>
-                      ))
-                    ) : null}
+                    {essentialsData && essentialsData[category]
+                      ? essentialsData[category].map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))
+                      : null}
                   </ul>
                 </Accordion.Body>
               </Accordion.Item>
@@ -32,15 +46,55 @@ const AccordionComponent = ({ activeKey, handleAccordionChange, handleGoBack, ha
           </Col>
         ))}
       </Row>
-      <Row>
+      <Row className="mt-5 mb-5">
         <Col>
-          <Button variant="light" onClick={handleGoBack} className="mt-3">Back</Button>
-        </Col>
-        <Col>
-          <Button variant="light" onClick={handlePrint} className="mt-3 mx-auto button" disabled={printing}>
-            {printing ? 'Printing...' : 'Print Checklist'}
+          <Button
+            variant="light"
+            onClick={handleGoBack}
+            className="mt-3"
+            style={{
+              backgroundColor: "#5e503f",
+              padding: "12px 10px",
+              fontSize: "20px",
+              textDecoration: "none",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              color: "#f4f4f4",
+              transition: "background-color 0.3s",
+              boxShadow: "0px 3px 5px rgba(10, 9, 8, 0.1)",
+              marginTop: "25px",
+              marginBottom: "50px",
+            }}
+          >
+            Back
           </Button>
         </Col>
+        <Col className="d-flex justify-content-center">
+          <Button
+            variant="light"
+            onClick={handlePrint}
+            className="mt-3 mx-auto button"
+            disabled={printing}
+            style={{
+              backgroundColor: "#5e503f",
+              padding: "12px 10px",
+              fontSize: "20px",
+              textDecoration: "none",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              color: "#f4f4f4",
+              transition: "background-color 0.3s",
+              boxShadow: "0px 3px 5px rgba(10, 9, 8, 0.1)",
+              marginTop: "25px",
+              marginBottom: "50px",
+            }}
+          >
+            {printing ? "Printing..." : "Print Checklist"}
+          </Button>
+        </Col>
+        <Col></Col>
       </Row>
     </Container>
   );
