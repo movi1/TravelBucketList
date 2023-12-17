@@ -75,13 +75,13 @@ h2 {
 }
 
 /* Error message styles */
-.login-form .error-message p {
+.error-message p {
   color: #d9534f;
   margin-top: 15px;
 }
 
 /* text styles within form */
-.login-form p {
+p {
   color: #5e503f;
   margin-top: 15px;
 }
