@@ -74,8 +74,14 @@ h3 {
 }
 
 /* Error message styles */
-.signup-form .error-message p {
+.error-message p {
   color: #d9534f;
+  margin-top: 15px;
+}
+
+/* text styles within form */
+p {
+  color: #5e503f;
   margin-top: 15px;
 }
 
@@ -95,12 +101,6 @@ h3 {
 
 .signup-navigate-btn:hover {
   background-color: #22333b;
-}
-
-/* text styles within form */
-.signup-form p {
-  color: #5e503f;
-  margin-top: 15px;
 }
 
 /* Log In Link */
