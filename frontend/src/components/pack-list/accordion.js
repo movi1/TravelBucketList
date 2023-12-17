@@ -10,6 +10,7 @@ const AccordionComponent = ({
   printing,
   essentialsData,
 }) => {
+  // Categories for the accordion sections
   const categories = [
     "🎫 Essentials",
     "🧳 Clothes",
@@ -21,6 +22,7 @@ const AccordionComponent = ({
 
   return (
     <Container className="pack-list-container">
+      {/* Accordion sections based on categories */}
       <Row>
         {categories.map((category, index) => (
           <Col key={index} md={4}>
@@ -33,6 +35,7 @@ const AccordionComponent = ({
               <Accordion.Item eventKey={index.toString()}>
                 <Accordion.Header>{category}</Accordion.Header>
                 <Accordion.Body>
+                  {/* Pack list items for each category */}
                   <ul className="pack-list">
                     {essentialsData && essentialsData[category]
                       ? essentialsData[category].map((item, itemIndex) => (
@@ -46,7 +49,10 @@ const AccordionComponent = ({
           </Col>
         ))}
       </Row>
+
+      {/* Buttons for navigation and printing */}
       <Row className="mt-5 mb-5">
+        {/* Back button */}
         <Col>
           <Button
             variant="light"
@@ -70,6 +76,7 @@ const AccordionComponent = ({
             Back
           </Button>
         </Col>
+        {/* Print button */}
         <Col className="d-flex justify-content-center">
           <Button
             variant="light"
@@ -94,6 +101,8 @@ const AccordionComponent = ({
             {printing ? "Printing..." : "Print Checklist"}
           </Button>
         </Col>
+
+        {/* Placeholder column for correct spacing */}
         <Col></Col>
       </Row>
     </Container>
