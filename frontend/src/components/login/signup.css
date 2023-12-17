@@ -118,7 +118,7 @@ h3 {
 
 /* Welcome Message after sign Up */
 .signup-welcome-message {
-  margin-top: 20px;
+  margin: 10% auto;
   padding: 20px;
   background-color: #eae0d5; /* Camel color */
   border-radius: 8px;

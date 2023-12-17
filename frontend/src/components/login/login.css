@@ -1,15 +1,23 @@
-/* login-signup.css */
+/* General styling for the entire body of the document */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
+/* Styling for the container of the login form */
 .login-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:70vh; /* Set the container height to 100% of the viewport height */
+  margin: 50px auto;
 }
 
+/* Heading styles */
+h2 {
+  color: #22333b;
+  padding: 20px 0;
+}
+
+/* Styling for the login form */
 .login-form {
   width: 400px; /* Set a fixed width for the form */
   margin: 50px auto; /* Center the form horizontally with top and bottom margins */
@@ -21,19 +29,14 @@ body {
   background-color: #eae0d5;
 }
 
-h2 {
-  color: #22333b;
-
-}
-
-label {
+.login-form label {
   display: block;
   margin-top: 15px;
   font-size: 15px;
   color: #5e503f;
 }
 
-input {
+.login-form input {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
@@ -42,14 +45,17 @@ input {
   font-size: 16px;
   background-color: #ffffff;
   color: #22333b;
+  text-align: center;
   transition: border-color 0.3s ease;
 }
 
-input:focus {
+.login-form input:focus {
   border-color: #22333b;
 }
 
-button.login-btn {
+/* Styling for the login button */
+
+.login-form button.login-btn {
   background-color: #5e503f;
   color: #ffffff;
   padding: 12px 20px;
@@ -62,38 +68,39 @@ button.login-btn {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
 }
 
-button.login-btn:hover {
+.login-form button.login-btn:hover {
   background-color: #22333b; /* Adjusted background color on hover */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Adjusted shadow on hover */
 }
 
-.error-message p {
+/* Error message styles */
+.login-form .error-message p {
   color: #d9534f;
   margin-top: 15px;
- 
 }
 
-p {
+/* text styles within form */
+.login-form p {
   color: #5e503f;
   margin-top: 15px;
 }
 
-a {
+/* Sign Up Link */
+.login-container a {
   color: #22333b;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3em;
   transition: color 0.3s ease; /* Add a transition for color change */
 }
 
-a:hover {
- 
+.login-container a:hover {
   box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3); /* Add a subtle box shadow on hover */
 }
-/* Add these styles to your CSS file or component styles */
 
+/* Welcome Message after login */
 .welcome-message {
-  margin-top: 20px;
+  margin: 11% auto;
   padding: 20px;
   background-color: #eae0d5; /* Camel color */
   border-radius: 8px;
@@ -106,8 +113,9 @@ a:hover {
   font-size: 25px;
 }
 
+/* Log out Button Styles */
 .logout-btn {
-  background-color: #22333B; /* Dark Khaki color */
+  background-color: #22333b; /* Dark Khaki color */
   color: #ffffff; /* White color */
   padding: 10px 20px;
   border: none;
