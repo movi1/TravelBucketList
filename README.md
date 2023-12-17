@@ -20,7 +20,7 @@ Make sure you have the following installed:
 
  ## Collaborators Clone the Repository:
 ```
-git clone https://github.com/your-username/the-last-project-cfg.git
+git clone https://github.com/movi1/the-last-project-cfg.git
 ```
 ---
 
