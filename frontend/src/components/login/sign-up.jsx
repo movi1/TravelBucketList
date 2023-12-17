@@ -24,7 +24,35 @@ const SignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
 
+    // Validate that both email and password are provided
+    if (!email && !password) {
+      setError('Please provide both email and password.');
+      return;
+    } else if (!email) {
+      setError('Please enter a valid email address.');
+      return;
+    } else if (!password) {
+      setError('Please enter a valid password.');
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    // Validate password length
+    const minLength = 6;
+    if (password.length < minLength) {
+      setError(`Password must be at least ${minLength} characters.`);
+      return;
+    }
+
+
     try {
+
       // Call the signUpApi function with user input
       const response = await signUpApi(username, email, password);
 
