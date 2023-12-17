@@ -1,62 +1,76 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { signUpApi } from './api';
-import SignUpWelcomeMessage from './signUpWelcomeMessage';
-import './signup.css';
-import { useAuth } from './authContext'; // Update the path based on your project structure
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { signUpApi } from "./api";
+import SignUpWelcomeMessage from "./signUpWelcomeMessage";
+import "./signup.css";
+import { useAuth } from "./authContext"; // Update path based project structure
 
 const SignUp = () => {
+  // Access the login function from the authentication context
   const { login } = useAuth();
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+
+  // State variables for form input and error handling
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [isSignedUp, setIsSignedUp] = useState(false);
+
+  // Navigation hook for redirecting after successful signup
   const navigate = useNavigate();
 
-const handleSignUp = async (e) => {
-  e.preventDefault();
+  // Handle sign-up form submission
+  const handleSignUp = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await signUpApi(username, email, password);
+    try {
+      // Call the sign-up API
+      const response = await signUpApi(username, email, password);
 
-    if (response && response.toLowerCase() === 'sign-up successful') {
-      console.log('Sign-up successful');
+      // Check if the response indicates successful sign-up
+      if (response && response.toLowerCase() === "sign-up successful") {
+        console.log("Sign-up successful");
 
-      // Log user data before calling login
-      console.log('User data before login:', { username, email });
+        // Log user data before calling login
+        console.log("User data before login:", { username, email });
 
-      // Perform login after successful signup
-      login({ username, email });
+        // Perform login after successful signup
+        login({ username, email });
 
-      // Log user data after calling login
-      console.log('User data after login:', { username, email });
+        // Log user data after calling login
+        console.log("User data after login:", { username, email });
 
-      setIsSignedUp(true);
-    } else {
-      console.error('Invalid or unexpected response structure');
-      setError('Error during sign-up');
+        // Update state to indicate successful signup
+        setIsSignedUp(true);
+      } else {
+        console.error("Invalid or unexpected response structure");
+        setError("Error during sign-up");
+      }
+    } catch (error) {
+      console.error("Error during sign-up:", error);
+      setError(error || "Error during sign-up");
     }
-  } catch (error) {
-    console.error('Error during sign-up:', error);
-    setError(error || 'Error during sign-up');
-  }
-};
+  };
 
-
+  // Function to reset form fields and error message
   function resetForm() {
-    setUsername('');
-    setEmail('');
-    setPassword('');
-    setError('');
+    setUsername("");
+    setEmail("");
+    setPassword("");
+    setError("");
   }
 
   return (
     <div className="signup-container">
       {isSignedUp ? (
-        <SignUpWelcomeMessage username={username} onNavigate={() => navigate('/another-page')} />
+        // Display welcome message after successful signup
+        <SignUpWelcomeMessage
+          username={username}
+          onNavigate={() => navigate("/another-page")}
+        />
       ) : (
         <>
+          {/* Sign-up form */}
           <form onSubmit={handleSignUp} className="signup-form">
             <h2>Sign Up</h2>
             <label htmlFor="signup-username">Username:</label>
@@ -95,7 +109,7 @@ const handleSignUp = async (e) => {
         </>
       )}
     </div>
-  )
+  );
 };
 
 export default SignUp;
