@@ -3,53 +3,63 @@ import { useNavigate, Link } from 'react-router-dom';
 import { signUpApi } from './api';
 import SignUpWelcomeMessage from './signUpWelcomeMessage';
 import './signup.css';
-import { useAuth } from './authContext'; // Update the path based on your project structure
+import { useAuth } from './authContext';
 
+// SignUp component
 const SignUp = () => {
+  // Get the login function from AuthContext
   const { login } = useAuth();
+
+  // State variables for username, email, password, error, and signup status
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isSignedUp, setIsSignedUp] = useState(false);
+
+  // UseNavigate hook for navigation
   const navigate = useNavigate();
 
-const handleSignUp = async (e) => {
-  e.preventDefault();
+  // Event handler for form submission
+  const handleSignUp = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await signUpApi(username, email, password);
+    try {
+      // Call the signUpApi function with user input
+      const response = await signUpApi(username, email, password);
 
-    if (response && response.toLowerCase() === 'sign-up successful') {
-      console.log('Sign-up successful');
+      // Check if the response is valid and sign-up was successful
+      if (response && response.toLowerCase() === 'sign-up successful') {
+        console.log('Sign-up successful');
 
-      // Log user data before calling login
-      console.log('User data before login:', { username, email });
+        // Log user data before calling login
+        console.log('User data before login:', { username, email });
 
-      // Perform login after successful signup
-      login({ username, email });
+        // Perform login after successful signup
+        login({ username, email });
 
-      // Log user data after calling login
-      console.log('User data after login:', { username, email });
+        // Log user data after calling login
+        console.log('User data after login:', { username, email });
 
-      setIsSignedUp(true);
-    } else {
-      console.error('Invalid or unexpected response structure');
-      setError('Error during sign-up');
+        // Update state to indicate successful sign-up
+        setIsSignedUp(true);
+      } else {
+        console.error('Invalid or unexpected response structure');
+        setError('Error during sign-up');
+      }
+    } catch (error) {
+      console.error('Error during sign-up:', error);
+      setError(error || 'Error during sign-up');
     }
-  } catch (error) {
-    console.error('Error during sign-up:', error);
-    setError(error || 'Error during sign-up');
-  }
-};
+  };
 
-
-  function resetForm() {
-    setUsername('');
-    setEmail('');
-    setPassword('');
-    setError('');
-  }
+  // Function to reset form fields and error state
+  // function resetForm() {
+  //   setUsername('');
+  //   setEmail('');
+  //   setPassword('');
+  //   setError('');
+  // }
 
   return (
     <div className="signup-container">

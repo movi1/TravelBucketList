@@ -7,6 +7,7 @@ import "./home.css";
 export const Home = () => {
   const [animate, setAnimate] = useState(false);
 
+    // Trigger animation when the component is first rendered and added to the DOM.
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true);

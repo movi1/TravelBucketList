@@ -98,16 +98,15 @@ input::placeholder {
 }
 
 /* Button styles in country info */
-
 .country-info button {
   background-color: #5e503f;
-  color: white; /* White text color */
-  padding: 10px 20px; /* Padding */
-  font-size: 16px; /* Font size */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Add border-radius for rounded corners */
-  cursor: pointer; /* Add cursor pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .country-info button:hover {
@@ -145,7 +144,7 @@ input::placeholder {
     height: 0;
     padding-top: 75%;
     position: relative;
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
 
   .map-frame iframe {
@@ -154,7 +153,7 @@ input::placeholder {
     left: 0;
     width: 100%;
     height: 100%;
-    box-sizing: border-box; /* Include padding and borders in the total height */
+    box-sizing: border-box;
   }
 
   .country-info {
@@ -181,9 +180,9 @@ input::placeholder {
   }
 
   .map-container {
-    width: 100%; /* Adjust width as needed */
-    margin: 0 auto 30px; 
-    overflow: hidden; 
+    width: 100%;
+    margin: 0 auto 30px;
+    overflow: hidden;
   }
 
   .map-frame {
@@ -203,7 +202,7 @@ input::placeholder {
   }
 
   .map-container {
-    width: 60%; /* Adjust width as needed */
+    width: 60%;
     margin-right: 10px;
   }
 
@@ -213,6 +212,6 @@ input::placeholder {
   }
 
   .country-info {
-    width: 40%; /* Adjust width as needed */
+    width: 40%;
   }
 }
