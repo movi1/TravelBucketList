@@ -18,9 +18,10 @@
 }
 
 .bk-container h1 {
+  padding: 20px 10px;
   margin-bottom: 10px;
   font-size: 24px;
-  color: #61dafb;
+  color: #f4f4f4;
   font-family: "EB Garamond", sans-serif;
 }
 
@@ -67,7 +68,7 @@
 }
 
 .close-button:hover {
-  color: #61dafb;
+  color: #5e503f;
 }
 /* Laptops and desktops - side by side columns */
 @media (min-width: 1025px) {

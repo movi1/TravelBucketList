@@ -26,12 +26,12 @@ body {
   box-shadow: 0 4px 6px rgba(94, 80, 63, 0.2);
   background-color: #f4f4f4;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
 /* Search input styles */
 input {
-  width: calc(100% - 30px);
+  width: calc(100%);
   padding: 15px;
   border: none;
   border-radius: 10px;
