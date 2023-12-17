@@ -3,15 +3,18 @@ import { CgClose } from 'react-icons/cg';
 import '../map/SaveBucketList.css';
 
 
+
 export const SaveBucketList = ({ bucketList, countries, onClose }) => {
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(true);
 
+
+  /* Handle the button click to close the SaveBucketList component.*/
   const handleButtonClick = () => {
     setIsVisible(false);
   };
 
-
+  /*UseEffect hook to handle the visibility of the message.*/
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessage('');

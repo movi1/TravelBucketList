@@ -1,6 +1,7 @@
 /* General styling for the entire body of the document */
 body {
   font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Styling for the container of the login form */
@@ -19,8 +20,8 @@ h2 {
 
 /* Styling for the login form */
 .login-form {
-  width: 400px; /* Set a fixed width for the form */
-  margin: 50px auto; /* Center the form horizontally with top and bottom margins */
+  width: 400px;
+  margin: 50px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -64,8 +65,8 @@ h2 {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to the transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-form button.login-btn:hover {
@@ -102,14 +103,15 @@ h2 {
 .welcome-message {
   margin: 11% auto;
   padding: 20px;
-  background-color: #eae0d5; /* Camel color */
+  background-color: #eae0d5;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0.2, 0.3);
   text-align: center;
 }
 
+/* Welcome message paragraph styles */
 .welcome-message p {
-  color: #22333b; /* Charcoal color */
+  color: #22333b;
   font-size: 25px;
 }
 
@@ -127,6 +129,7 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Logout button hover styles */
 .logout-btn:hover {
-  background-color: #5e503f; /* A darker shade for hover effect */
+  background-color: #5e503f;
 }

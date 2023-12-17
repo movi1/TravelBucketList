@@ -7,7 +7,7 @@
   position: absolute;
   bottom: 20px;
   left: 5px;
-  background-color:#22333B; /* Adjust the alpha channel for transparency */
+  background-color: #22333b; /* Adjust the alpha channel for transparency */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding: 15px;
@@ -40,7 +40,6 @@
   border: 2px solid #ccc; /* Border style */
 }
 
-
 .bk-container li:hover {
   background-color: #087391;
   color: #f4f4f4;
@@ -69,14 +68,12 @@
 
 .close-button:hover {
   color: #61dafb;
- 
 }
 /* Laptops and desktops - side by side columns */
 @media (min-width: 1025px) {
-  
 }
 /* Media query for tablet screens */
-@media (min-width: 601px) and (max-width: 1024px)  {
+@media (min-width: 601px) and (max-width: 1024px) {
   .bk-container {
     position: fixed;
     bottom: 90px;

@@ -18,14 +18,14 @@ const Login = () => {
   // Access the navigation function from React Router
   const navigate = useNavigate();
 
-  // Function to handle the login attempt
+  // Function to handle the login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      // Call the login API with entered username and password
+      // Call the loginApi function to attempt user login
       const response = await loginApi(username, password);
-      console.log("Test");
+      console.log('Test');
 
       if (response.success) {
         // Handle successful login
@@ -42,7 +42,7 @@ const Login = () => {
     }
   };
 
-  // Function to handle logout
+  // Function to handle user logout
   function handleLogout() {
     setIsLoggedIn(false);
   }
