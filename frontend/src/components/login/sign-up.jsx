@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { signUpApi } from './api';
-import SignUpWelcomeMessage from './signUpWelcomeMessage';
-import './signup.css';
-import { useAuth } from './authContext';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { signUpApi } from "./api";
+import SignUpWelcomeMessage from "./signUpWelcomeMessage";
+import "./signup.css";
+import { useAuth } from "./authContext"; // Update path based project structure
 
 // SignUp component
 const SignUp = () => {
@@ -64,9 +64,14 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       {isSignedUp ? (
-        <SignUpWelcomeMessage username={username} onNavigate={() => navigate('/another-page')} />
+        // Display welcome message after successful signup
+        <SignUpWelcomeMessage
+          username={username}
+          onNavigate={() => navigate("/another-page")}
+        />
       ) : (
         <>
+          {/* Sign-up form */}
           <form onSubmit={handleSignUp} className="signup-form">
             <h2>Sign Up</h2>
             <label htmlFor="signup-username">Username:</label>
@@ -105,7 +110,7 @@ const SignUp = () => {
         </>
       )}
     </div>
-  )
+  );
 };
 
 export default SignUp;

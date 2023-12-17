@@ -1,22 +1,24 @@
+/* General styling for the entire body of the document */
 body {
   font-family: "Raleway", sans-serif;
 }
 
-/* SignUp Container */
+/* Styling for the container of the sign-up form */
 .signup-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  margin: 50px auto;
 }
 
-/* Heading Styles */
+/* Heading styles */
 h2,
 h3 {
   color: #22333b;
+  padding: 20px 0;
 }
 
-/* SignUp Form Styles */
+/* Styling for the sign-up form */
 .signup-form {
   width: 400px; /* Set a fixed width for the form */
   margin: 50px auto; /* Center the form horizontally with top and bottom margins */
@@ -28,16 +30,14 @@ h3 {
   background-color: #eae0d5;
 }
 
-/* Label Styles */
-label {
+.signup-form label {
   display: block;
   margin-top: 15px;
   font-size: 15px;
   color: #5e503f;
 }
 
-/* Input Styles */
-input {
+.signup-form input {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
@@ -46,15 +46,16 @@ input {
   font-size: 16px;
   background-color: #ffffff;
   color: #22333b;
+  text-align: center;
   transition: border-color 0.3s ease;
 }
 
-input:focus {
+.signup-form input:focus {
   border-color: #22333b;
 }
 
-/* Button Styles */
-button.signup-btn {
+/* Styling for the sign-up button */
+.signup-form button.signup-btn {
   background-color: #5e503f;
   color: #ffffff;
   padding: 12px 20px;
@@ -67,17 +68,18 @@ button.signup-btn {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
 }
 
-button.signup-btn:hover {
+.signup-form button.signup-btn:hover {
   background-color: #22333b;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Error Message Styles */
-.error-message p {
+/* Error message styles */
+.signup-form .error-message p {
   color: #d9534f;
   margin-top: 15px;
 }
 
+/* Home button after Sign Up */
 .signup-navigate-btn {
   background-color: #5e503f;
   color: #ffffff;
@@ -90,32 +92,33 @@ button.signup-btn:hover {
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to the transition */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .signup-navigate-btn:hover {
   background-color: #22333b;
 }
 
-/* Text Styles */
-p {
+/* text styles within form */
+.signup-form p {
   color: #5e503f;
   margin-top: 15px;
 }
 
-/* Link Styles */
-a {
+/* Log In Link */
+.signup-container a {
   color: #22333b;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3em;
   transition: color 0.3s ease; /* Add a transition for color change */
 }
 
-a:hover {
+.signup-container a:hover {
   box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3); /* Add a subtle box shadow on hover */
 }
 
-/* SignUp Welcome Message Styles */
+/* Welcome Message after sign Up */
 .signup-welcome-message {
-  margin-top: 20px;
+  margin: 10% auto;
   padding: 20px;
   background-color: #eae0d5; /* Camel color */
   border-radius: 8px;
@@ -128,6 +131,20 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.signup-container a:hover {
-  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3);
+/* Home Button after Sign Up*/
+.go-another-page-btn {
+  background-color: #22333b; /* Dark Khaki color */
+  color: #ffffff; /* White color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.go-another-page-btn:hover {
+  background-color: #5e503f;
 }
