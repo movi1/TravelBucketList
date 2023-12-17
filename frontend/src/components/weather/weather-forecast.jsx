@@ -39,8 +39,8 @@ const WeatherForecast = ({ weatherForecastData }) => {
         {weatherForecastData.list.slice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
             <AccordionItemHeading>
-              <AccordionItemButton>
-                <div className="daily-item">
+              <AccordionItemButton >
+                <div className="day-item">
                   <img
                     alt="weather"
                     className="icon-small"
@@ -57,20 +57,20 @@ const WeatherForecast = ({ weatherForecastData }) => {
 
             {/* Accordion item panel for additional daily details */}
             <AccordionItemPanel>
-              <div className="daily-details-grid">
-                <div className="daily-details-grid-item">
+              <div className="day-expansion-grid">
+                <div className="day-expansion">
                   <label>Feels like</label>
                   <label>{Math.round(item.main.feels_like)}°C</label>
                 </div>
-                <div className="daily-details-grid-item">
+                <div className="day-expansion">
                   <label>Wind</label>
                   <label>{item.wind.speed} m/s</label>
                 </div>
-                <div className="daily-details-grid-item">
+                <div className="day-expansion">
                   <label>Humidity</label>
                   <label>{item.main.humidity} %</label>
                 </div>
-                <div className="daily-details-grid-item">
+                <div className="day-expansion">
                   <label>Pressure</label>
                   <label>{item.main.pressure} hPa</label>
                 </div>
