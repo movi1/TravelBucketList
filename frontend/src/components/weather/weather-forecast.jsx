@@ -7,6 +7,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 
+// Define week days for use in the forecast
 const WEEK_DAYS = [
   "Monday",
   "Tuesday",
@@ -17,15 +18,23 @@ const WEEK_DAYS = [
   "Sunday",
 ];
 
+// WeatherForecast component to display the forecast for the next 7 days
 const WeatherForecast = ({ weatherForecastData }) => {
-  const dayInWeek = new Date().getDay(); 
+  // Get the current day of the week
+  const dayInWeek = new Date().getDay();
+
+  // Arrange days of the week based on the current day
   const forecastDays = WEEK_DAYS.slice(dayInWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInWeek)
   );
 
+  // Render the WeatherForecast component
   return (
     <>
+      {/* Title for the weather forecast section */}
       <label className="title">Forecast for next 7 days</label>
+
+      {/* Accordion component for displaying daily forecast details */}
       <Accordion allowZeroExpanded>
         {weatherForecastData.list.slice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
@@ -41,12 +50,12 @@ const WeatherForecast = ({ weatherForecastData }) => {
                   <label className="description">
                     {item.weather[0].description}
                   </label>
-                  <label className="temp">
-                    {Math.round(item.main.temp)}°C
-                  </label>
+                  <label className="temp">{Math.round(item.main.temp)}°C</label>
                 </div>
               </AccordionItemButton>
             </AccordionItemHeading>
+
+            {/* Accordion item panel for additional daily details */}
             <AccordionItemPanel>
               <div className="day-expansion-grid">
                 <div className="day-expansion">

@@ -30,13 +30,17 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
   // Handle hover effect
   const handleHoverEffect = (event) => {
     const tooltip = event.currentTarget.querySelector('.tooltip');
-    tooltip.style.opacity = 1;
+    if (tooltip) {
+      tooltip.style.opacity = 1;
+    }
   };
 
   // Handle leave effect
   const handleLeaveEffect = (event) => {
     const tooltip = event.currentTarget.querySelector('.tooltip');
-    tooltip.style.opacity = 0;
+    if (tooltip) {
+      tooltip.style.opacity = 0;
+    }
   };
 
   // Responsive styles
@@ -87,7 +91,7 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
             <img src="/images/suntrim.png" alt="Sun" className="icon-style" />
           </div>
           <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
-            Sun
+        
           </div>
           <p className="button-text">Sun</p>
         </button>
@@ -108,9 +112,6 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
           <div className="image-container">
             <img src="/images/snowtrim.png" alt="Snow" className="icon-style" />
           </div>
-          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
-            Snow
-          </div>
           <p className="button-text">Snow</p>
         </button>
 
@@ -130,9 +131,6 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
           <div className="image-container">
             <img src="/images/citytrim.png" alt="City Break" className="icon-style" />
           </div>
-          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
-            City
-          </div>
           <p className="button-text">City</p>
         </button>
 
@@ -151,9 +149,6 @@ const Destination = ({ handleDestinationSelect, handleHover, handleLeave }) => {
         >
           <div className="image-container">
             <img src="/images/officetrim.png" alt="Business" className="icon-style" />
-          </div>
-          <div className="tooltip" style={{ ...responsiveStyles.tooltipStyle }}>
-            Business
           </div>
           <p className="button-text">Business</p>
         </button>

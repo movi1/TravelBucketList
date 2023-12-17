@@ -12,18 +12,17 @@ export default function MapComponent({ selectedCityName }) {
   useEffect(() => {
     const apiUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${selectedCityName}`;
     console.log(apiUrl)
-  
+
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         if (data.length > 0) {
           // Destructure lat and lon from the first result
           const { lat, lon } = data[0];
-          
           // Convert lat and lon to numbers
           const latitude = parseFloat(lat);
           const longitude = parseFloat(lon);
-  
+
           // Update bounding box calculation
           const bbox = [
             longitude - 0.2,
@@ -31,7 +30,7 @@ export default function MapComponent({ selectedCityName }) {
             longitude + 0.2,
             latitude + 0.1
           ];
-  
+
           // Set the updated map URL
           setMapUrl(`https://www.openstreetmap.org/export/embed.html?bbox=${bbox.join('%2C')}&amp;layer=mapnik`);
         } else {
@@ -42,10 +41,10 @@ export default function MapComponent({ selectedCityName }) {
         console.error('Error fetching geocoding data:', error);
       });
   }, [selectedCityName]);
-  
+
 
   return (                        // data-testid is used for testing to identify HTML elements.
-    <div className="map-container" data-testid="map-container"> 
+    <div className="map-container" data-testid="map-container">
       {mapUrl && (
         <>
           <iframe

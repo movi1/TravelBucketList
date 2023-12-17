@@ -1,26 +1,63 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { signUpApi } from './api';
-import SignUpWelcomeMessage from './signUpWelcomeMessage';
-import './signup.css';
-import { useAuth } from './authContext'; // Update the path based on your project structure
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { signUpApi } from "./api";
+import SignUpWelcomeMessage from "./signUpWelcomeMessage";
+import "./signup.css";
+import { useAuth } from "./authContext"; // Update path based project structure
 
+// SignUp component
 const SignUp = () => {
+  // Get the login function from AuthContext
   const { login } = useAuth();
+
+  // State variables for username, email, password, error, and signup status
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isSignedUp, setIsSignedUp] = useState(false);
+
+  // UseNavigate hook for navigation
   const navigate = useNavigate();
 
+  // Event handler for form submission
   const handleSignUp = async (e) => {
     e.preventDefault();
 
+    // Validate that both email and password are provided
+    if (!email && !password) {
+      setError('Please provide both email and password.');
+      return;
+    } else if (!email) {
+      setError('Please enter a valid email address.');
+      return;
+    } else if (!password) {
+      setError('Please enter a valid password.');
+      return;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    // Validate password length
+    const minLength = 6;
+    if (password.length < minLength) {
+      setError(`Password must be at least ${minLength} characters.`);
+      return;
+    }
+
+
     try {
+
+      // Call the signUpApi function with user input
       const response = await signUpApi(username, email, password);
 
-      if (response !== undefined && response.toLowerCase() === 'sign-up successful') {
+      // Check if the response is valid and sign-up was successful
+      if (response && response.toLowerCase() === 'sign-up successful') {
         console.log('Sign-up successful');
 
         // Log user data before calling login
@@ -32,6 +69,7 @@ const SignUp = () => {
         // Log user data after calling login
         console.log('User data after login:', { username, email });
 
+        // Update state to indicate successful sign-up
         setIsSignedUp(true);
       } else {
         console.error('Invalid or unexpected response structure');
@@ -39,23 +77,29 @@ const SignUp = () => {
       }
     } catch (error) {
       console.error('Error during sign-up:', error);
-      setError(error.message || 'Error during sign-up');
+      setError(error || 'Error during sign-up');
     }
   };
 
-  function resetForm() {
-    setUsername('');
-    setEmail('');
-    setPassword('');
-    setError('');
-  }
+  // Function to reset form fields and error state
+  // function resetForm() {
+  //   setUsername('');
+  //   setEmail('');
+  //   setPassword('');
+  //   setError('');
+  // }
 
   return (
     <div className="signup-container">
       {isSignedUp ? (
-        <SignUpWelcomeMessage username={username} onNavigate={() => navigate('/another-page')} />
+        // Display welcome message after successful signup
+        <SignUpWelcomeMessage
+          username={username}
+          onNavigate={() => navigate("/another-page")}
+        />
       ) : (
         <>
+          {/* Sign-up form */}
           <form onSubmit={handleSignUp} className="signup-form">
             <h2>Sign Up</h2>
             <label htmlFor="signup-username">Username:</label>
@@ -87,14 +131,14 @@ const SignUp = () => {
             </button>
 
             {error && <p className="error-message">{error}</p>}
-            <p>
+            <p className = "switch-login-sign-up">
               Already have an account? <Link to="/login">Log In</Link>
             </p>
           </form>
         </>
       )}
     </div>
-  )
+  );
 };
 
 export default SignUp;

@@ -1,5 +1,7 @@
 import React from 'react';
 import './login.css';
+
+//Welcome Message Component
 const WelcomeMessage = ({ username, onLogout }) => {
   return (
     <div className='welcome-message'>

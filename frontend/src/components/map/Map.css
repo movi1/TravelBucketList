@@ -1,20 +1,24 @@
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Raleway&display=swap");
 
+/* Global styles for the body */
 body {
   font-family: " Raleway", sans-serif;
   background-color: #f4f4f4;
 }
+
+/* Main container styles */
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
   background-color: #f4f4f4;
   box-shadow: 0 0 10px #0A0908(0, 0, 0, 0.1);
   min-height: 70vh;
 }
-/* Improved styles for the search container */
+
+/* Search container styles */
 .search-container {
   position: relative;
   width: 100%;
@@ -22,18 +26,17 @@ body {
   box-shadow: 0 4px 6px rgba(94, 80, 63, 0.2);
   background-color: #f4f4f4;
   border-radius: 10px;
-  
-  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
-/* Improved styles for the search input */
+/* Search input styles */
 input {
-  width: calc(100% - 30px);
+  width: calc(100%);
   padding: 15px;
   border: none;
   border-radius: 10px;
   font-size: 16px;
-  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.2); /* Added shadow to the input */
+  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.2);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
   box-sizing: border-box;
   background-color: #f4f4f4;
@@ -46,19 +49,12 @@ input:focus {
   box-shadow: none;
 }
 input::placeholder {
-  /* color: rgba(34, 51, 59, 0.7);  */
   color: #22333b;
   font-family: "Raleway", sans-serif;
 }
 
-/* input:focus {
-  outline: none;
-  border: 1px solid #c6ac8f;
-  box-shadow: 0px 6px 10px rgba(0, 123, 255, 0.1);
-} */
-
+/* Suggestions container styles */
 .suggestions {
-  position: absolute;
   top: 60px; /* Adjust the distance from the input */
   width: 100%;
   background-color: #f4f4f4;
@@ -67,6 +63,7 @@ input::placeholder {
   color: #22333b;
 }
 
+/* Styles for individual suggestions */
 .suggestions div {
   padding: 10px;
   cursor: pointer;
@@ -77,16 +74,14 @@ input::placeholder {
   background-color: #eae0d5;
 }
 
+/* Country details container styles */
 .country-details {
-  /* box-sizing: content-box; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   position: relative;
   max-width: 70%;
   text-align: center;
-  /* background-color: #fff; */
-  /* padding: 15px; */
   border-radius: 10px;
   box-shadow: 0 4px 5px rgb(94, 80, 63);
   background-color: #f0f0f0;
@@ -94,27 +89,32 @@ input::placeholder {
   font-family: "Raleway", sans-serif;
 }
 
+/* Country info styles */
 .country-info {
   max-width: 100%;
   padding: 10px;
   margin: 0 5px 30px;
   font-size: 20px;
 }
+
+/* Button styles in country info */
 .country-info button {
   background-color: #5e503f;
-  color: white; /* White text color */
-  padding: 10px 20px; /* Padding */
-  font-size: 16px; /* Font size */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Add border-radius for rounded corners */
-  cursor: pointer; /* Add cursor pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .country-info button:hover {
   background-color: #22333b;
   box-shadow: 0px 6px 10px rgba(0, 0, 0.5, 0.2); /* Increase shadow on hover */
 }
+
+/* Responsive styles for smaller screens */
 @media (max-width: 600px) {
   .main-container {
     flex-direction: column;
@@ -122,6 +122,7 @@ input::placeholder {
     margin-top: 10px;
     width: 100%;
   }
+
   .search-container {
     width: 75%;
   }
@@ -141,9 +142,9 @@ input::placeholder {
   .map-frame {
     width: 100%;
     height: 0;
-    padding-top: 75%; /* Adjust the aspect ratio as needed */
+    padding-top: 75%;
     position: relative;
-    box-sizing: border-box; /* Include padding and borders in the total height */
+    box-sizing: border-box;
   }
 
   .map-frame iframe {
@@ -152,7 +153,7 @@ input::placeholder {
     left: 0;
     width: 100%;
     height: 100%;
-    box-sizing: border-box; /* Include padding and borders in the total height */
+    box-sizing: border-box;
   }
 
   .country-info {
@@ -162,16 +163,16 @@ input::placeholder {
   }
 }
 
-
-/* Tablet view */
+/* Tablet view responsive styles*/
 @media (min-width: 601px) and (max-width: 1024px) {
   .main-container {
- padding: 20px;
- width: 100%;
-    }
-    .search-container{
-      width: 48%;
-    }
+    padding: 20px;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 48%;
+  }
 
   .country-details {
     flex-direction: column;
@@ -179,37 +180,30 @@ input::placeholder {
   }
 
   .map-container {
-    width: 100%; /* Adjust width as needed */
-    margin: 0 auto 30px; /* Center with margins and add some spacing */
-    overflow: hidden; /* Ensure the iframe doesn't overflow its container */
+    width: 100%;
+    margin: 0 auto 30px;
+    overflow: hidden;
   }
 
   .map-frame {
     width: 100%; /* Make the iframe fill the container */
-    height: 100%; 
-    
+    height: 100%;
   }
 
   .country-info {
-    width: 100%; 
+    width: 100%;
   }
 }
 
-/* Laptops and desktops - side by side columns */
-/* Laptops and desktops - side by side columns */
+/* Laptops and desktops view responsive styles - side by side columns */
 @media (min-width: 1024px) {
   .main-container {
-   
     flex-direction: column;
-    /* Adjust as needed */
   }
 
-
-
-
   .map-container {
-    width: 60%; /* Adjust width as needed */
-    margin-right: 10px; /* Add margin to the right for spacing */
+    width: 60%;
+    margin-right: 10px;
   }
 
   .map-frame {
@@ -218,7 +212,6 @@ input::placeholder {
   }
 
   .country-info {
-    /* Add larger screen styles if needed */
-    width: 40%; /* Adjust width as needed */
+    width: 40%;
   }
 }

@@ -3,7 +3,6 @@
   font-size: 23px;
   font-weight: 700;
   padding: 0px 20px 50px 0px;
-
 }
 
 /* Daily Item Styles */
@@ -68,3 +67,4 @@
 .accordion__button[aria-expanded='true']:after {
   transform: rotate(225deg)
 }
+
