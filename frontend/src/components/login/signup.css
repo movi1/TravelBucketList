@@ -74,13 +74,13 @@ h3 {
 }
 
 /* Error message styles */
-.error-message p {
+.error-message {
   color: #d9534f;
   margin-top: 15px;
 }
 
 /* text styles within form */
-p {
+.switch-login-sign-up {
   color: #5e503f;
   margin-top: 15px;
 }

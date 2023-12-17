@@ -78,7 +78,7 @@ const Login = () => {
           {/* Display error message if there's an error */}
           {error && <p className="error-message">{error}</p>}
           {/* Link to the signup page */}
-          <p>
+          <p className="switch-login-signup">
             Don't have an account? <Link to="/signup">Sign Up</Link>
           </p>
         </form>
