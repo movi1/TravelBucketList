@@ -1,22 +1,24 @@
-# the-last-project-cfg
-## Pack & Go
 
-Welcome to the Travel Bucket List  project! 
-This application helps you organize and track your travel dreams and adventures. 
-Whether you're an avid traveler or someone with a growing wanderlust, this app is designed to make your travel aspirations come to life.
+# Pack & Go - The Travel Bucket List Project
 
-## Getting Started
+## Welcome to the  **Travel Bucket List  project!** 
+
+ This application helps you **organize** and **track** your travel dreams and adventures. 
+ Whether you're an *avid traveler* or someone with a growing _wanderlust_, this app is designed to make your travel aspirations come to life.
+---
+
+# Getting Started
 
 Follow these steps to set up and run the project on your local machine.
 
-### Prerequisites
+## Prerequisites
 
 Make sure you have the following installed:
 
 - Node.js and npm - [Download and Install Node.js](https://nodejs.org/)
 - Git - [Download and Install Git](https://git-scm.com/)
 
- ### Collaborators Clone the Repository:
+ ## Collaborators Clone the Repository:
 ```
 git clone https://github.com/your-username/the-last-project-cfg.git
 ```
@@ -27,7 +29,7 @@ git clone https://github.com/your-username/the-last-project-cfg.git
 ```
 cd the-last-project-cfg
 ```
-### Install Dependencies:
+## Install Dependencies:
 
 + Inside project folder, install dependencies:
 ```
@@ -93,7 +95,7 @@ npm run install:database
 ```
 
 ---
-### Start the Development Server:
+## Start the Development Server:
 
 + After installing dependencies, collaborators can start the development server:
 ```
@@ -101,7 +103,7 @@ npm start
 ```
 ---
 
-### Make changes
+## Make changes
 
 ### Committing Changes 
 
@@ -123,7 +125,6 @@ git push
 
 ## Colors Used
 
-### General Colors
 - **Light Gray:** #f4f4f4
 - **Charcoal:** #22333b
 - **Dark Khaki:** #5e503f
@@ -143,43 +144,50 @@ git push
 ### Fonts:
 The application uses the following fonts:
 
-- **Raleway**: This font is used for Navbar Links.
-- **EB Garamond**: This font is used for the title, subtitle, and buttons.
+- **Raleway**
+- **EB Garamond** 
 
-## Folder Structure
+# Project Structure
 
-The project follows a modular structure with the following main components:
+## Backend
+
+The backend of the project follows a modular structure with the following main components:
+
+- **prisma:**
+  - **migration:** 
+     + Contains files responsible for defining and applying changes to the database schema.
+     + Each file represents a migration, containing SQL instructions for creating or modifying tables and relationships.
+  - **schema.prisma:** 
+    + Outlines the structure of the 'users' table, serving as a blueprint for organizing user-related data in the MySQL database.
+    + Generates a JavaScript client for smooth interaction with the database.
+  - **index.js:**
+    + Entry point for a Node.js Express application with user authentication endpoints and MySQL database connection setup..
+  - **middleware.js:** 
+    +  Configures CORS for secure cross-origin communication and sets up JSON parsing middleware to handle incoming request data in the backend.
+  - **webpack.config.js:**
+    + Sets up the development environment for the client-side application, defining rules for JavaScript, JSX, and CSS files.
+
+## Frontend
+
+The frontend of the project follows a modular structure with the following main components:
 
 - **components:**
-  - **about-us:**
-    - **about-us.jsx:** React component for displaying information about the project or team.
-    - **about-us.css:** Stylesheet for the about-us component.
-    
-  - **bucket-list:**
-    - **bucket-list.jsx:** React component for managing the user's travel bucket list.
-    - **bucket-list.css:** Stylesheet for the bucket-list component.
+  - **about:** React component for displaying information about the project or team.
+  - **bucket-list:** React component for managing the user's travel bucket list.
+  - **contact-us:** React component for the contact us page.
+  - **faq-page:** React component for frequently asked questions.
+  - **footer:** React component for the footer section of the application.
+  - **header:** React component for the application's header and navigation.
+  - **home:** React component for the homepage or landing page.
+  - **login:** React component for user login functionality.
+  - **map:** React components related to mapping functionality.
+  - **pack-list:** React component for managing packing lists.
+  - **testimonial-carousel:** React component for displaying testimonials.
+  - **weather:** React components for displaying weather information.
+  - **weatherCTA:** React component for weather-related calls-to-action.
 
-  - **footer:**
-    - **footer.jsx:** React component for the footer section of the application.
-    - **footer.css:** Stylesheet for the footer component.
-
-  - **header:**
-    - **header.jsx:** React component for the application's header and navigation.
-    - **header.css:** Stylesheet for the header component.
-
-  - **home:**
-    - **home.jsx:** React component for the homepage or landing page.
-    - **home.css:** Stylesheet for the home component.
-
-  - **map:**
-    - **CountryDetails.jsx:** React component for displaying details about a specific country.
-    - **MapComponent.jsx:** React component for the main map functionality.
-    - **MapSearch.jsx:** React component for searching on the map.
-    - **MapSearch.css:** Stylesheet for the map search component.
-
-  - **tests:**
-    - Test files for unit or integration testing.
-
+- **tests:**
+  - Test files for unit or integration testing.
 
 
 
