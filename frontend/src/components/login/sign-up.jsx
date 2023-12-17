@@ -131,7 +131,7 @@ const SignUp = () => {
             </button>
 
             {error && <p className="error-message">{error}</p>}
-            <p>
+            <p className = "switch-login-sign-up">
               Already have an account? <Link to="/login">Log In</Link>
             </p>
           </form>
