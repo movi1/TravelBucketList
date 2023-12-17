@@ -8,7 +8,7 @@ import { MeetTheTeam } from "./components/about/meet-the-team";
 import TestimonialCarousel from "./components/testimonial-carousel/testimonial-carousel";
 import MapSearch from "./components/map/MapSearch";
 import PackList from './components/pack-list/pack-list';
-import WeatherCTA from './components/WeatherCTA/WeatherCTA';
+import WeatherCTA from './components/weather-cta/weather-cta';
 import Login from "./components/login/log-in";
 import SignUp from "./components/login/sign-up";
 import ContactUs from "./components/contact-us/contact-us";
