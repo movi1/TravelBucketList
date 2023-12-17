@@ -1,18 +1,20 @@
-/* login-signup.css */
+/* Body styles */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
+/* Login container styles */
 .login-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:70vh; /* Set the container height to 100% of the viewport height */
+  height: 70vh; /* Adjusted height */
 }
 
+/* Login form styles */
 .login-form {
-  width: 400px; /* Set a fixed width for the form */
-  margin: 50px auto; /* Center the form horizontally with top and bottom margins */
+  width: 400px;
+  margin: 50px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -21,11 +23,12 @@ body {
   background-color: #eae0d5;
 }
 
+/* Heading styles */
 h2 {
   color: #22333b;
-
 }
 
+/* Label styles */
 label {
   display: block;
   margin-top: 15px;
@@ -33,6 +36,7 @@ label {
   color: #5e503f;
 }
 
+/* Input styles */
 input {
   width: 100%;
   padding: 12px;
@@ -45,10 +49,12 @@ input {
   transition: border-color 0.3s ease;
 }
 
+/* Input focus styles */
 input:focus {
   border-color: #22333b;
 }
 
+/* Login button styles */
 button.login-btn {
   background-color: #5e503f;
   color: #ffffff;
@@ -58,57 +64,62 @@ button.login-btn {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to the transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Login button hover styles */
 button.login-btn:hover {
-  background-color: #22333b; /* Adjusted background color on hover */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Adjusted shadow on hover */
+  background-color: #22333b;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Error message styles */
 .error-message p {
   color: #d9534f;
   margin-top: 15px;
- 
 }
 
+/* Paragraph styles */
 p {
   color: #5e503f;
   margin-top: 15px;
 }
 
+/* Link styles */
 a {
   color: #22333b;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
-  transition: color 0.3s ease; /* Add a transition for color change */
+  transition: color 0.3s ease;
 }
 
+/* Link hover styles */
 a:hover {
- 
-  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3); /* Add a subtle box shadow on hover */
+  box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3);
 }
-/* Add these styles to your CSS file or component styles */
 
+/* Welcome message styles */
 .welcome-message {
   margin-top: 20px;
   padding: 20px;
-  background-color: #eae0d5; /* Camel color */
+  background-color: #eae0d5;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0.2, 0.3);
   text-align: center;
 }
 
+/* Welcome message paragraph styles */
 .welcome-message p {
-  color: #22333b; /* Charcoal color */
+  color: #22333b;
   font-size: 25px;
 }
 
+/* Logout button styles */
 .logout-btn {
-  background-color: #22333B; /* Dark Khaki color */
-  color: #ffffff; /* White color */
+  background-color: #22333b;
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -119,6 +130,7 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Logout button hover styles */
 .logout-btn:hover {
-  background-color: #5e503f; /* A darker shade for hover effect */
+  background-color: #5e503f;
 }

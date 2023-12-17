@@ -1,20 +1,26 @@
 import { createContext, useContext, useState } from 'react';
 
+// Create an authentication context
 export const AuthContext = createContext();
 
+// Define an authentication provider component
 export const AuthProvider = ({ children }) => {
+  // State to manage user data
   const [user, setUser] = useState(null);
 
+  // Function to handle user login
   const login = (userData) => {
-    // Your login logic, set user data
+    // set user data
     setUser(userData);
   };
 
+  // Function to handle user logout
   const logout = () => {
-    // Your logout logic, clear user data
+    // clear user data
     setUser(null);
   };
 
+  // Provide the authentication context value to the children components
   return (
     <AuthContext.Provider value={{ user, login, logout }}>
       {children}
@@ -22,6 +28,7 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
+// Custom hook to access the authentication context
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {

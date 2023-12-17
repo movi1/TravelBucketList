@@ -2,6 +2,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+/* SignUp Container */
 .signup-container {
   display: flex;
   align-items: center;
@@ -9,13 +10,13 @@ body {
   height: 70vh;
 }
 
-h2 {
+/* Heading Styles */
+h2,
+h3 {
   color: #22333b;
 }
-h3 {
-    color: #22333b;
-  }
 
+/* SignUp Form Styles */
 .signup-form {
   width: 400px; /* Set a fixed width for the form */
   margin: 50px auto; /* Center the form horizontally with top and bottom margins */
@@ -27,6 +28,7 @@ h3 {
   background-color: #eae0d5;
 }
 
+/* Label Styles */
 label {
   display: block;
   margin-top: 15px;
@@ -34,6 +36,7 @@ label {
   color: #5e503f;
 }
 
+/* Input Styles */
 input {
   width: 100%;
   padding: 12px;
@@ -50,6 +53,7 @@ input:focus {
   border-color: #22333b;
 }
 
+/* Button Styles */
 button.signup-btn {
   background-color: #5e503f;
   color: #ffffff;
@@ -68,10 +72,10 @@ button.signup-btn:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Error Message Styles */
 .error-message p {
   color: #d9534f;
   margin-top: 15px;
-  
 }
 
 .signup-navigate-btn {
@@ -90,11 +94,13 @@ button.signup-btn:hover {
   background-color: #22333b;
 }
 
+/* Text Styles */
 p {
   color: #5e503f;
   margin-top: 15px;
 }
 
+/* Link Styles */
 a {
   color: #22333b;
   text-decoration: none;
@@ -107,6 +113,7 @@ a:hover {
   box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3); /* Add a subtle box shadow on hover */
 }
 
+/* SignUp Welcome Message Styles */
 .signup-welcome-message {
   margin-top: 20px;
   padding: 20px;
@@ -115,35 +122,12 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0.2, 0.3);
   text-align: center;
 }
-.signup-welcome-message  p {
-    color: #22333b; /* Charcoal color */
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-
+.signup-welcome-message p {
+  color: #22333b; /* Charcoal color */
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
 .signup-container a:hover {
   box-shadow: 0 4px 6px rgba(94, 80, 63, 0.3);
 }
-
-
-.go-another-page-btn {
-    background-color: #22333B; /* Dark Khaki color */
-    color: #ffffff; /* White color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
-
-.go-another-page-btn:hover {
-background-color: #5e503f;
-}
-
-
-
-

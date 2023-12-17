@@ -6,7 +6,7 @@ import './login.css';
 import { useAuth } from './authContext';
 
 
-
+// Login component handles user authentication
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,13 +15,15 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
+  // Function to handle the login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
-  
+
     try {
+      // Call the loginApi function to attempt user login
       const response = await loginApi(username, password);
       console.log('Test');
-  
+
       if (response.success) {
         // Handle successful login
         setIsLoggedIn(true)
@@ -36,6 +38,8 @@ const Login = () => {
       e.preventDefault();
     }
   };
+
+  // Function to handle user logout
   function handleLogout() {
     setIsLoggedIn(false);
   }
