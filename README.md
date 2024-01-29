@@ -1,4 +1,5 @@
 
+
 # Pack & Go - The Travel Bucket List Project
 
 ## Welcome to the  **Travel Bucket List  project!** 
@@ -188,6 +189,7 @@ The frontend of the project follows a modular structure with the following main 
 
 - **tests:**
   - Test files for unit or integration testing.
+
 
 
 
